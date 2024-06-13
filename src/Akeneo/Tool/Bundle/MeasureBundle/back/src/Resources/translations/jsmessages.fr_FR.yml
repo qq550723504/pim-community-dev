@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Rechercher en utilisant un libellé ou un code
   family:
-    result_count: "{0}0 Familles de mesure |{1}1 Famille de mesure|]1, Inf[{{ itemsCount }} Familles de mesure"
+    result_count: "{0}0 Familles de mesure |{1}1 Famille de mesure，{{ itemsCount }} Familles de mesure"
     not_found: Famille de mesure introuvable
     no_data:
       title: Désolé il n'y a pas de famille de mesure !

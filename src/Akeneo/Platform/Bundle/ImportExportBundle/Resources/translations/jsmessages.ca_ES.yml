@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: Selecció de les categories
-        label: "{0}Tots els productes|{1}Una categoria seleccionada|]1,Inf[{{ count }} categories seleccionades"
+        label: "{0}Tots els productes|{1}Una categoria seleccionada,Inf[{{ count }} categories seleccionades"
         title: Selecciona categories
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: No es pot pujar l'arxiu. El seva mida pot excedir la mida màxima de pujada configurada a la seva configuració del servidor PHP o HTTP
       page_title:
-        index: "]-Inf, 1] {{ count }} perfil d'importació|]1, Inf [{{ count }} perfils d'importació"
+        index: " {{ count }} perfil d'importació, Inf [{{ count }} perfils d'importació"
       module:
         create:
           button: Crear perfil d'importació
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: Perfil d'exportació creat correctament
       page_title:
-        index: "]-Inf, 1] {{ count }} perfil d'exportació|]1, Inf [{{ count }} perfils d'exportació"
+        index: " {{ count }} perfil d'exportació, Inf [{{ count }} perfils d'exportació"
       module:
         create:
           button: Crear perfil d'exportació

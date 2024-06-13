@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Buscar en etiqueta o código
   family:
-    result_count: "{0}0 familias de medición |{1}1 familia de medición |]1, Inf[{{ itemsCount }} familias de medición"
+    result_count: "{0}0 familias de medición |{1}1 familia de medición ，{{ itemsCount }} familias de medición"
     not_found: Familia de medición no encontrada
     no_data:
       title: Lo sentimos, no hay ninguna familia de medición!

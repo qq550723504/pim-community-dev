@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: 사용자가 생성되었습니다.
       page_title:
-        index: "]-Inf, 1] {{ count }} 사용자|]1, Inf [{{ count }} 사용자"
+        index: " {{ count }} 사용자, Inf [{{ count }} 사용자"
       properties:
         username: 사용자 이름
         profile: 주요 업무는 무엇인가요?
@@ -101,7 +101,7 @@ pim_user_management:
     role:
       plural_label: 역할
       page_title:
-        index: "]-Inf, 1] {{ count }} 역할|]1, Inf [{{ count }} 역할"
+        index: " {{ count }} 역할, Inf [{{ count }} 역할"
       module:
         create:
           button: 역할 만들기
@@ -110,7 +110,7 @@ pim_user_management:
     group:
       plural_label: 사용자 그룹
       page_title:
-        index: "]-Inf, 1] {{ count }} 그룹|]1, Inf [{{ count }} 그룹"
+        index: " {{ count }} 그룹, Inf [{{ count }} 그룹"
       module:
         create:
           button: 그룹 만들기

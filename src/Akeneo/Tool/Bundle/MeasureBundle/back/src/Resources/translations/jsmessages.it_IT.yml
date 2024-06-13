@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Cerca su etichetta o codice
   family:
-    result_count: "{0}0 famiglie di unità di misura|{1}1 famiglia di unità di misura|]1, Inf[{{ itemsCount }} famiglie di unità di misura"
+    result_count: "{0}0 famiglie di unità di misura|{1}1 famiglia di unità di misura，{{ itemsCount }} famiglie di unità di misura"
     not_found: Famiglia di unità di misura non trovata
     no_data:
       title: Spiacenti, nessuna famiglia di unità di misura esistente!

@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: Usuari creat correctament.
       page_title:
-        index: "]-Inf, 1] {{ count }} usuari|]1, Inf [{{ count }} usuaris"
+        index: " {{ count }} usuari, Inf [{{ count }} usuaris"
       properties:
         username: Nom d’usuari
         profile: Quina és la teva missió principal?
@@ -101,7 +101,7 @@ pim_user_management:
     role:
       plural_label: Rols
       page_title:
-        index: "]-Inf, 1] {{ count }} rol|]1, Inf [{{ count }} rols"
+        index: " {{ count }} rol, Inf [{{ count }} rols"
       module:
         create:
           button: Crear rol
@@ -110,7 +110,7 @@ pim_user_management:
     group:
       plural_label: Grup d'usuaris
       page_title:
-        index: "]-Inf, 1] {{ count }} grup|]1, Inf [{{ count }} grups"
+        index: " {{ count }} grup, Inf [{{ count }} grups"
       module:
         create:
           button: Crear grup

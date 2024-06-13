@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: Categorie selectie
-        label: "{0}Alle producten|{1}één geselecteerde categorie|]1,Inf[{{ count }} geselecteerde categorieën"
+        label: "{0}Alle producten|{1}één geselecteerde categorie,Inf[{{ count }} geselecteerde categorieën"
         title: Selecteer categorieën
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: Kan het bestand niet uploaden. De grootte van het bestand kan de geconfigureerde maximale uploadgrootte op uw PHP of HTTP server configuratie overschrijden
       page_title:
-        index: "]-Inf, 1] {{ count }} importprofiel|]1, Inf [{{ count }} importprofielen"
+        index: " {{ count }} importprofiel, Inf [{{ count }} importprofielen"
       module:
         create:
           button: Importprofiel aanmaken
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: Exportprofiel succesvol aangemaakt
       page_title:
-        index: "]-Inf, 1] {{ count }} exportprofiel|]1, Inf [{{ count }} exportprofielen"
+        index: " {{ count }} exportprofiel, Inf [{{ count }} exportprofielen"
       module:
         create:
           button: Exportprofiel aanmaken

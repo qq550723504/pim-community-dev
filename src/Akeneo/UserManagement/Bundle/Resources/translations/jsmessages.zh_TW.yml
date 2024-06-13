@@ -38,7 +38,7 @@ pim_user_management:
         create:
           success: 用戶已成功創建。
       page_title:
-        index: "]-Inf, 1] {{ count }} 個用戶 |]1, Inf [{{ count }} 個用戶"
+        index: " {{ count }} 個用戶 , Inf [{{ count }} 個用戶"
       properties:
         username: 用戶名
         name_prefix: 姓名前綴
@@ -84,7 +84,7 @@ pim_user_management:
     role:
       plural_label: 角色
       page_title:
-        index: "]-Inf, 1] {{ count }} 個角色|]1, Inf [{{ count }} 個角色"
+        index: " {{ count }} 個角色, Inf [{{ count }} 個角色"
       module:
         create:
           button: 創建角色
@@ -93,7 +93,7 @@ pim_user_management:
     group:
       plural_label: 用戶分組
       page_title:
-        index: "]-Inf, 1] {{ count }} 個分組|]1, Inf [{{ count }} 個分組"
+        index: " {{ count }} 個分組, Inf [{{ count }} 個分組"
       module:
         create:
           button: 創建分組

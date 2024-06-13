@@ -11,7 +11,7 @@ oro.grid.mass_action.delete.label: Obriši
 oro.grid.mass_action.delete.confirm_title: Potvrda masovne akcije
 oro.grid.mass_action.delete.confirm_content: Da li ste sigurni da želite ukloniti odabrane stavke?
 oro.grid.datagrid.page_size.all: Sve
-oro.grid.mass_action.delete.success_message: "{0} niti jedan entitet nije uklonjen|{1} jedan entitet je uklonjen|] 1, Inf [%count% entiteta je uklonjeno"
+oro.grid.mass_action.delete.success_message: "{0} niti jedan entitet nije uklonjen|{1} jedan entitet je uklonjen%count% entiteta je uklonjeno"
 datagrid_view:
   columns:
     min_message: Odaberi barem jedan stupac u prikazu tablice

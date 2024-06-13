@@ -22,10 +22,10 @@ Millisecond: 밀리초
 Microsecond: 마이크로초
 "Time Zone": "시간대"
 duration:
-  days: "{0}0일|{1}1일|]1, Inf[{{ count }}일"
-  hours: "{0}0시간|{1}1시간|]1, Inf[{{ count }}시간"
-  minutes: "{0}0분|{1}1분|]1, Inf[{{ count }}분"
-  seconds: "{0}0초|{1}1초|]1, Inf[{{ count }}초"
+  days: "{0}0일|{1}1일，{{ count }}일"
+  hours: "{0}0시간|{1}1시간，{{ count }}시간"
+  minutes: "{0}0분|{1}1분，{{ count }}분"
+  seconds: "{0}0초|{1}1초，{{ count }}초"
 #PIM messages
 Localized value: 지역화된 값
 Columns: 열
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: 이전
   by: '-'
   cancel: 취소
-  characters_left: ']-Inf, 1]{{ count }}자 남음|]1, Inf[{{ count }}자 남음'
+  characters_left: '{{ count }}자 남음，{{ count }}자 남음'
   clear_value: 값 삭제
   close: 닫기
   code: 코드
@@ -223,14 +223,14 @@ pim_common:
   quality_score: 품질 점수
   remove: 제거
   required_label: (필수)
-  result_count: "{0}0 결과|{1}1 결과|]1, Inf[{{ itemsCount }} 결과"
+  result_count: "{0}0 결과|{1}1 결과，{{ itemsCount }} 결과"
   save: 저장
   search: 검색
   select2:
     search: 검색...
     no_match: 일치 항목 없음
     load_more: 추가 결과 로드 중...
-  selected: "{0}0개 선택|{1}1개 선택|]1, Inf[{{ itemsCount }}개 선택"
+  selected: "{0}0개 선택|{1}1개 선택，{{ itemsCount }}개 선택"
   status: 상태
   to: 종료
   type: 유형
@@ -299,7 +299,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: 계속하시겠습니까?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }}개 작업|]1, Inf[{{ count }}개 작업"
+    index: "{{ count }}개 작업，{{ count }}개 작업"
   module:
     create:
       upload: 여기에 {{ type }} 파일을 놓거나, 클릭하여 디스크 찾아보기
@@ -409,29 +409,29 @@ pim_settings:
   product_settings: 제품 설정
   automation_settings: 자동화
   count:
-    category_trees: '{0}0개의 트리 |{1}1개의 트리 |]1, Inf[{{ count }}개의 트리 '
-    categories: '{0}및 0개의 카테고리가 있습니다|{1}및 1개의 카테고리가 있습니다|]1, Inf[및 {{ count }}개의 카테고리가 있습니다'
-    channels: '{0}0개의 채널이 있습니다|{1}1개의 채널이 있습니다|]1, Inf[{{ count }}개의 채널이 있습니다'
-    locales: '{0}0개의 로케일이 활성화되어 있습니다|{1}1개의 로케일이 활성화되어 있습니다|]1, Inf[{{ count }}개의 로케일이 활성화되어 있습니다'
-    currencies: '{0}0개의 통화가 활성화되어 있습니다|{1}1개의 통화가  활성화되어 있습니다|]1, Inf[{{ count }}개의 통화가 활성화되어 있습니다'
-    attribute_groups: '{0}0개의 특성 그룹이 있습니다|{1}1개의 특성 그룹이 있습니다|]1, Inf[{{ count }}개의 특성 그룹이 있습니다'
-    attributes: '{0}0개의 특성이 있습니다|{1}1개의 특성이 있습니다|]1, Inf[{{ count }}개의 특성이 있습니다'
-    families: '{0}0개의 패밀리가 있습니다|{1}1개의 패밀리가 있습니다|]1, Inf[{{ count }}개의 패밀리가 있습니다'
-    measurements: '{0}0개의 측정이 있습니다|{1}1개의 측정이 있습니다|]1, Inf[{{ count }}개의 측정이 있습니다'
-    association_types: '{0}0개의 연결 유형이 있습니다|{1}1개의 연결 유형이 있습니다|]1, Inf[{{ count }}개의 연결 유형이 있습니다'
-    group_types: '{0}0개의 그룹 유형이 있습니다|{1}1개의 그룹 유형이 있습니다|]1, Inf[{{ count }}개의 그룹 유형이 있습니다'
-    groups: '{0}0개의 그룹이 있습니다|{1}1개의 그룹이 있습니다|]1, Inf[{{ count }}개의 그룹이 있습니다'
-    rules: '{0}0개의 규칙이 활성화되어 있습니다|{1}1개의 규칙이 활성화되어 있습니다|]1, Inf[{{ count }}개의 규칙이 활성화되어 있습니다'
-    identifier_generators: '{0}0개 식별자 생성기가 있습니다|{1}1개 식별자 생성기가 있습니다|]1, Inf[{{ count }}개 식별자 생성기가 있습니다'
+    category_trees: '{0}0개의 트리 |{1}1개의 트리 ，{{ count }}개의 트리 '
+    categories: '{0}및 0개의 카테고리가 있습니다|{1}및 1개의 카테고리가 있습니다，및 {{ count }}개의 카테고리가 있습니다'
+    channels: '{0}0개의 채널이 있습니다|{1}1개의 채널이 있습니다，{{ count }}개의 채널이 있습니다'
+    locales: '{0}0개의 로케일이 활성화되어 있습니다|{1}1개의 로케일이 활성화되어 있습니다，{{ count }}개의 로케일이 활성화되어 있습니다'
+    currencies: '{0}0개의 통화가 활성화되어 있습니다|{1}1개의 통화가  활성화되어 있습니다，{{ count }}개의 통화가 활성화되어 있습니다'
+    attribute_groups: '{0}0개의 특성 그룹이 있습니다|{1}1개의 특성 그룹이 있습니다，{{ count }}개의 특성 그룹이 있습니다'
+    attributes: '{0}0개의 특성이 있습니다|{1}1개의 특성이 있습니다，{{ count }}개의 특성이 있습니다'
+    families: '{0}0개의 패밀리가 있습니다|{1}1개의 패밀리가 있습니다，{{ count }}개의 패밀리가 있습니다'
+    measurements: '{0}0개의 측정이 있습니다|{1}1개의 측정이 있습니다，{{ count }}개의 측정이 있습니다'
+    association_types: '{0}0개의 연결 유형이 있습니다|{1}1개의 연결 유형이 있습니다，{{ count }}개의 연결 유형이 있습니다'
+    group_types: '{0}0개의 그룹 유형이 있습니다|{1}1개의 그룹 유형이 있습니다，{{ count }}개의 그룹 유형이 있습니다'
+    groups: '{0}0개의 그룹이 있습니다|{1}1개의 그룹이 있습니다，{{ count }}개의 그룹이 있습니다'
+    rules: '{0}0개의 규칙이 활성화되어 있습니다|{1}1개의 규칙이 활성화되어 있습니다，{{ count }}개의 규칙이 활성화되어 있습니다'
+    identifier_generators: '{0}0개 식별자 생성기가 있습니다|{1}1개 식별자 생성기가 있습니다，{{ count }}개 식별자 생성기가 있습니다'
 pim_system:
   system_menu: 시스템 메뉴
   system_navigation: 시스템 탐색
   users_management_navigation: 사용자 관리 탐색
   count:
-    product_values: '{0}0개의 제품 값이 있습니다|{1}1개의 제품 값이 있습니다|]1, Inf[{{ count }}개의 제품 값이 있습니다'
-    users: '{0}0명의 사용자가 있습니다|{1}1명의 사용자가 있습니다|]1, Inf[{{ count }}명의 사용자가 있습니다'
-    user_groups: '{0}0개의 사용자 그룹이 있습니다|{1}1개의 사용자 그룹이 있습니다|]1, Inf[{{ count }}개의 사용자 그룹이 있습니다'
-    roles: '{0}0개의 역할이 있습니다|{1}1개의 역할이 있습니다|]1, Inf[{{ count }}개의 역할이 있습니다'
+    product_values: '{0}0개의 제품 값이 있습니다|{1}1개의 제품 값이 있습니다，{{ count }}개의 제품 값이 있습니다'
+    users: '{0}0명의 사용자가 있습니다|{1}1명의 사용자가 있습니다，{{ count }}명의 사용자가 있습니다'
+    user_groups: '{0}0개의 사용자 그룹이 있습니다|{1}1개의 사용자 그룹이 있습니다，{{ count }}개의 사용자 그룹이 있습니다'
+    roles: '{0}0개의 역할이 있습니다|{1}1개의 역할이 있습니다，{{ count }}개의 역할이 있습니다'
   sso:
     enabled: SSO 활성화됨
     disabled: SSO 비활성화됨

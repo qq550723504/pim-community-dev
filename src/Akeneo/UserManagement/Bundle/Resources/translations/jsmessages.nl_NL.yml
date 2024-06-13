@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: Gebruiker succesvol aangemaakt.
       page_title:
-        index: "]-Inf, 1] {{ count }} gebruiker|]1, Inf [{{ count }} gebruikers"
+        index: " {{ count }} gebruiker, Inf [{{ count }} gebruikers"
       properties:
         username: Gebruikersnaam
         profile: Wat is uw belangrijkste missie?
@@ -101,7 +101,7 @@ pim_user_management:
     role:
       plural_label: Rollen
       page_title:
-        index: "]-Inf, 1] {{ count }} rol|]1, Inf [{{ count }} rollen"
+        index: " {{ count }} rol, Inf [{{ count }} rollen"
       module:
         create:
           button: Rol aanmaken
@@ -110,7 +110,7 @@ pim_user_management:
     group:
       plural_label: Gebruikersgroepen
       page_title:
-        index: "]-Inf, 1] {{ count }} groep|]1, Inf [{{ count }} groepen"
+        index: " {{ count }} groep, Inf [{{ count }} groepen"
       module:
         create:
           button: Groep aanmaken

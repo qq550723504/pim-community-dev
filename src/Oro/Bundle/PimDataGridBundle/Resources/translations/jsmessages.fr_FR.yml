@@ -43,7 +43,7 @@ pim_datagrid:
   mass_action:
     delete:
       empty_selection: Aucun produit sélectionné
-      success_message: "{0} Aucune entité n'a été supprimée|{1} Une entité a été supprimée|]1, Inf [ %count% entités ont été supprimées"
+      success_message: "{0} Aucune entité n'a été supprimée|{1} Une entité a été supprimée, Inf [ %count% entités ont été supprimées"
     default:
       confirmation:
         title: Confirmation de l'Action de masse

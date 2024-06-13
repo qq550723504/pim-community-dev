@@ -35,7 +35,7 @@ pim_datagrid:
   mass_action:
     delete:
       empty_selection: Nessun prodotto selezionato
-      success_message: "{0} nessuna entità rimossa|{1} una entità rimossa|]1, Inf[%count% entità sono state rimosse"
+      success_message: "{0} nessuna entità rimossa|{1} una entità rimossa，%count% entità sono state rimosse"
     default:
       confirmation:
         content: Sei sicuro di voler proseguire?

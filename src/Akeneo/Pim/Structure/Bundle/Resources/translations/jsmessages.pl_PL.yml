@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: Atrybut używany jako główny obraz
     empty_attribute_as_image: Nie zaznaczone
   page_title:
-    index: "]-Inf, 1]{{ count }} rodzina|]1, Inf[{{ count }} rodzin"
+    index: "{{ count }} rodzina，{{ count }} rodzin"
   module:
     attributes:
       not_required_label: Nie wymagany
@@ -110,7 +110,7 @@ pim_enrich.entity.association_type:
       success: Typ powiązania pomyślnie usunięty
       fail: Nie można usunąć tego typu powiązania
   page_title:
-    index: "] -Inf, 1] {{ count }} typ powiązania|] 1, Inf [{{ count }} typy powiązania"
+    index: "{{ count }} typ powiązania{{ count }} typy powiązania"
   module:
     create:
       title: Utwórz nowy typ powiązania
@@ -138,7 +138,7 @@ pim_enrich.entity.group_type:
       success: Typ grupy pomyślnie usunięty
       fail: Nie można usunąć tego typu grupy
   page_title:
-    index: "] -Inf, 1] {{ count }} typ grupy|] 1, Inf [{{ count }} typy/ów grup"
+    index: "{{ count }} typ grupy{{ count }} typy/ów grup"
   module:
     create:
       button: Utwórz typ grupy
@@ -156,7 +156,7 @@ pim_enrich.entity.attribute:
       success: Atrybut pomyślnie usunięty
       fail: Nie można usunąć tego atrybutu
   page_title:
-    index: "] -Inf, 1] {{ count }} atrybut|] 1, Inf [{{ count }} atrybuty/ów"
+    index: "{{ count }} atrybut{{ count }} atrybuty/ów"
   property:
     allowed_extensions: Dozwolone rozszerzenia
     auto_option_sorting: Automatycznie segreguj opcje w kolejności alfabetycznej
@@ -232,9 +232,9 @@ pim_enrich.entity.attribute:
     delete:
       confirm: Czy na pewno chcesz usunąć ten atrybut?
       attribute_removal: Atrybut zostanie usunięty ze wszystkich produktów.
-      product_count: '{0}0 produktów|{1}1 produkt|]1, Inf[{{ count }} produktów'
-      product_model_count: '{0}0 modeli produktów|{1}1 model produktu|]1, Inf[{{ count }} modeli produktów'
-      used: ']-Inf,1]obecnie ma wartości określone dla tego atrybutu.|]1, Inf[obecnie mają wartości określone dla tego atrybutu.'
+      product_count: '{0}0 produktów|{1}1 produkt，{{ count }} produktów'
+      product_model_count: '{0}0 modeli produktów|{1}1 model produktu，{{ count }} modeli produktów'
+      used: ']-Inf,1]obecnie ma wartości określone dla tego atrybutu.，obecnie mają wartości określone dla tego atrybutu.'
       helper:
         content: Jeśli chcesz zmienić typ atrybutu, aby był tłumaczony lub zmienny, zachowując jednocześnie dostęp do istniejących wartości atrybutu,
         link: zajrzyj do naszego Centrum Pomocy (aby uzyskać więcej informacji).
@@ -245,7 +245,7 @@ pim_enrich.entity.attribute:
     mass_delete:
       modal:
         title: Atrybuty
-        subtitle: '{1}Potwierdź usunięcie {{ count }} atrybutu|]1, Inf[Potwierdź usunięcie {{ count }} atrybutów'
+        subtitle: '{1}Potwierdź usunięcie {{ count }} atrybutu，Potwierdź usunięcie {{ count }} atrybutów'
         label: Wpisz następujący tekst „{{ textToCheck }}”
         confirm: Czy na pewno chcesz usunąć te atrybuty?
       message_bar:
@@ -255,7 +255,7 @@ pim_enrich.entity.attribute_group:
   label: grupa atrybutów
   uppercase_label: Grupa atrybutów
   plural_label: Grupy Atrybutów
-  result_count: '{0}0 grup atrybutów|{1}1 grupa atrybutów|]1, Inf[{{ count }} grup atrybutów'
+  result_count: '{0}0 grup atrybutów|{1}1 grupa atrybutów，{{ count }} grup atrybutów'
   limit_reached: Osiągnięto limit {{ max }} grup atrybutów.
   show_more_attribute:
     title: Trochę tu tłoczno, pokazujemy Ci {{ attributeCount }}/{{ totalAttributeCount }} atrybutów.
@@ -286,20 +286,20 @@ pim_enrich.entity.attribute_group:
   grid:
     columns:
       attribute_count: Liczba powiązanych atrybutów
-  selected: '{0}Nie wybrano grupy atrybutów|{1}Wybrano jedną grupę atrybutów|]1,Inf]Liczba wybranych grup atrybutów: {{ count }}'
+  selected: '{0}Nie wybrano grupy atrybutów|{1}Wybrano jedną grupę atrybutów,Inf]Liczba wybranych grup atrybutów: {{ count }}'
   mass_delete:
-    confirm: '{1}Czy na pewno chcesz usunąć tę grupę atrybutów?|]1, Inf[Czy na pewno chcesz usunąć następującą liczbę grup atrybutów: {{ count }}?'
+    confirm: '{1}Czy na pewno chcesz usunąć tę grupę atrybutów?，Czy na pewno chcesz usunąć następującą liczbę grup atrybutów: {{ count }}?'
     confirmation_phrase: 'Wpisz „{{ confirmation_word }}”'
     confirmation_word: usuń
-    attribute_warning: '{1}Usunięcie tych grup atrybutów będzie mieć wpływ na {{ number_of_attribute }} powiązany atrybut. Będzie trzeba przenieść go do nowej grupy atrybutów.|]1, Inf[Usunięcie tych grup atrybutów będzie mieć wpływ na następującą liczbę powiązanych atrybutów: {{ number_of_attribute }}. Będzie trzeba przenieść je do nowej grupy atrybutów.'
-    select_attribute_group: '{1}Wybierz grupę atrybutów, do której chcesz przenieść ten powiązany atrybut|]1, Inf[Wybierz grupę atrybutów, do której chcesz przenieść następującą liczbę powiązanych atrybutów: {{ number_of_attribute }}'
+    attribute_warning: '{1}Usunięcie tych grup atrybutów będzie mieć wpływ na {{ number_of_attribute }} powiązany atrybut. Będzie trzeba przenieść go do nowej grupy atrybutów.，Usunięcie tych grup atrybutów będzie mieć wpływ na następującą liczbę powiązanych atrybutów: {{ number_of_attribute }}. Będzie trzeba przenieść je do nowej grupy atrybutów.'
+    select_attribute_group: '{1}Wybierz grupę atrybutów, do której chcesz przenieść ten powiązany atrybut，Wybierz grupę atrybutów, do której chcesz przenieść następującą liczbę powiązanych atrybutów: {{ number_of_attribute }}'
     empty_result_label: 'Nie znaleziono grup atrybutów'
     placeholder: 'Wybierz grupę atrybutów'
     open_label: 'lista grup atrybutów'
   delete:
     confirm: 'Czy na pewno chcesz usunąć tę grupę atrybutów?'
     attribute_warning: '{1}Usunięcie tej grupy atrybutów będzie mieć wpływ na {{ number_of_attribute }} powiązany atrybut. Będzie trzeba przenieść go do nowej grupy atrybutów.'
-    select_attribute_group: '{1}Wybierz grupę atrybutów, do której chcesz przenieść ten powiązany atrybut:|]1, Inf[Wybierz grupę atrybutów, do której chcesz przenieść następującą liczbę powiązanych atrybutów: {{ number_of_attribute }}:'
+    select_attribute_group: '{1}Wybierz grupę atrybutów, do której chcesz przenieść ten powiązany atrybut:，Wybierz grupę atrybutów, do której chcesz przenieść następującą liczbę powiązanych atrybutów: {{ number_of_attribute }}:'
   batch_jobs:
     delete_attribute_groups:
       delete_attribute_groups:
@@ -312,7 +312,7 @@ pim_import_export:
       success: Zbiorcze usuwanie grup atrybutów zakończone
 pim_enrich.mass_edit.family:
   title: Działanie zbiorcze rodzin
-  confirm: "{1} Zamierzasz zaktualizować rodzinę następującymi informacjami, proszę potwierdź.|{2,3,4} Zamierzasz zaktualizować {{ itemsCount }} rodzin/y następującymi informacjami, proszę potwierdź.|] 1, Inf [Zamierzasz zaktualizować {{ itemsCount }} rodzin/y następującymi informacjami, proszę potwierdź."
+  confirm: "{1} Zamierzasz zaktualizować rodzinę następującymi informacjami, proszę potwierdź.|{2,3,4} Zamierzasz zaktualizować {{ itemsCount }} rodzin/y następującymi informacjami, proszę potwierdź.Zamierzasz zaktualizować {{ itemsCount }} rodzin/y następującymi informacjami, proszę potwierdź."
   step:
     select:
       label: Wybierz rodziny
@@ -329,7 +329,7 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: Określ wymagania atrybutów
       description: Poniższe wymagania atrybutów zostaną zastosowane do wybranych rodzin
-      label_count: "{1}Ustaw wymagania atrybutów <span class=\"AknFullPage-title--highlight\">1 rodziny</span>|] 1, Inf [Ustaw wymagania atrybutów <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} rodzin</span>"
+      label_count: "{1}Ustaw wymagania atrybutów <span class=\"AknFullPage-title--highlight\">1 rodziny</span>Ustaw wymagania atrybutów <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} rodzin</span>"
 batch_jobs:
   default_steps:
     delete_attribute_groups: Usuń grupy atrybutów

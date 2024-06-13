@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Canal removido com sucesso
       fail: Não é possível excluir este canal
   page_title:
-    index: "]-Inf, 1]{{ count }} canal|]1, Inf[{{ count }} canais"
+    index: "{{ count }} canal，{{ count }} canais"
   property:
     category_tree: Árvore de categorias
     do_not_convert: Não converter
@@ -66,7 +66,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: Moedas
   page_title:
-    index: "]-Inf, 1]{{ count }} moeda|]1, Inf[{{ count }} moedas"
+    index: "{{ count }} moeda，{{ count }} moedas"
 flash:
   currency:
     error:

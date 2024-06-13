@@ -51,7 +51,7 @@ pim_user_management:
         create:
           success: Käyttäjä luotiin onnistuneesti.
       page_title:
-        index: "]-Inf, 1] {{ count }} käyttäjä|]1, Inf [{{ count }} käyttäjää"
+        index: " {{ count }} käyttäjä, Inf [{{ count }} käyttäjää"
       properties:
         username: Käyttäjänimi
         profile: Mikä on pääasiallinen tehtäväsi?
@@ -98,7 +98,7 @@ pim_user_management:
     role:
       plural_label: Roolit
       page_title:
-        index: "]-Inf, 1] {{ count }} rooli|]1, Inf [{{ count }} roolia"
+        index: " {{ count }} rooli, Inf [{{ count }} roolia"
       module:
         create:
           button: Luo rooli
@@ -107,7 +107,7 @@ pim_user_management:
     group:
       plural_label: Käyttäjäryhmät
       page_title:
-        index: "]-Inf, 1] {{ count }} ryhmä|]1, Inf [{{ count }} ryhmää"
+        index: " {{ count }} ryhmä, Inf [{{ count }} ryhmää"
       module:
         create:
           button: Luo ryhmä

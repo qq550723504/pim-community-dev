@@ -11,7 +11,7 @@ oro.grid.mass_action.delete.label: 删除
 oro.grid.mass_action.delete.confirm_title: 批量删除确认
 oro.grid.mass_action.delete.confirm_content: 您确定要删除所选的项目吗?
 oro.grid.datagrid.page_size.all: 所有
-oro.grid.mass_action.delete.success_message: "{0} 没有实体被删除 |{1} 一个实体被删除 |]1，Inf [%count% 实体被删除"
+oro.grid.mass_action.delete.success_message: "{0} 没有实体被删除 |{1} 一个实体被删除 ，Inf [%count% 实体被删除"
 datagrid_view:
   columns:
     min_message: 您必须选择至少一个要显示的 datagrid 列

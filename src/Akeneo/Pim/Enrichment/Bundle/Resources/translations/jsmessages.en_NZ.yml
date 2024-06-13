@@ -31,7 +31,7 @@ pim_enrich.entity.product:
       success: Product successfully created
       fail: No attribute is configured as a product identifier or you don't have the rights to edit it.
   page_title:
-    index: "]-Inf, 1]{{ count }} result|]1, Inf[{{ count }} results"
+    index: "{{ count }} result，{{ count }} results"
   module:
     create:
       subtitle: Create product
@@ -68,14 +68,14 @@ pim_enrich.entity.product:
       remove_optional: Remove this attribute
       locale_specific_unavailable: This locale specific field is not available in this locale
       locale_unavailable: This localizable field is not available for locale '{{ locale }}' and channel '{{ channel }}'
-      to_fill_count: "{1}1 missing required attribute|]1, Inf[{{ count }} missing required attributes"
+      to_fill_count: "{1}1 missing required attribute，{{ count }} missing required attributes"
       add_attribute_option: Add attribute option
     completeness:
       title: Completeness
       complete: Completeness
       no_family: No family defined. Please define a family to calculate the completeness of this product.
       no_completeness: You just changed the family of the product. Please save it first to calculate the completeness for the new family.
-      missing_values: "{1}1 missing value|]1, Inf[{{ count }} missing values"
+      missing_values: "{1}1 missing value，{{ count }} missing values"
     sequential_edit:
       item_limit: Only first 1000 items shown in this sequential edit ({{ count }} selected)
       empty: Your selection is empty, please change your search criteria
@@ -148,7 +148,7 @@ pim_enrich.entity.product_model:
       create: Add new
       required_label: '(variant axis)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} variant product|]1, Inf[{{ complete }} / {{ total }} variant products"
+      variant_product: "{{ complete }} / {{ total }} variant product，{{ complete }} / {{ total }} variant products"
       label: Variant
     delete:
       confirm: Are you sure you want to delete this product model? All its children, product models and variant products, will be also deleted.
@@ -166,7 +166,7 @@ pim_enrich.entity.group:
       success: Group successfully removed
       fail: Cannot delete this group
   page_title:
-    index: "]-Inf, 1]{{ count }} group|]1, Inf[{{ count }} groups"
+    index: "{{ count }} group，{{ count }} groups"
   module:
     create:
       button: Create group
@@ -194,7 +194,7 @@ pim_enrich.export.product:
     locales:
       help: "The locales defines the localized product values to export. Ex: only product information in French."
     attributes:
-      label: "{0}All attributes|{1}One attribute selected|]1,Inf[{{ count }} attributes selected"
+      label: "{0}All attributes|{1}One attribute selected,Inf[{{ count }} attributes selected"
       help: "Select the product information to export. Ex: only the technical attributes."
       empty: All attributes will be exported
       modal:

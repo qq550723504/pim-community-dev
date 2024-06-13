@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: User successfully created.
       page_title:
-        index: "]-Inf, 1] {{ count }} user|]1, Inf [{{ count }} users"
+        index: " {{ count }} user, Inf [{{ count }} users"
       properties:
         username: Username
         profile: I develop solutions connected with Akeneo PIM.
@@ -99,7 +99,7 @@ pim_user_management:
     role:
       plural_label: Roles
       page_title:
-        index: "]-Inf, 1] {{ count }} role|]1, Inf [{{ count }} roles"
+        index: " {{ count }} role, Inf [{{ count }} roles"
       module:
         create:
           button: Create role
@@ -108,7 +108,7 @@ pim_user_management:
     group:
       plural_label: User groups
       page_title:
-        index: "]-Inf, 1] {{ count }} group|]1, Inf [{{ count }} groups"
+        index: " {{ count }} group, Inf [{{ count }} groups"
       module:
         create:
           button: Create group

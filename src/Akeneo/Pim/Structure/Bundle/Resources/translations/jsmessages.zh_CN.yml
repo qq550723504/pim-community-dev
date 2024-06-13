@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: 用作主要图片的属性
     empty_attribute_as_image: 未选择
   page_title:
-    index: "]-Inf, 1]{{ count }} 个品类|]1, Inf[{{ count }} 个品类"
+    index: "{{ count }} 个品类，{{ count }} 个品类"
   module:
     attributes:
       not_required_label: 非必填
@@ -75,7 +75,7 @@ pim_enrich.entity.attribute_option:
     delete:
       fail: 删除属性选项时出错
   page_title:
-    index: "]-Inf, 1]{{ count }} 个选项|]1, Inf[{{ count }} 个选项"
+    index: "{{ count }} 个选项，{{ count }} 个选项"
   module:
     edit:
       cancel_title: 取消修改
@@ -110,7 +110,7 @@ pim_enrich.entity.association_type:
       success: 关联类型已成功移除
       fail: 无法删除此关联类型
   page_title:
-    index: "]-Inf, 1]{{ count }} 个关联类型|]1, Inf[{{ count }} 个关联类型"
+    index: "{{ count }} 个关联类型，{{ count }} 个关联类型"
   module:
     create:
       title: 创建新的关联类型
@@ -138,7 +138,7 @@ pim_enrich.entity.group_type:
       success: 分组类型已成功移除
       fail: 不能删除该组类型
   page_title:
-    index: "]-Inf, 1]{{ count }} 个分组类型|]1, Inf[{{ count }} 个分组类型"
+    index: "{{ count }} 个分组类型，{{ count }} 个分组类型"
   module:
     create:
       button: 创建分组类型
@@ -156,7 +156,7 @@ pim_enrich.entity.attribute:
       success: 属性已成功移除
       fail: 不能删除该属性
   page_title:
-    index: "]-Inf, 1]{{ count }} 项属性|]1, Inf[{{ count }} 项属性"
+    index: "{{ count }} 项属性，{{ count }} 项属性"
   property:
     allowed_extensions: 允许的扩展名
     auto_option_sorting: 按字母顺序自动排序选项
@@ -232,9 +232,9 @@ pim_enrich.entity.attribute:
     delete:
       confirm: 确定要删除此属性吗？
       attribute_removal: 将从所有产品中移除该属性。
-      product_count: '{0}0 个产品|{1}1 个产品|]1, Inf[{{ count }} 个产品'
-      product_model_count: '{0}0 个产品模型|{1}1 个产品模型|]1, Inf[{{ count }} 个产品模型'
-      used: ']-Inf,1]当前已设置了此属性的值。|]1, Inf[当前已设置了此属性的值。'
+      product_count: '{0}0 个产品|{1}1 个产品，{{ count }} 个产品'
+      product_model_count: '{0}0 个产品模型|{1}1 个产品模型，{{ count }} 个产品模型'
+      used: ']-Inf,1]当前已设置了此属性的值。，当前已设置了此属性的值。'
       helper:
         content: 如果您需要更改属性类型，使其具有区域或范围属性，同时保持对现有属性值的访问，
         link: 查看我们的“帮助中心”（获取更多信息）。
@@ -245,7 +245,7 @@ pim_enrich.entity.attribute:
     mass_delete:
       modal:
         title: 属性
-        subtitle: '{1}确认删除 {{ count }} 个属性|]1, Inf[确认删除 {{ count }} 个属性'
+        subtitle: '{1}确认删除 {{ count }} 个属性，确认删除 {{ count }} 个属性'
         label: 请输入 "{{ textToCheck }}"
         confirm: 确定要删除这些属性吗？
       message_bar:
@@ -255,7 +255,7 @@ pim_enrich.entity.attribute_group:
   label: 属性组
   uppercase_label: 属性组
   plural_label: 属性组
-  result_count: '{0}0 个属性组|{1}1 个属性组|]1, Inf[{{ count }} 个属性组'
+  result_count: '{0}0 个属性组|{1}1 个属性组，{{ count }} 个属性组'
   limit_reached: 您已达到 {{ max }} 个属性组的限制。
   show_more_attribute:
     title: 这里比较拥挤，我们会显示 {{ attributeCount }}/{{ totalAttributeCount }} 个属性。
@@ -286,20 +286,20 @@ pim_enrich.entity.attribute_group:
   grid:
     columns:
       attribute_count: 相关属性计数
-  selected: '{0}已选择 0 个属性组|{1}已选择 1 个属性组|]1, Inf[已选择 {{ count }} 个属性组'
+  selected: '{0}已选择 0 个属性组|{1}已选择 1 个属性组，已选择 {{ count }} 个属性组'
   mass_delete:
-    confirm: '{1}确定要删除此属性组吗？|]1, Inf[确定要删除 {{ count }} 个属性组吗？'
+    confirm: '{1}确定要删除此属性组吗？，确定要删除 {{ count }} 个属性组吗？'
     confirmation_phrase: '请输入 "{{ confirmation_word }}"'
     confirmation_word: 删除
     attribute_warning: '{1}删除这些属性组会影响 {{ number_of_attribute }} 个相关的属性。您需要将此相关的属性移动到一个新的属性组。]1，Inf[删除这些属性组会影响 {{ number_of_attribute }} 个相关的属性。您需要将这些相关的属性移动到一个新的属性组。'
-    select_attribute_group: '{1}请选择要将相关的属性移动到其中的属性组：|]1，Inf[请选择要将 {{ number_of_attribute }} 个相关的属性移动到其中的属性组'
+    select_attribute_group: '{1}请选择要将相关的属性移动到其中的属性组：，请选择要将 {{ number_of_attribute }} 个相关的属性移动到其中的属性组'
     empty_result_label: '未找到属性组'
     placeholder: '选择属性组'
     open_label: '属性组列表'
   delete:
     confirm: '确定要删除此属性组吗？'
     attribute_warning: '删除此属性组将会影响 {{ number_of_attribute }} 个相关的属性。您需要将此相关的属性移动到一个新的属性组。'
-    select_attribute_group: '{1}请选择要将相关的属性移动到其中的属性组：|]1，Inf[请选择要将 {{ number_of_attribute }} 个相关的属性移动到其中的属性组：'
+    select_attribute_group: '{1}请选择要将相关的属性移动到其中的属性组：，请选择要将 {{ number_of_attribute }} 个相关的属性移动到其中的属性组：'
   batch_jobs:
     delete_attribute_groups:
       delete_attribute_groups:
@@ -312,7 +312,7 @@ pim_import_export:
       success: 批量删除属性组完成
 pim_enrich.mass_edit.family:
   title: 品类批量操作
-  confirm: "{1}您将更新品类的以下信息，请确认。|]1, Inf[您将更新 {{ itemsCount }} 个品类的以下信息，请确认。"
+  confirm: "{1}您将更新品类的以下信息，请确认。，您将更新 {{ itemsCount }} 个品类的以下信息，请确认。"
   step:
     select:
       label: 选择品类
@@ -329,7 +329,7 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: 设置属性要求
       description: 下列属性要求将应用于所选的品类中
-      label_count: "{1}设置 <span class=\"AknFullPage-title--highlight\">1 个品类</span>的属性要求|]1, Inf[设置 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 个品类</span>的属性要求"
+      label_count: "{1}设置 <span class=\"AknFullPage-title--highlight\">1 个品类</span>的属性要求，设置 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 个品类</span>的属性要求"
 batch_jobs:
   default_steps:
     delete_attribute_groups: 删除属性组

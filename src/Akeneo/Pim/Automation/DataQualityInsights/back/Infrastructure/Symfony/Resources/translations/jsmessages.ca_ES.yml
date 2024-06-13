@@ -43,8 +43,8 @@ akeneo_data_quality_insights:
       day: dia
     key_indicators:
       title: Indicadors clau
-      products: '{1}1 producte|]1, 200[{{ count }} productes|[200, Inf[més de {{ count }} productes'
-      product_models: '{1}1 model de producte|]1, 200[{{ count }} models de producte|[200, Inf[més de {{ count }} models de producte'
+      products: '{1}1 producte, 200[{{ count }} productes|[200, Inf[més de {{ count }} productes'
+      product_models: '{1}1 model de producte, 200[{{ count }} models de producte|[200, Inf[més de {{ count }} models de producte'
       entities_to_work_on: 'Tens <improvable_products_count_link/> per treballar.'
       entities_to_work_on_2_kinds: 'Tens <improvable_products_count_link/> i <improvable_product_models_count_link/> per treballar.'
       list:

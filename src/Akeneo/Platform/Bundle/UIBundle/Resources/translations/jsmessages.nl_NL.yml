@@ -22,10 +22,10 @@ Millisecond: Milliseconde
 Microsecond: Microseconde
 "Time Zone": "Tijdzone"
 duration:
-  days: "{0}0 dagen|{1}1 dagen|]1, Inf[{{ count }} dagen"
-  hours: "{0}0 uur|{1}1 uur|]1, Inf[{{ count }} uren"
-  minutes: "{0}0 minuten|{1}1 minuut|]1, Inf[{{ count }} minuten"
-  seconds: "{0}0 seconden|{1}1 seconde|]1, Inf[{{ count }} seconden"
+  days: "{0}0 dagen|{1}1 dagen，{{ count }} dagen"
+  hours: "{0}0 uur|{1}1 uur，{{ count }} uren"
+  minutes: "{0}0 minuten|{1}1 minuut，{{ count }} minuten"
+  seconds: "{0}0 seconden|{1}1 seconde，{{ count }} seconden"
 #PIM messages
 Localized value: Gelokaliseerde waarde
 Columns: Kolommen
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: Voor
   by: door
   cancel: Annuleer
-  characters_left: ']-Inf, 1]{{ count }} teken over|]1, Inf[{{ count }} tekens over'
+  characters_left: '{{ count }} teken over，{{ count }} tekens over'
   clear_value: Verwijder waarde
   close: Sluiten
   code: Code
@@ -224,14 +224,14 @@ pim_common:
   quality_score: Kwaliteitsscore
   remove: Verwijder
   required_label: (vereist)
-  result_count: "{0}0 resultaten|{1}1 resultaat|]1, Inf[{{ itemsCount }} resultaten"
+  result_count: "{0}0 resultaten|{1}1 resultaat，{{ itemsCount }} resultaten"
   save: Opslaan
   search: Zoeken
   select2:
     search: Zoeken...
     no_match: Geen overeenkomsten gevonden
     load_more: Meer resultaten laden...
-  selected: "{0}0 items geselecteerd|{1}1 item geselecteerd|]1, Inf[{{ itemsCount }} items geselecteerd"
+  selected: "{0}0 items geselecteerd|{1}1 item geselecteerd，{{ itemsCount }} items geselecteerd"
   status: Status
   to: tot
   type: Soort
@@ -300,12 +300,12 @@ pim_enrich.entity.fallback:
       discard_changes_title: Weet u het zeker?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} woord|]1, Inf[{{ count }} woorden"
+    index: "{{ count }} woord，{{ count }} woorden"
   module:
     create:
       upload: Versleep jouw {{ type }} bestand naar hier, of klik om bestand te zoeken
     download:
-      dropdown_title: "]-Inf, 1]Download gegenereerde bestanden ]1, Inf[Download gegenereerde bestanden"
+      dropdown_title: "Download gegenereerde bestanden Download gegenereerde bestanden"
       archive: Download gegenereerd archief
       output: Download gegenereerd bestand
       input: Download leesbestand
@@ -413,29 +413,29 @@ pim_settings:
   product_settings: Productinstellingen
   automation_settings: Automatisering
   count:
-    category_trees: '{0}U heeft 0 bomen |{1}U heeft 1 boom |]1, Inf[U heeft {{ count }} bomen '
-    categories: '{0}en 0 categorieën|{1}en 1 categorie|]1, Inf[en {{ count }} categorieën'
-    channels: '{0}U heeft 0 kanalen |{1}U heeft 1 kanaal |]1, Inf[U heeft {{ count }} kanalen'
-    locales: '{0}U heeft 0 ingeschakelde talen|{1}U heeft 1 ingeschakelde taal|]1, Inf[U heeft {{ count }} ingeschakelde talen'
-    currencies: '{0}U heeft 0 ingeschakelde valuta|{1}U heeft 1 ingeschakelde valuta|]1, Inf[U heeft {{ count }} ingeschakelde valuta'
-    attribute_groups: '{0}U heeft 0 attribuutgroepen|{1}U heeft 1 attribuutgroep|]1, Inf[U heeft {{ count }} attribuutgroepen'
-    attributes: '{0}U heeft 0 attributen|{1}U heeft 1 attribuut|]1, Inf[U heeft {{ count }} attributen'
-    families: '{0}U heeft 0 families |{1}U heeft 1 familie|]1, Inf[U heeft {{ count }} families'
-    measurements: '{0}U heeft 0 meetwaarden|{1}U heeft 1 meetwaarde|]1, Inf[U heeft {{ count }} meetwaarden'
-    association_types: '{0}U heeft 0 associatietypes|{1}U heeft 1 associatietype|]1, Inf[U heeft {{ count }} associatietypes'
-    group_types: '{0}U heeft 0 groepstypes|{1}U heeft 1 groepstype|]1, Inf[U heeft {{ count }} groepstypes'
-    groups: '{0}U heeft 0 groepen|{1}U heeft 1 groep|]1, Inf[U heeft {{ count }} groepen'
-    rules: '{0}U heeft 0 ingeschakelde regels|{1}U heeft 1 ingeschakelde regel|]1, Inf[U heeft {{ count }} ingeschakelde regels'
-    identifier_generators: '{0}Je hebt 0 identifier generator+{0}{1}Je hebt 1 identifier generator! ]1, Inf[Je hebt {{ count }} identifier generators'
+    category_trees: '{0}U heeft 0 bomen |{1}U heeft 1 boom ，U heeft {{ count }} bomen '
+    categories: '{0}en 0 categorieën|{1}en 1 categorie，en {{ count }} categorieën'
+    channels: '{0}U heeft 0 kanalen |{1}U heeft 1 kanaal ，U heeft {{ count }} kanalen'
+    locales: '{0}U heeft 0 ingeschakelde talen|{1}U heeft 1 ingeschakelde taal，U heeft {{ count }} ingeschakelde talen'
+    currencies: '{0}U heeft 0 ingeschakelde valuta|{1}U heeft 1 ingeschakelde valuta，U heeft {{ count }} ingeschakelde valuta'
+    attribute_groups: '{0}U heeft 0 attribuutgroepen|{1}U heeft 1 attribuutgroep，U heeft {{ count }} attribuutgroepen'
+    attributes: '{0}U heeft 0 attributen|{1}U heeft 1 attribuut，U heeft {{ count }} attributen'
+    families: '{0}U heeft 0 families |{1}U heeft 1 familie，U heeft {{ count }} families'
+    measurements: '{0}U heeft 0 meetwaarden|{1}U heeft 1 meetwaarde，U heeft {{ count }} meetwaarden'
+    association_types: '{0}U heeft 0 associatietypes|{1}U heeft 1 associatietype，U heeft {{ count }} associatietypes'
+    group_types: '{0}U heeft 0 groepstypes|{1}U heeft 1 groepstype，U heeft {{ count }} groepstypes'
+    groups: '{0}U heeft 0 groepen|{1}U heeft 1 groep，U heeft {{ count }} groepen'
+    rules: '{0}U heeft 0 ingeschakelde regels|{1}U heeft 1 ingeschakelde regel，U heeft {{ count }} ingeschakelde regels'
+    identifier_generators: '{0}Je hebt 0 identifier generator+{0}{1}Je hebt 1 identifier generator! Je hebt {{ count }} identifier generators'
 pim_system:
   system_menu: Systeemmenu
   system_navigation: Systeem navigatie
   users_management_navigation: Gebruikersbeheer navigatie
   count:
-    product_values: '{0}U heeft 0 productwaarden|{1}U heeft 1 productwaarde|]1, Inf[U heeft {{ count }} productwaarden'
-    users: '{0}U heeft 0 gebruikers|{1}U heeft 1 gebruiker|]1, Inf[U heeft {{ count }} gebruikers'
-    user_groups: '{0}U heeft 0 gebruikersgroepen|{1}U heeft 1 gebruikersgroep|]1, Inf[U heeft {{ count }} gebruikersgroepen'
-    roles: '{0}U heeft 0 rollen|{1}U heeft 1 rol|]1, Inf[U heeft {{ count }} rollen'
+    product_values: '{0}U heeft 0 productwaarden|{1}U heeft 1 productwaarde，U heeft {{ count }} productwaarden'
+    users: '{0}U heeft 0 gebruikers|{1}U heeft 1 gebruiker，U heeft {{ count }} gebruikers'
+    user_groups: '{0}U heeft 0 gebruikersgroepen|{1}U heeft 1 gebruikersgroep，U heeft {{ count }} gebruikersgroepen'
+    roles: '{0}U heeft 0 rollen|{1}U heeft 1 rol，U heeft {{ count }} rollen'
   sso:
     enabled: Eenmalige aanmelding ingeschakeld
     disabled: Eenmalige aanmelding uitgeschakeld

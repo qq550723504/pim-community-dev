@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: Utente creato con successo.
       page_title:
-        index: "]-Inf, 1] {{ count }} utente|]1, Inf [{{ count }} utenti"
+        index: " {{ count }} utente, Inf [{{ count }} utenti"
       properties:
         username: Nome utente
         profile: Qual è la tua missione principale?
@@ -101,7 +101,7 @@ pim_user_management:
     role:
       plural_label: Ruoli
       page_title:
-        index: "]-Inf, 1] {{ count }} ruolo|]1, Inf [{{ count }} ruoli"
+        index: " {{ count }} ruolo, Inf [{{ count }} ruoli"
       module:
         create:
           button: Crea Ruolo
@@ -110,7 +110,7 @@ pim_user_management:
     group:
       plural_label: Gruppi degli utenti
       page_title:
-        index: "]-Inf, 1] {{ count }} gruppo|]1, Inf [{{ count }} gruppi"
+        index: " {{ count }} gruppo, Inf [{{ count }} gruppi"
       module:
         create:
           button: Crea gruppo

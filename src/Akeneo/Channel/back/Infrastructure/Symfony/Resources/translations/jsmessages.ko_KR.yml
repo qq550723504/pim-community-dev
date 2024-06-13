@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: 채널이 제거되었습니다
       fail: 이 채널을 삭제할 수 없습니다
   page_title:
-    index: "]-Inf, 1]{{ count }}개 채널|]1, Inf[{{ count }}개 채널"
+    index: "{{ count }}개 채널，{{ count }}개 채널"
   property:
     category_tree: 카테고리 트리
     do_not_convert: 변환 안 함
@@ -65,7 +65,7 @@ pim_enrich.entity.locale:
   uppercase_label: 로케일
   plural_label: 로케일
   page_title:
-    index: "]-Inf, 1]{{ count }}개의 활성화된 로케일|]1, Inf[{{ count }}개"
+    index: "{{ count }}개의 활성화된 로케일，{{ count }}개"
   helper: "로케일을 활성화 또는 비활성화하려면 <a href={{ href }}>내 채널</a> "
   grid:
     columns:
@@ -76,7 +76,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: 통화
   page_title:
-    index: "]-Inf, 1]{{ count }}개 통화|]1, Inf[{{ count }}개 통화"
+    index: "{{ count }}개 통화，{{ count }}개 통화"
 flash:
   currency:
     error:

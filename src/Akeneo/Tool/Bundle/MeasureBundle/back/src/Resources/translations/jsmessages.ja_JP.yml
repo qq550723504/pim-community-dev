@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: ラベルもしくはコードでの検索
   family:
-    result_count: "{0}0 測定ファミリー|{1}1 測定ファミリー|]1, Inf[{{ itemsCount }} 測定ファミリー"
+    result_count: "{0}0 測定ファミリー|{1}1 測定ファミリー，{{ itemsCount }} 測定ファミリー"
     not_found: 測定ファミリーは見つかりません
     no_data:
       title: 測定ファミリーがありません！

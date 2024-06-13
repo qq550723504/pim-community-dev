@@ -45,7 +45,7 @@ akeneo_catalogs:
   product_selection:
     empty: Ajouter des critères de sélection pour créer votre sélection de produits
     count:
-      products: '{0}Aucun produit|{1}1 produit|]1, Inf[{{ count }} produits'
+      products: '{0}Aucun produit|{1}1 produit，{{ count }} produits'
       error: Impossible de calculer le nombre de produits
     more_information: Consultez notre Help Center pour plus d'informations.
     add_criteria:

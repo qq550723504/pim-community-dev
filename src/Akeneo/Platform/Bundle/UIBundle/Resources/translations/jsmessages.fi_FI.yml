@@ -22,10 +22,10 @@ Millisecond: Millisekunti
 Microsecond: Mikrosekunti
 "Time Zone": "Aikavyöhyke"
 duration:
-  days: "{0}0 päivää|{1}1 päivä|]1, Inf[{{ count }} päivää"
-  hours: "{0}0 tuntia|{1}1 tunti|]1, Inf[{{ count }} tuntia"
-  minutes: "{0}0 minuuttia|{1}1 minuutti|]1, Inf[{{ count }} minuuttia"
-  seconds: "{0}0 sekuntia|{1}1 sekunti|]1, Inf[{{ count }} sekuntia"
+  days: "{0}0 päivää|{1}1 päivä，{{ count }} päivää"
+  hours: "{0}0 tuntia|{1}1 tunti，{{ count }} tuntia"
+  minutes: "{0}0 minuuttia|{1}1 minuutti，{{ count }} minuuttia"
+  seconds: "{0}0 sekuntia|{1}1 sekunti，{{ count }} sekuntia"
 #PIM messages
 Localized value: Paikallinen arvo
 Columns: Sarakkeet
@@ -140,7 +140,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -160,7 +160,7 @@ pim_common:
   before: Ennen
   by: tehnyt
   cancel: Peruuta
-  characters_left: ']-Inf, 1]{{ count }} merkki jäljellä|]1, Inf[{{ count }} merkkiä jäljellä'
+  characters_left: '{{ count }} merkki jäljellä，{{ count }} merkkiä jäljellä'
   clear_value: Tyhjennä arvo
   close: Sulje
   code: Koodi
@@ -205,14 +205,14 @@ pim_common:
   quality_score: Laatupisteytys
   remove: Poista
   required_label: (vaadittu)
-  result_count: "{0}0 tulosta|{1}1 tulos|]1, Inf[{{ itemsCount }} tulosta"
+  result_count: "{0}0 tulosta|{1}1 tulos，{{ itemsCount }} tulosta"
   save: Tallenna
   search: Etsi
   select2:
     search: Hae...
     no_match: Ei hakutuloksia
     load_more: Ladataan lisää tuloksia...
-  selected: "{0}Ei valittu{1}Yksi valittu]1, Inf[{{ itemsCount }} valittu"
+  selected: "{0}Ei valittu{1}Yksi valittu{{ itemsCount }} valittu"
   status: Status
   to: mihin
   type: Tyyppi
@@ -279,7 +279,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: Oletko varma?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} työ|]1, Inf[{{ count }} työtä"
+    index: "{{ count }} työ，{{ count }} työtä"
   module:
     create:
       upload: Pudota {{ type }}-tiedosto tähän tai klikkaa selataksesi tiedostoja
@@ -384,28 +384,28 @@ pim_settings:
   catalog_settings: Katalogin asetukset
   product_settings: Tuotteiden asetukset
   count:
-    category_trees: '{0}Teillä on 0 kategoriapuuta|{1}Teillä on 1 kategoriapuu |]1, Inf[Teillä on {{ count }} kategoriapuuta '
-    categories: '{0}ja 0 kategoriaa|{1}ja 1 kategoria|]1, Inf[ja {{ count }} kategoriaa'
-    channels: '{0}Teillä on 0 kanavaa|{1}Teillä on 1 kanava|]1, Inf[Teillä on {{ count }} kanavaa'
-    locales: '{0}Teillä on 0 lokaalia käytössä|{1}Teillä on 1 lokaali käytössä|]1, Inf[Teillä on {{ count }} lokaalia käytössä'
-    currencies: '{0}Teillä on 0 valuuttaa käytössä|{1}Teillä on 1 valuutta käytössä|]1, Inf[Teillä on {{ count }} valuuttaa käytössä'
-    attribute_groups: '{0}Teillä on 0 attribuuttiryhmää|{1}Teillä on 1 attribuuttiryhmä|]1, Inf[Teillä on {{ count }} attriibuuttiryhmää'
-    attributes: '{0}Teillä on 0 attribuuttia|{1}Teillä on 1 attribuutti|]1, Inf[Teillä on {{ count }} attribuuttia'
-    families: '{0}Teillä on 0 perhettä|{1}Teillä on 1 perhe|]1, Inf[Teillä on {{ count }} perhettä'
-    measurements: '{0}Teillä on 0 mittaa|{1}Teillä on 1 mitta|]1, Inf[Teillä on {{ count }} mittaa'
-    association_types: '{0}Teillä on 0 tuoteliitostyyppiä|{1}Teillä on 1 tuoteliitostyyppi|]1, Inf[Teillä on {{ count }} tuoteliitostyyppiä'
-    group_types: '{0}Teillä on 0 ryhmätyyppiä|{1}Teillä on 1 ryhmätyyppi|]1, Inf[Teillä on {{ count }} ryhmätyyppiä'
-    groups: '{0}Teillä on 0 ryhmää|{1}Teillä on 1 ryhmä|]1, Inf[Teillä on {{ count }} ryhmää'
-    rules: '{0}Teillä on 0 sääntöä käytössä|{1}Teillä on 1 sääntö käytössä|]1, Inf[Teillä on {{ count }} sääntöä käytössä'
+    category_trees: '{0}Teillä on 0 kategoriapuuta|{1}Teillä on 1 kategoriapuu ，Teillä on {{ count }} kategoriapuuta '
+    categories: '{0}ja 0 kategoriaa|{1}ja 1 kategoria，ja {{ count }} kategoriaa'
+    channels: '{0}Teillä on 0 kanavaa|{1}Teillä on 1 kanava，Teillä on {{ count }} kanavaa'
+    locales: '{0}Teillä on 0 lokaalia käytössä|{1}Teillä on 1 lokaali käytössä，Teillä on {{ count }} lokaalia käytössä'
+    currencies: '{0}Teillä on 0 valuuttaa käytössä|{1}Teillä on 1 valuutta käytössä，Teillä on {{ count }} valuuttaa käytössä'
+    attribute_groups: '{0}Teillä on 0 attribuuttiryhmää|{1}Teillä on 1 attribuuttiryhmä，Teillä on {{ count }} attriibuuttiryhmää'
+    attributes: '{0}Teillä on 0 attribuuttia|{1}Teillä on 1 attribuutti，Teillä on {{ count }} attribuuttia'
+    families: '{0}Teillä on 0 perhettä|{1}Teillä on 1 perhe，Teillä on {{ count }} perhettä'
+    measurements: '{0}Teillä on 0 mittaa|{1}Teillä on 1 mitta，Teillä on {{ count }} mittaa'
+    association_types: '{0}Teillä on 0 tuoteliitostyyppiä|{1}Teillä on 1 tuoteliitostyyppi，Teillä on {{ count }} tuoteliitostyyppiä'
+    group_types: '{0}Teillä on 0 ryhmätyyppiä|{1}Teillä on 1 ryhmätyyppi，Teillä on {{ count }} ryhmätyyppiä'
+    groups: '{0}Teillä on 0 ryhmää|{1}Teillä on 1 ryhmä，Teillä on {{ count }} ryhmää'
+    rules: '{0}Teillä on 0 sääntöä käytössä|{1}Teillä on 1 sääntö käytössä，Teillä on {{ count }} sääntöä käytössä'
 pim_system:
   system_menu: Järjestelmävalikko
   system_navigation: Järjestelmänavigaatio
   users_management_navigation: Käyttäjähallinnan navigaatio
   count:
-    product_values: '{0}Teillä on 0 tuotearvoa|{1}Teillä on 1 tuotearvo|]1, Inf[Teillä on {{ count }} tuotearvoa'
-    users: '{0}Teillä on 0 käyttäjää|{1}Teillä on  1 käyttäjä|]1, Inf[Teillä on  {{ count }} käyttäjää'
-    user_groups: '{0}Teillä on 0 käyttäjäryhmää|{1}Teillä on 1 käyttäjäryhmä|]1, Inf[Teillä on {{ count }} käyttäjäryhmää'
-    roles: '{0}Teillä on 0 roolia|{1}Teillä on 1 rooli|]1, Inf[Teillä on {{ count }} roolia'
+    product_values: '{0}Teillä on 0 tuotearvoa|{1}Teillä on 1 tuotearvo，Teillä on {{ count }} tuotearvoa'
+    users: '{0}Teillä on 0 käyttäjää|{1}Teillä on  1 käyttäjä，Teillä on  {{ count }} käyttäjää'
+    user_groups: '{0}Teillä on 0 käyttäjäryhmää|{1}Teillä on 1 käyttäjäryhmä，Teillä on {{ count }} käyttäjäryhmää'
+    roles: '{0}Teillä on 0 roolia|{1}Teillä on 1 rooli，Teillä on {{ count }} roolia'
   sso:
     enabled: SSO käytössä
     disabled: SSO pois käytöstä

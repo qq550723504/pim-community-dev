@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Kanalen fjernet
       fail: Kan ikke slette denne kanalen
   page_title:
-    index: "] -Inf, 1] {{ count }} kanal |] 1, Inf [{{ count }} kanaler"
+    index: "{{ count }} kanal {{ count }} kanaler"
   property:
     category_tree: Kategoritre
     do_not_convert: Ikke konverter
@@ -65,7 +65,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: Valutaer
   page_title:
-    index: "] -Inf, 1] {{ count }} valuta |] 1, Inf [{{ count }} valutaer"
+    index: "{{ count }} valuta {{ count }} valutaer"
 flash:
   currency:
     error:

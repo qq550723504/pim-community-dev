@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: ユーザーは正常に作成されました。
       page_title:
-        index: "]-Inf, 1] {{ count }} ユーザー |]1, Inf [{{ count }} ユーザー"
+        index: " {{ count }} ユーザー , Inf [{{ count }} ユーザー"
       properties:
         username: ユーザー名
         profile: 主な目標は何ですか？
@@ -101,7 +101,7 @@ pim_user_management:
     role:
       plural_label: 権限
       page_title:
-        index: "] -Inf, 1] {{ count }}権限|] 1, Inf [{{ count }} 権限"
+        index: "{{ count }}権限{{ count }} 権限"
       module:
         create:
           button: 権限を作成
@@ -110,7 +110,7 @@ pim_user_management:
     group:
       plural_label: ユーザーグループ
       page_title:
-        index: "]-Inf, 1] {{ count }} グループ |]1, Inf [{{ count }} グループ"
+        index: " {{ count }} グループ , Inf [{{ count }} グループ"
       module:
         create:
           button: グループを作成

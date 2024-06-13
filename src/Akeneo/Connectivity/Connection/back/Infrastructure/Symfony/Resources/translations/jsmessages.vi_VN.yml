@@ -45,11 +45,11 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: Giám sát
       helper:
-        title: '{0} Bạn có {{ count }} lỗi |[1,Inf] Bạn có {{ count }} lỗi'
+        title: '{0} Bạn có {{ count }} lỗi , Bạn có {{ count }} lỗi'
         description: Tại đây, bạn có thể xem chi tiết từng lỗi cho kết nối này trong 7 ngày qua. Số lỗi được giới hạn ở 100 lỗi.
         link: Để biết cách giải quyết vấn đề này, vui lòng truy cập trung tâm trợ giúp API.
       search_filter:
         placeholder: Tìm kiếm trong các thông báo lỗi
-        result_count: '{0} Không thấy kết quả |[1,Inf] {{ count }} kết quả'
+        result_count: '{0} Không thấy kết quả , {{ count }} kết quả'
       no_error:
         title: Tuyệt vời! Không tìm thấy lỗi!

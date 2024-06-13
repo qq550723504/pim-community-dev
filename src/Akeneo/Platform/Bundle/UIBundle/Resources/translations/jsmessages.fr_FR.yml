@@ -22,10 +22,10 @@ Millisecond: Milliseconde
 Microsecond: Microseconde
 "Time Zone": "Fuseau horaire"
 duration:
-  days: "{0}0 jours|{1}1 jour|]1, Inf[{{ count }} jours"
-  hours: "{0}0 heures|{1}1 heure|]1, Inf[{{ count }} heures"
-  minutes: "{0}0 minutes|{1}1 minute|]1, Inf[{{ count }} minutes"
-  seconds: "{0}0 secondes|{1}1 seconde|]1, Inf[{{ count }} secondes"
+  days: "{0}0 jours|{1}1 jour，{{ count }} jours"
+  hours: "{0}0 heures|{1}1 heure，{{ count }} heures"
+  minutes: "{0}0 minutes|{1}1 minute，{{ count }} minutes"
+  seconds: "{0}0 secondes|{1}1 seconde，{{ count }} secondes"
 #PIM messages
 Localized value: Valeur localisée
 Columns: Colonnes
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: Avant
   by: par
   cancel: Annuler
-  characters_left: ']-Inf, 1]{{ count }} caractère restant|]1, +Inf[{{ count }} caractères restants'
+  characters_left: '{{ count }} caractère restant, +Inf[{{ count }} caractères restants'
   clear_value: Effacer la valeur
   close: Fermer
   code: Code
@@ -224,14 +224,14 @@ pim_common:
   quality_score: Score de qualité
   remove: Supprimer
   required_label: (obligatoire)
-  result_count: "{0}0 résultats|{1}1 résultat|]1, Inf[{{ itemsCount }} résultats"
+  result_count: "{0}0 résultats|{1}1 résultat，{{ itemsCount }} résultats"
   save: Enregistrer
   search: Rechercher
   select2:
     search: Rechercher...
     no_match: Aucune correspondance trouvée
     load_more: Chargement de plus de résultats...
-  selected: "{0}0 élément sélectionné|{1}1 élément sélectionné|]1, Inf[{{ itemsCount }} éléments sélectionnés"
+  selected: "{0}0 élément sélectionné|{1}1 élément sélectionné，{{ itemsCount }} éléments sélectionnés"
   status: État
   to: jusqu'au
   type: Type
@@ -300,12 +300,12 @@ pim_enrich.entity.fallback:
       discard_changes_title: Êtes-vous sûr(e) ?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} tâche|]1, Inf[{{ count }} tâches"
+    index: "{{ count }} tâche，{{ count }} tâches"
   module:
     create:
       upload: Déposez votre fichier {{ type }} ici, ou cliquez ici pour le chercher sur votre disque
     download:
-      dropdown_title: "]-Inf, 1]Télécharger le fichier généré|]1, Inf[Télécharger les fichiers générés"
+      dropdown_title: "Télécharger le fichier généré，Télécharger les fichiers générés"
       archive: Télécharger l'archive générée
       output: Télécharger le fichier généré
       input: Télécharger fichier lu
@@ -413,29 +413,29 @@ pim_settings:
   product_settings: Paramètres produit
   automation_settings: Automatisation
   count:
-    category_trees: '{0}Vous avez 0 arbres |{1}Vous avez 1 arbre |]1, Inf[Vous avez {{ count }} arbres '
-    categories: '{0}et 0 catégories|{1}et 1 catégorie|]1, Inf[et {{ count }} catégories'
-    channels: '{0}Vous avez 0 canal|{1}Vous avez 1 canal|]1, Inf[Vous avez {{ count }} canaux'
-    locales: '{0}Vous avez 0 locale activée|{1}Vous avez 1 locale activée|]1, Inf[Vous avez {{ count }} locales activées'
-    currencies: '{0}Vous avez 0 devise activée|{1}Vous avez 1 devise activée|]1, Inf[Vous avez {{ count }} devises activées'
-    attribute_groups: '{0}Vous avez 0 groupe d''attributs|{1}Vous avez 1 groupe d''attributs|]1, Inf[Vous avez {{ count }} groupes d''attributs'
-    attributes: '{0}Vous avez 0 attribut|{1}Vous avez 1 attribut|]1, Inf[Vous avez {{ count }} attributs'
-    families: '{0}Vous avez 0 famille|{1}Vous avez 1 famille|]1, Inf[Vous avez {{ count }} familles'
-    measurements: '{0}Vous avez 0 mesure|{1}Vous avez 1 mesure|]1, Inf[Vous avez {{ count }} mesures'
-    association_types: '{0}Vous avez 0 type d''association |{1}Vous avez 1 type d''association|]1, Inf[Vous avez {{ count }} types d''association'
-    group_types: '{0}Vous avez 0 type de groupe|{1}Vous avez 1 type de groupe|]1, Inf[Vous avez {{ count }} types de groupe'
-    groups: '{0}Vous avez 0 groupe|{1}Vous avez 1 groupe|]1, Inf[Vous avez {{ count }} groupes'
-    rules: '{0}Vous avez 0 règle activée|{1}Vous avez 1 règle activée|]1, Inf[Vous avez {{ count }} règles activées'
-    identifier_generators: '{0}Vous avez 0 générateur d''identifiants|{1}Vous avez 1 générateur d''identifiants|]1, Inf[Vous avez {{ count }} générateurs d''identifiants'
+    category_trees: '{0}Vous avez 0 arbres |{1}Vous avez 1 arbre ，Vous avez {{ count }} arbres '
+    categories: '{0}et 0 catégories|{1}et 1 catégorie，et {{ count }} catégories'
+    channels: '{0}Vous avez 0 canal|{1}Vous avez 1 canal，Vous avez {{ count }} canaux'
+    locales: '{0}Vous avez 0 locale activée|{1}Vous avez 1 locale activée，Vous avez {{ count }} locales activées'
+    currencies: '{0}Vous avez 0 devise activée|{1}Vous avez 1 devise activée，Vous avez {{ count }} devises activées'
+    attribute_groups: '{0}Vous avez 0 groupe d''attributs|{1}Vous avez 1 groupe d''attributs，Vous avez {{ count }} groupes d''attributs'
+    attributes: '{0}Vous avez 0 attribut|{1}Vous avez 1 attribut，Vous avez {{ count }} attributs'
+    families: '{0}Vous avez 0 famille|{1}Vous avez 1 famille，Vous avez {{ count }} familles'
+    measurements: '{0}Vous avez 0 mesure|{1}Vous avez 1 mesure，Vous avez {{ count }} mesures'
+    association_types: '{0}Vous avez 0 type d''association |{1}Vous avez 1 type d''association，Vous avez {{ count }} types d''association'
+    group_types: '{0}Vous avez 0 type de groupe|{1}Vous avez 1 type de groupe，Vous avez {{ count }} types de groupe'
+    groups: '{0}Vous avez 0 groupe|{1}Vous avez 1 groupe，Vous avez {{ count }} groupes'
+    rules: '{0}Vous avez 0 règle activée|{1}Vous avez 1 règle activée，Vous avez {{ count }} règles activées'
+    identifier_generators: '{0}Vous avez 0 générateur d''identifiants|{1}Vous avez 1 générateur d''identifiants，Vous avez {{ count }} générateurs d''identifiants'
 pim_system:
   system_menu: Menu système
   system_navigation: Navigation système
   users_management_navigation: Navigation utilisateurs
   count:
-    product_values: '{0}Vous n''avez aucune valeur produit |{1}Vous avez 1 valeur produit|]1, Inf[Vous avez {{ count }} valeurs produit'
-    users: '{0}Vous avez 0 utilisateurs|{1}Vous avez 1 utilisateur|]1, Inf[Vous avez {{ count }} utilisateurs'
-    user_groups: '{0}Vous avez 0 groupes d''utilisateurs |{1}Vous avez 1 groupe d''utilisateur|]1, Inf[Vous avez {{ count }} groupes d''utilisateurs'
-    roles: '{0}vous avez 0 rôles|{1}Vous avez 1 rôle|]1, Inf[Vous avez {{ count }} rôles'
+    product_values: '{0}Vous n''avez aucune valeur produit |{1}Vous avez 1 valeur produit，Vous avez {{ count }} valeurs produit'
+    users: '{0}Vous avez 0 utilisateurs|{1}Vous avez 1 utilisateur，Vous avez {{ count }} utilisateurs'
+    user_groups: '{0}Vous avez 0 groupes d''utilisateurs |{1}Vous avez 1 groupe d''utilisateur，Vous avez {{ count }} groupes d''utilisateurs'
+    roles: '{0}vous avez 0 rôles|{1}Vous avez 1 rôle，Vous avez {{ count }} rôles'
   sso:
     enabled: SSO activé
     disabled: SSO désactivé

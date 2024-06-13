@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: 레이블 또는 코드 검색
   family:
-    result_count: "{0}0 측정 패밀리|{1}1 측정 패밀리|]1, Inf[{{ itemsCount }} 측정 패밀리"
+    result_count: "{0}0 측정 패밀리|{1}1 측정 패밀리，{{ itemsCount }} 측정 패밀리"
     not_found: 측정 패밀리 찾지 못함
     no_data:
       title: 죄송합니다. 측정 패밀리가 없습니다!

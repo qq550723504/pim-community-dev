@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: Selección de categorías
-        label: "{0}Todos los productos|{1}Una categoría seleccionada|]1,Inf[{{ count }} categorías seleccionadas"
+        label: "{0}Todos los productos|{1}Una categoría seleccionada,Inf[{{ count }} categorías seleccionadas"
         title: Seleccionar categorías
     locales:
       validation:
@@ -31,7 +31,7 @@ pim_import_export:
         upload:
           error: No se puede subir el archivo. Su tamaño puede exceder el tamaño máximo de carga configurado en su configuración de servidor PHP o HTTP
       page_title:
-        index: "]-Inf, 1] {{ count }} perfil de importación|]1, Inf [{{ count }} perfiles de importación"
+        index: " {{ count }} perfil de importación, Inf [{{ count }} perfiles de importación"
       module:
         create:
           button: Crear perfil importado
@@ -41,7 +41,7 @@ pim_import_export:
         create:
           success: Perfil para exportar creado exitosamente
       page_title:
-        index: "]-Inf, 1] {{ count }} perfil de exportación|]1, Inf [{{ count }} perfiles de exportación"
+        index: " {{ count }} perfil de exportación, Inf [{{ count }} perfiles de exportación"
       module:
         create:
           button: Crear perfil para exportar

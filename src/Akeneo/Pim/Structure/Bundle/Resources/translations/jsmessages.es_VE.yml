@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: Atributo usado como la imagen principal
     empty_attribute_as_image: No seleccionado
   page_title:
-    index: "]-Inf, 1]{{ count }} familia|]1, Inf[{{ count }} familias"
+    index: "{{ count }} familia，{{ count }} familias"
   module:
     attributes:
       not_required_label: No requerido
@@ -91,7 +91,7 @@ pim_enrich.entity.association_type:
       success: Tipo de asociación eliminado éxitosamente
       fail: No se puede eliminar este tipo de asociación
   page_title:
-    index: "]-Inf, 1]{{ count }} tipo de asociación|]1, Inf[{{ count }}tipos de asociaciones"
+    index: "{{ count }} tipo de asociación，{{ count }}tipos de asociaciones"
   module:
     create:
       button: Crear un tipo de asociación
@@ -110,7 +110,7 @@ pim_enrich.entity.group_type:
       success: Tipo de grupo eliminado éxitosamente
       fail: Este tipo de grupo no se puede eliminar
   page_title:
-    index: "]-Inf, 1]{{ count }} tipo de grupo|]1, Inf[{{ count }} tipos de grupo"
+    index: "{{ count }} tipo de grupo，{{ count }} tipos de grupo"
   module:
     create:
       button: Crear tipo de grupo
@@ -128,7 +128,7 @@ pim_enrich.entity.attribute:
       success: Atributo eliminado éxitosamente
       fail: Este atributo no se puede eliminar
   page_title:
-    index: "]-Inf, 1]{{ count }} atributo|]1, Inf[{{ count }} atributos"
+    index: "{{ count }} atributo，{{ count }} atributos"
   property:
     allowed_extensions: Extensiones permitidas
     auto_option_sorting: Ordene opciones automáticas por orden alfabético
@@ -222,7 +222,7 @@ pim_enrich.entity.attribute_group:
       confirm: '¿Está usted seguro que quiere eliminar este grupo de atributo?'
 pim_enrich.mass_edit.family:
   title: Familias de acción masiva
-  confirm: "{1}Está a punto de actualizar una familia con la siguiente información, por favor confirme.|]1, Inf[Está a punto de actualizar {{ itemsCount }} familias con la información siguiente, por favor confirme."
+  confirm: "{1}Está a punto de actualizar una familia con la siguiente información, por favor confirme.，Está a punto de actualizar {{ itemsCount }} familias con la información siguiente, por favor confirme."
   step:
     select:
       label: Elija familias
@@ -239,4 +239,4 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: Establecer los requisitos de atributos
       description: Los siguientes requerimientos de atributos serán aplicados a las familias seleccionadas
-      label_count: "{1}Configurar los requerimientos de atributos de <span class=\"AknFullPage-title--highlight\">1 familia</span>|]1, Inf[Configurar los requerimientos de <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} familias</span>"
+      label_count: "{1}Configurar los requerimientos de atributos de <span class=\"AknFullPage-title--highlight\">1 familia</span>，Configurar los requerimientos de <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} familias</span>"

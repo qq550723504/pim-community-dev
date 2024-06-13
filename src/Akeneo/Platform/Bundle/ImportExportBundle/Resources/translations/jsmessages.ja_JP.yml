@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: カテゴリ選択
-        label: "{0}全商品 |{1}1件の選択済カテゴリ|]1,Inf[{{ count }} 件の選択済カテゴリ"
+        label: "{0}全商品 |{1}1件の選択済カテゴリ,Inf[{{ count }} 件の選択済カテゴリ"
         title: カテゴリを選択
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: ファイルをアップロードできません。お使いのPHPあるいはHTTPサーバー構成の最大アップロードサイズを超過しているようです。
       page_title:
-        index: "]-Inf, 1] {{ count }} インポートプロファイル|]1, Inf [{{ count }} インポートプロファイル"
+        index: " {{ count }} インポートプロファイル, Inf [{{ count }} インポートプロファイル"
       module:
         create:
           button: インポートプロファイルを作成
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: エクスポートプロファイルが正常に作成されました
       page_title:
-        index: "]-Inf, 1] {{ count }} エクスポートプロファイル|]1, Inf [{{ count }} エクスポートプロファイル"
+        index: " {{ count }} エクスポートプロファイル, Inf [{{ count }} エクスポートプロファイル"
       module:
         create:
           button: エクスポートプロファイルを作成

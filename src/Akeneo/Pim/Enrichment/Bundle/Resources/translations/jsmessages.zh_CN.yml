@@ -34,9 +34,9 @@ pim_enrich.entity.product:
       success: 产品已成功创建
       fail: 没有属性被配置为产品标识符，或者您没有编辑的权限。
   page_title:
-    index: "]-Inf, 1]{{ count }} 个结果|]1, Inf[{{ count }} 个结果"
-    product: "]-Inf, 1]{{ count }} 个产品|]1, Inf[{{ count }} 个产品"
-    product_model: "]-Inf, 1]{{ count }} 个产品模型|]1, Inf[{{ count }} 个产品模型"
+    index: "{{ count }} 个结果，{{ count }} 个结果"
+    product: "{{ count }} 个产品，{{ count }} 个产品"
+    product_model: "{{ count }} 个产品模型，{{ count }} 个产品模型"
     product_and_product_model: "{{ productCount }}, {{ productModelCount }}"
   module:
     create:
@@ -84,7 +84,7 @@ pim_enrich.entity.product:
       remove_optional: 移除此属性
       locale_specific_unavailable: 此区域特定字段在此区域不可用
       locale_unavailable: 这个可本地化的字段不能用于本地化语言 '{{ locale }}' 和 '{{ channel }}' 渠道
-      to_fill_count: "{1}缺少 1 个必要属性 |]1，Inf[缺少 {{ count }} 个必要属性"
+      to_fill_count: "{1}缺少 1 个必要属性 ，缺少 {{ count }} 个必要属性"
       add_attribute_option: 添加属性选项
       add_option: 添加选项
     completeness:
@@ -92,7 +92,7 @@ pim_enrich.entity.product:
       complete: 完成度
       no_family: 没有定义品类。请定义一个品类来计算该产品的完成度。
       no_completeness: 您只是改变了该产品的品类。请先保存以计算新品类的完成度。
-      missing_values: "{1}缺少 1 个值|]1，Inf[缺少 {{ count }} 个值"
+      missing_values: "{1}缺少 1 个值，缺少 {{ count }} 个值"
     sequential_edit:
       item_limit: 在该序列编辑中只显示头 1000 个条目（{{ count }} 个已选）
       empty: 您的选择为空，请更改搜索条件
@@ -178,10 +178,10 @@ pim_enrich.entity.product_model:
     variant_axis:
       label: '变量轴'
       create: 新增
-      title_create_label: "]-Inf, 1]添加新的 {{ axes }}|]1, Inf[添加新的 {{ axes }}"
+      title_create_label: "添加新的 {{ axes }}，添加新的 {{ axes }}"
       required_label: '(变量轴)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} 个变型产品|]1, Inf[{{ complete }} / {{ total }} 个变型产品"
+      variant_product: "{{ complete }} / {{ total }} 个变型产品，{{ complete }} / {{ total }} 个变型产品"
       label: 变型
     delete:
       confirm: 确定要删除此产品模型吗？其所有的子模型、产品模型和变型产品也将被删除。
@@ -199,7 +199,7 @@ pim_enrich.entity.group:
       success: 分组已成功移除
       fail: 不能删除该组
   page_title:
-    index: "]-Inf, 1]{{ count }} 个组|]1, Inf[{{ count }} 个组"
+    index: "{{ count }} 个组，{{ count }} 个组"
   module:
     create:
       button: 创建组
@@ -217,7 +217,7 @@ pim_enrich.entity.category:
   uppercase_label: 类别
   plural_label: 类别
   page_title:
-    index: "]-Inf, 1]{{ count }} 个树|]1, Inf[{{ count }} 个树"
+    index: "{{ count }} 个树，{{ count }} 个树"
   content:
     empty_tree_list:
       title: 您没有任何树
@@ -227,7 +227,7 @@ pim_enrich.entity.category:
         label: 树标签
         number_of_categories: 类别数量
         actions: 操作
-        count_categories: ']-Inf, 1]{{ count }} 个类别|]1, Inf[{{ count }} 个类别'
+        count_categories: '{{ count }} 个类别，{{ count }} 个类别'
     tree:
       not_found: 找不到类别树
     edit:
@@ -271,7 +271,7 @@ pim_enrich.export.product:
     locales:
       help: "区域设置定义了要导出的本地化产品值。例如，仅用法语显示的产品信息"
     attributes:
-      label: "{0}所有属性 |{1}选定一个属性 |]1,Inf[选定 {{ count }} 个属性"
+      label: "{0}所有属性 |{1}选定一个属性 ,Inf[选定 {{ count }} 个属性"
       help: "选择要导出的产品信息。例如︰ 仅导出有技术类的属性。"
       empty: 将导出所有属性
       modal:
@@ -344,7 +344,7 @@ pim_enrich.export.product:
     title: 全局设置
 pim_enrich.mass_edit.product:
   title: 产品批量操作
-  confirm: "{0}您即将更新一些产品的以下信息，以前的值将被替换。请确认。|{1}您即将更新一个产品的以下信息，以前的值将被替换。请确认。|]1，Inf[您即将更新 {{ itemsCount }} 个产品的以下信息，以前的值将被替换。请确认。"
+  confirm: "{0}您即将更新一些产品的以下信息，以前的值将被替换。请确认。|{1}您即将更新一个产品的以下信息，以前的值将被替换。请确认。，您即将更新 {{ itemsCount }} 个产品的以下信息，以前的值将被替换。请确认。"
   step:
     select:
       label: 选择产品
@@ -364,59 +364,59 @@ pim_enrich.mass_edit.product:
       select_attributes: 选择属性
     change_status:
       label: 更改状态
-      label_count: "{0}更改一些<span class=\"AknFullPage-title--highlight\">产品</span>的状态|{1}更改 <span class=\"AknFullPage-title--highlight\">1 件产品</span>的状态|]1, Inf[更改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>的状态"
+      label_count: "{0}更改一些<span class=\"AknFullPage-title--highlight\">产品</span>的状态|{1}更改 <span class=\"AknFullPage-title--highlight\">1 件产品</span>的状态，更改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>的状态"
       description: 将启用或禁用选定的产品。
       field: 要启用
     edit_common:
       label: 编辑属性值
-      label_count: "{0}编辑一些<span class=\"AknFullPage-title--highlight\">产品</span>的属性值|{1}编辑<span class=\"AknFullPage-title--highlight\"> 1 件产品</span>的属性值|]1, Inf[编辑 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品的属性值</span>"
+      label_count: "{0}编辑一些<span class=\"AknFullPage-title--highlight\">产品</span>的属性值|{1}编辑<span class=\"AknFullPage-title--highlight\"> 1 件产品</span>的属性值，编辑 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品的属性值</span>"
       description: 只有属于所选产品品类的属性将被编辑，其中包含 {{ locale }} 区域和 {{ scope }} 渠道的以下数据。以前的值将被替换。
       no_update: 请选择至少一个要更新的字段。
     add_attribute_value:
       label: 添加属性值
-      label_count: "{0}为一些<span class=\"AknFullPage-title--highlight\">产品</span>添加属性值|{1}为 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加属性值|]1, Inf[为 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加属性值"
+      label_count: "{0}为一些<span class=\"AknFullPage-title--highlight\">产品</span>添加属性值|{1}为 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加属性值，为 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加属性值"
       description: 只有属于产品品类的多值属性将被编辑，编辑内容包含以下 {{ locale }} 区域和 {{ scope }} 渠道数据。已添加属性值，之前的值被保留。
     change_family:
       label: 更改品类
-      label_count: "{0}更改一些<span class=\"AknFullPage-title--highlight\">产品</span>的品类|{1}更改 <span class=\"AknFullPage-title--highlight\">1 件产品</span>的品类|]1, Inf[更改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>的品类"
+      label_count: "{0}更改一些<span class=\"AknFullPage-title--highlight\">产品</span>的品类|{1}更改 <span class=\"AknFullPage-title--highlight\">1 件产品</span>的品类，更改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>的品类"
       description: 选定产品的品类将更改为被选定的品类
     add_to_group:
       label: 添加到组
-      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>添加到分组|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加到分组|]1, Inf[将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加到分组"
+      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>添加到分组|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加到分组，将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加到分组"
       description: 选择要将选定的产品加入其中的组
       field: 分组
       no_update: 请先选择一个组以继续
     add_to_category:
       label: 添加到类别
-      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>添加到类别|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加到类别|]1, Inf[将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加到类别"
+      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>添加到类别|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加到类别，将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加到类别"
       description: 产品将被放入以下类别，现存的分类也会保留。
     move_to_category:
       label: 在类别之间移动
-      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>在类别之间移动|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>在类别之间移动|]1, Inf[将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>在类别之间移动"
+      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>在类别之间移动|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>在类别之间移动，将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>在类别之间移动"
       description: 产品将被放入以下类别，现存的分类会丢失。
       no_update: 请选择类别。
     remove_from_category:
       label: 从类别中移除
-      label_count: "{0}从类别中移除一些<span class=\"AknFullPage-title--highlight\">产品</span>|{1}从类别中移除 <span class=\"AknFullPage-title--highlight\">1 件产品</span>|]1, Inf[从类别中移除 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>"
+      label_count: "{0}从类别中移除一些<span class=\"AknFullPage-title--highlight\">产品</span>|{1}从类别中移除 <span class=\"AknFullPage-title--highlight\">1 件产品</span>，从类别中移除 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>"
       description: 产品将从以下类别中移除。
       no_update: 没有选中的类别来从中移除选定的产品。
     add_to_existing_product_model:
       label: 添加到现有的产品模型
-      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>添加到现有的产品模型|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加到现有的产品模型|]1, Inf[将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加到现有的产品模型"
+      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>添加到现有的产品模型|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品</span>添加到现有的产品模型，将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>添加到现有的产品模型"
       description: 选定的产品模型将收集这些产品，并使其通用属性更加丰富。
       no_update: 请先选择一个产品模型以继续
     convert_to_simple_products:
       label: 转换为简单产品
-      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>转换为简单产品|{1}将 <span class=\"AknFullPage-title--highlight\">1 个产品</span>转换为简单产品|]1, Inf[将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 个产品</span>转换为简单产品"
+      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>转换为简单产品|{1}将 <span class=\"AknFullPage-title--highlight\">1 个产品</span>转换为简单产品，将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 个产品</span>转换为简单产品"
       description: 所有之前的值、类别和关联将被保存。
     associate_to_product_and_product_model:
       label: 关联产品
-      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>关联到产品或产品模型|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品关联到产品或产品模型</span>|]1, Inf[将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>关联到产品或产品模型。"
+      label_count: "{0}将一些<span class=\"AknFullPage-title--highlight\">产品</span>关联到产品或产品模型|{1}将 <span class=\"AknFullPage-title--highlight\">1 件产品关联到产品或产品模型</span>，将 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>关联到产品或产品模型。"
       description: 在网格中选择的产品将关联到所选关联类型下的产品和产品模型
       validate: 请先添加关联，再前往下一步
     change_parent_product_model:
       label: 更改父产品模型
-      label_count: "{0}更改一些<span class=\"AknFullPage-title--highlight\">产品</span>的父产品模型|{1}更改 <span class=\"AknFullPage-title--highlight\">1 件产品</span>的父产品模型|]1, Inf[更改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>的父产品模型"
+      label_count: "{0}更改一些<span class=\"AknFullPage-title--highlight\">产品</span>的父产品模型|{1}更改 <span class=\"AknFullPage-title--highlight\">1 件产品</span>的父产品模型，更改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 件产品</span>的父产品模型"
       description: 在网格中选定的变型产品或子产品模型的父级将被更改为选定的产品模型。
 pim_datagrid:
   no_entities: "未找到 {{ entityHint }}"
@@ -457,9 +457,9 @@ pim_datagrid:
     sequential_edit: 顺序编辑
     mass_delete: 批量删除
     selected:
-      family: "]-Inf, 1]已选定 {{ count }} 个品类|]1, Inf[已选定 {{ count }} 个品类"
-      attribute: "]-Inf, 1]已选定 {{ count }} 个属性|]1, Inf[已选定 {{ count }} 个属性"
-      product: "]-Inf, 1]已选定 {{ count }} 个结果|]1, Inf[已选定 {{ count }} 个结果"
+      family: "已选定 {{ count }} 个品类，已选定 {{ count }} 个品类"
+      attribute: "已选定 {{ count }} 个属性，已选定 {{ count }} 个属性"
+      product: "已选定 {{ count }} 个结果，已选定 {{ count }} 个结果"
   view_selector:
     view: 视图
     choose_type: 我想创建一个专用视图

@@ -10,7 +10,7 @@ oro.grid.mass_action.delete.label: Burahin
 oro.grid.mass_action.delete.confirm_title: Malawakang Kompirmasyon sa Pagbura
 oro.grid.mass_action.delete.confirm_content: Sigurado ka bang burahin mo ang mga napiling mga aytems?
 oro.grid.datagrid.page_size.all: Lahat
-oro.grid.mass_action.delete.success_message: "{0} Walang mga entities ang natanggal |{1} Isang entity ay nabura|]1,Inf[ %count% lahat ng mga entities ay nabura"
+oro.grid.mass_action.delete.success_message: "{0} Walang mga entities ang natanggal |{1} Isang entity ay nabura,Inf[ %count% lahat ng mga entities ay nabura"
 datagrid_view:
   columns:
     min_message: Pumili ka kahit isang datagrid kolum para ipakita

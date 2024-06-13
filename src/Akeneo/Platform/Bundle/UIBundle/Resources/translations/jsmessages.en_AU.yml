@@ -22,10 +22,10 @@ Millisecond: Millisecond
 Microsecond: Microsecond
 "Time Zone": "Time Zone"
 duration:
-  days: "{0}0 days|{1}1 day|]1, Inf[{{ count }} days"
-  hours: "{0}0 hours|{1}1 hour|]1, Inf[{{ count }} hours"
-  minutes: "{0}0 minutes|{1}1 minute|]1, Inf[{{ count }} minutes"
-  seconds: "{0}0 seconds|{1}1 second|]1, Inf[{{ count }} seconds"
+  days: "{0}0 days|{1}1 day，{{ count }} days"
+  hours: "{0}0 hours|{1}1 hour，{{ count }} hours"
+  minutes: "{0}0 minutes|{1}1 minute，{{ count }} minutes"
+  seconds: "{0}0 seconds|{1}1 second，{{ count }} seconds"
 #PIM messages
 Localized value: Localized value
 Columns: Columns
@@ -140,7 +140,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -202,7 +202,7 @@ pim_common:
   properties: Properties
   remove: Remove
   required_label: (required)
-  result_count: "{0}0 results|{1}1 result|]1, Inf[{{ itemsCount }} results"
+  result_count: "{0}0 results|{1}1 result，{{ itemsCount }} results"
   save: Save
   search: Search
   select2:

@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Zoek op naam of code.
   family:
-    result_count: "{0}0 maten families|{1}1 Maten familie|]1, Inf[{{ itemsCount }} matan families"
+    result_count: "{0}0 maten families|{1}1 Maten familie，{{ itemsCount }} matan families"
     not_found: Matenfamilie niet gevonden
     no_data:
       title: Sorry is is geen matenfamilie!

@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Kanal başarılı bir şekilde kaldırıldı
       fail: Bu kanal silinemiyor
   page_title:
-    index: "] -Inf, 1] {{ kapsama }} kanal|] 1, Inf [{{ kapsama }} kanallar"
+    index: "{{ kapsama }} kanal{{ kapsama }} kanallar"
   property:
     category_tree: Bağlantı kategorisi
     do_not_convert: Dönüştürmeyin
@@ -65,7 +65,7 @@ pim_enrich.entity.locale:
   uppercase_label: Yerel Ayar
   plural_label: Yerel Ayarlar
   page_title:
-    index: "]-Inf]{{ count }} aktifleştirilmiş yerel ayar|]1, Inf[ aktifleştirilmiş yerer ayar"
+    index: "]-Inf]{{ count }} aktifleştirilmiş yerel ayar， aktifleştirilmiş yerer ayar"
   helper: "Bir yeri aktive etmek veya devre dışı bırakmak için, </a> kanalınızdaki <a href={{ href }}> birine giderek yeri ekler veya çıkarırsınız"
   grid:
     columns:

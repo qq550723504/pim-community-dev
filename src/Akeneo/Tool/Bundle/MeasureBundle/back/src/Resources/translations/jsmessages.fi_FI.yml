@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Etsi nimellä tai koodilla
   family:
-    result_count: "{0}0 Mittaperhettä{1}1 Mittaperhe]1, Inf[{{ itemsCount }} Mittaperhettä"
+    result_count: "{0}0 Mittaperhettä{1}1 Mittaperhe{{ itemsCount }} Mittaperhettä"
     not_found: Mittaperhettä ei löytynyt
     no_data:
       title: Pahoittelut, ei yhtään mittaperhettä!

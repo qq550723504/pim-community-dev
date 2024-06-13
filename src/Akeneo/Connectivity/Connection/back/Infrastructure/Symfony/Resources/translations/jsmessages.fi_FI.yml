@@ -45,7 +45,7 @@ akeneo_connectivity.connection:
     marketplace:
       title: Haluatko yhdistää PIMin toiseen sovellukseen? 🤟
       helper:
-        title: '{0} PIM-versiosi kanssa yhteensopivia sovelluksia tai konnektoreita ei ole.|{1} PIM-versiosi kanssa on yhteensopiva {{ count }} sovellus tai konnektori. |[2,Inf] PIM-versiosi kanssa yhteensopivia sovelluksia ja konnektoreita on {{ count }}.'
+        title: '{0} PIM-versiosi kanssa yhteensopivia sovelluksia tai konnektoreita ei ole.|{1} PIM-versiosi kanssa on yhteensopiva {{ count }} sovellus tai konnektori.  PIM-versiosi kanssa yhteensopivia sovelluksia ja konnektoreita on {{ count }}.'
         title_without_apps: '{0} PIM-versiosi kanssa yhteensopivia konnektoreita ei ole.{1} {{ count }} PIM-versiosi kanssa yhteensopiva konnektori. [2,Inf] {{ count }} PIM-versiosi kanssa yhteensopivia konnektoria.'
       card:
         developed_by: 'Kehittäjä {{ author }}'
@@ -55,11 +55,11 @@ akeneo_connectivity.connection:
         connected: Yhdistetty
       extensions:
         title: Konnektorit
-        total: '{0} Ei konnektoreita|{1} 1 konnektori|[2,Inf] {{ total }} konnektoria'
+        total: '{0} Ei konnektoreita|{1} 1 konnektori {{ total }} konnektoria'
         empty: Ei versiosi kanssa yhteensopivia konnektoreita
       apps:
         title: Sovellukset
-        total: '{0} Ei sovelluksia|{1} 1 sovellus|[2,Inf] {{ total }} sovellusta'
+        total: '{0} Ei sovelluksia|{1} 1 sovellus {{ total }} sovellusta'
         empty: Ei versiosi kanssa yhteensopivia sovelluksia
       scroll_to_top: Siirry ylös
       test_apps:
@@ -104,14 +104,14 @@ akeneo_connectivity.connection:
       list:
         apps:
           title: Yhdistetyt sovellukset
-          total: '{0} Ei sovelluksia|{1} 1 sovellus|[2,Inf] {{ total }} sovellusta'
+          total: '{0} Ei sovelluksia|{1} 1 sovellus {{ total }} sovellusta'
           empty: Ei yhdistettyjä sovelluksia
           check_marketplace: 'Tarkista {{ marketplaceLink }} selataksesi kaiken käytettävissä olevan sisällön ja asenna ensimmäinen sovellus.'
         test_apps:
           title: Minun testisovellukseni
           removed_user: Poistettu käyttäjä
         helper:
-          title: '[0,1] PIM on yhteydessä {{ count }} sovellukseen.|[2,Inf] PIM on yhteydessä {{ count }} sovellukseen.'
+          title: '[0,1] PIM on yhteydessä {{ count }} sovellukseen. PIM on yhteydessä {{ count }} sovellukseen.'
           description_2: Haluaa tietää lisää Sovelluksista?
           link: Katso lisätietoja ohjekeskuksestamme.
         card:
@@ -425,12 +425,12 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: Virheiden monitorointi
       helper:
-        title: '{0} Sinulla on {{ count }} virhe |[1,Inf] Sinulla on {{ count }} virhettä'
+        title: '{0} Sinulla on {{ count }} virhe , Sinulla on {{ count }} virhettä'
         description: Täällä näet yksityiskohtaisesti kunkin virheen tämän yhteyden osalta viimeisten 7 päivän aikana. Virhemäärä on rajoitettu 100 virheeseen.
         link: Jos haluat ratkaista tämän, vieraile API-yhteyksien ohjekeskuksessamme
       search_filter:
         placeholder: Etsi virheviesteistä
-        result_count: '{0} Ei tuloksia|{1} 1 tulos|[2,Inf] {{ count }} tulosta'
+        result_count: '{0} Ei tuloksia|{1} 1 tulos {{ count }} tulosta'
       error_list:
         date_time_column:
           title: Päivämäärä ja kellonaika

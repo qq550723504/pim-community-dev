@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: Valgte kategorier
-        label: "{0}Alle produkter|{1}En valgt kategori|]1,Inf[{{ count }} valgte kategorier"
+        label: "{0}Alle produkter|{1}En valgt kategori,Inf[{{ count }} valgte kategorier"
         title: Velg kategorier
     locales:
       validation:
@@ -31,7 +31,7 @@ pim_import_export:
         upload:
           error: Det var ikke mulig å laste opp filen. Det er mulig filens størrelse overskrider maks grense for opplasting definert i PHP eller HTTP-server konfigurasjon
       page_title:
-        index: "]-Inf, 1] {{ count }} importprofil|]1, Inf [{{ count }} importprofiler"
+        index: " {{ count }} importprofil, Inf [{{ count }} importprofiler"
       module:
         create:
           button: Opprett importprofil
@@ -41,7 +41,7 @@ pim_import_export:
         create:
           success: Eksportprofil ble opprettet
       page_title:
-        index: "]-Inf, 1] {{ count }} eksportprofil|]1, Inf [{{ count }} eksportprofiler"
+        index: " {{ count }} eksportprofil, Inf [{{ count }} eksportprofiler"
       module:
         create:
           button: Opprett eksportprofil

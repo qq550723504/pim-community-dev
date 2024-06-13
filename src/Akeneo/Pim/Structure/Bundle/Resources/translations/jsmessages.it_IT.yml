@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: Attributo utilizzato come immagine principale
     empty_attribute_as_image: Non Selezionato
   page_title:
-    index: "]-Inf, 1]{{ count }} famiglia|]1, Inf[{{ count }} famiglie"
+    index: "{{ count }} famiglia，{{ count }} famiglie"
   module:
     attributes:
       not_required_label: Non obbligatorio
@@ -75,7 +75,7 @@ pim_enrich.entity.attribute_option:
     delete:
       fail: Errore durante la cancellazione dell'opzione attributo
   page_title:
-    index: "]-Inf, 1]{{ count }} opzione|]1, Inf[{{ count }} opzioni"
+    index: "{{ count }} opzione，{{ count }} opzioni"
   module:
     edit:
       cancel_title: Annulla la modifica
@@ -110,7 +110,7 @@ pim_enrich.entity.association_type:
       success: Tipo di associazione rimossa con successo
       fail: Non è possibile eliminare questo tipo di associazione
   page_title:
-    index: "]-Inf, 1]{{ count }} tipo associazione|]1, Inf[{{ count }} tipi associazione"
+    index: "{{ count }} tipo associazione，{{ count }} tipi associazione"
   module:
     create:
       title: Creare un nuovo tipo di associazione
@@ -138,7 +138,7 @@ pim_enrich.entity.group_type:
       success: Tipo di gruppo rimosso con successo
       fail: Non è possibile eliminare questo tipo di gruppo
   page_title:
-    index: "]-Inf, 1]{{ count }} tipo gruppo|]1, Inf[{{ count }} tipi gruppo"
+    index: "{{ count }} tipo gruppo，{{ count }} tipi gruppo"
   module:
     create:
       button: Crea tipo gruppo
@@ -156,7 +156,7 @@ pim_enrich.entity.attribute:
       success: Attributo rimosso con successo
       fail: Non è possibile eliminare questo attributo
   page_title:
-    index: "]-Inf, 1]{{ count }} attributo|]1, Inf[{{ count }} attributi"
+    index: "{{ count }} attributo，{{ count }} attributi"
   property:
     allowed_extensions: Estensioni consentite
     auto_option_sorting: Ordina automaticamente le opzioni in ordine alfabetico
@@ -232,9 +232,9 @@ pim_enrich.entity.attribute:
     delete:
       confirm: Sei sicuro di voler eliminare questo attributo?
       attribute_removal: L'attributo verrà rimosso da tutti i prodotti.
-      product_count: '{0}0 prodotti|{1}1 prodotto|]1, Inf[{{ count }} prodotti'
-      product_model_count: '{0}0 modelli di prodotto|{1}1 modello di prodotto|]1, Inf[{{ count }} modelli di prodotto'
-      used: ']-Inf,1]attualmente ha dei valori impostati per questo attributo.|]1, Inf[attualmente hanno dei valori impostati per questo attributo.'
+      product_count: '{0}0 prodotti|{1}1 prodotto，{{ count }} prodotti'
+      product_model_count: '{0}0 modelli di prodotto|{1}1 modello di prodotto，{{ count }} modelli di prodotto'
+      used: ']-Inf,1]attualmente ha dei valori impostati per questo attributo.，attualmente hanno dei valori impostati per questo attributo.'
       helper:
         content: Se è necessario modificare il tipo di attributo, per renderlo localizzabile o applicabile, mantenendo l'accesso ai valori degli attributi esistenti,
         link: consulta il nostro Help Center (per ulteriori informazioni).
@@ -245,7 +245,7 @@ pim_enrich.entity.attribute:
     mass_delete:
       modal:
         title: Attributi
-        subtitle: '{1}Conferma l''eliminazione di {{ count }} attributo|]1, Inf[Conferma l''eliminazione di {{ count }} attributi'
+        subtitle: '{1}Conferma l''eliminazione di {{ count }} attributo，Conferma l''eliminazione di {{ count }} attributi'
         label: Digita "{{ textToCheck }}"
         confirm: Confermi di voler eliminare questi attributi?
       message_bar:
@@ -255,7 +255,7 @@ pim_enrich.entity.attribute_group:
   label: Attributi di gruppo
   uppercase_label: Gruppo attributi
   plural_label: Gruppi di attributi
-  result_count: '{0}0 gruppi di attributo|{1}1 gruppo di attributo|]1, Inf[{{ count }} gruppi di attributo'
+  result_count: '{0}0 gruppi di attributo|{1}1 gruppo di attributo，{{ count }} gruppi di attributo'
   limit_reached: Hai raggiunto il limite di {{ limit }} gruppi di attributi.
   show_more_attribute:
     title: Qui è un po' affollato, ti mostriamo {{ attributeCount }}/{{ totalAttributeCount }} attributi.
@@ -286,20 +286,20 @@ pim_enrich.entity.attribute_group:
   grid:
     columns:
       attribute_count: Conteggio attributi correlati
-  selected: '{0}0 gruppi di attributi selezionati|{1}1 gruppo di attributi selezionato|]1, Inf[{{ count }} gruppi di attributi selezionati'
+  selected: '{0}0 gruppi di attributi selezionati|{1}1 gruppo di attributi selezionato，{{ count }} gruppi di attributi selezionati'
   mass_delete:
-    confirm: '{1}Confermi di voler eliminare questo gruppo di attributi?|]1, Inf[Confermi di voler eliminare questi {{ count }} gruppi di attributi?'
+    confirm: '{1}Confermi di voler eliminare questo gruppo di attributi?，Confermi di voler eliminare questi {{ count }} gruppi di attributi?'
     confirmation_phrase: 'Digita "{{ confirmation_word }}"'
     confirmation_word: elimina
-    attribute_warning: '{1}L''eliminazione di questi gruppi di attributi avrà effetto su {{ number_of_attribute }} attributo correlato. Dovrai spostare questo attributo correlato in un nuovo gruppo di attributi.|]1, Inf[L''eliminazione di questi gruppi di attributi avrà effetto su {{ number_of_attribute }} attributi correlati. Dovrai spostare questi attributi correlati in un nuovo gruppo.'
-    select_attribute_group: '{1}Seleziona il gruppo di attributi in cui spostare l''attributo correlato |]1, Inf[Seleziona il gruppo di attributi in cui spostare i {{ number_of_attribute }} attributi correlati:'
+    attribute_warning: '{1}L''eliminazione di questi gruppi di attributi avrà effetto su {{ number_of_attribute }} attributo correlato. Dovrai spostare questo attributo correlato in un nuovo gruppo di attributi.，L''eliminazione di questi gruppi di attributi avrà effetto su {{ number_of_attribute }} attributi correlati. Dovrai spostare questi attributi correlati in un nuovo gruppo.'
+    select_attribute_group: '{1}Seleziona il gruppo di attributi in cui spostare l''attributo correlato ，Seleziona il gruppo di attributi in cui spostare i {{ number_of_attribute }} attributi correlati:'
     empty_result_label: 'Nessun gruppo di attributi trovato'
     placeholder: 'Seleziona gruppo di attributi'
     open_label: 'elenco gruppi di attributi'
   delete:
     confirm: 'Confermi di voler eliminare questo gruppo di attributi?'
     attribute_warning: 'L''eliminazione di questo gruppo di attributi avrà effetto su {{ number_of_attribute }} attributo correlato. Dovrai spostare questo attributo correlato in un nuovo gruppo di attributi.'
-    select_attribute_group: '{1}Seleziona il gruppo di attributi in cui spostare l''attributo correlato:|]1, Inf[Seleziona il gruppo di attributi in cui spostare i {{ number_of_attribute }} attributi correlati:'
+    select_attribute_group: '{1}Seleziona il gruppo di attributi in cui spostare l''attributo correlato:，Seleziona il gruppo di attributi in cui spostare i {{ number_of_attribute }} attributi correlati:'
   batch_jobs:
     delete_attribute_groups:
       delete_attribute_groups:
@@ -312,7 +312,7 @@ pim_import_export:
       success: Eliminazione in blocco dei gruppi di attributi completata
 pim_enrich.mass_edit.family:
   title: Azione di massa sulle famiglie
-  confirm: "{1}Stai per aggiornare una famiglia con le seguenti informazioni, conferma.|]1, Inf[Stai per aggiornare {{ itemsCount }} famiglie con le seguenti informazioni, conferma."
+  confirm: "{1}Stai per aggiornare una famiglia con le seguenti informazioni, conferma.，Stai per aggiornare {{ itemsCount }} famiglie con le seguenti informazioni, conferma."
   step:
     select:
       label: Scegli le famiglie
@@ -329,7 +329,7 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: Imposta i requisiti degli attributi
       description: I requisiti degli attributi seguenti saranno applicati alle famiglie selezionate
-      label_count: "{1}imposta i requisiti degli attributi di <span class=\"AknFullPage-title--highlight\">1 famiglia</span>|]1, Inf[imposta i requisiti degli attributi di <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} famiglie</span>"
+      label_count: "{1}imposta i requisiti degli attributi di <span class=\"AknFullPage-title--highlight\">1 famiglia</span>，imposta i requisiti degli attributi di <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} famiglie</span>"
 batch_jobs:
   default_steps:
     delete_attribute_groups: Elimina gruppi di attributi

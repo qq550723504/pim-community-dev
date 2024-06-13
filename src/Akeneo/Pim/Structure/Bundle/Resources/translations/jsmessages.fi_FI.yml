@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: Pääkuvana käytettävä attribuutti
     empty_attribute_as_image: Ei ole valittu
   page_title:
-    index: "]-Inf, 1] {{ count }} perhe|]1, Inf [{{ count }} perhettä"
+    index: " {{ count }} perhe, Inf [{{ count }} perhettä"
   module:
     attributes:
       not_required_label: Ei vaadittu
@@ -105,7 +105,7 @@ pim_enrich.entity.association_type:
       success: Assosiaatiotyyppi poistettu onnistuneesti
       fail: Liitostyyppiä ei voi poistaa
   page_title:
-    index: "]-Inf, 1] {{ count }} assosiaatiotyyppi|]1, Inf [{{ count }} assosiaatiotyyppiä"
+    index: " {{ count }} assosiaatiotyyppi, Inf [{{ count }} assosiaatiotyyppiä"
   module:
     create:
       title: Luo uusi tuoteliitostyyppi
@@ -133,7 +133,7 @@ pim_enrich.entity.group_type:
       success: Ryhmätyyppi poistettu onnistuneesti
       fail: Ryhmätyyppiä ei voi poistaa
   page_title:
-    index: "]-Inf, 1] {{ count }} ryhmätyyppi|]1, Inf [{{ count }} ryhmätyyppiä"
+    index: " {{ count }} ryhmätyyppi, Inf [{{ count }} ryhmätyyppiä"
   module:
     create:
       button: Luo ryhmätyyppi
@@ -152,7 +152,7 @@ pim_enrich.entity.attribute:
       success: Attribuutin poistaminen onnistui
       fail: Attribuuttia ei voi poistaa
   page_title:
-    index: "]-Inf, 1] {{ count }} attribuutti|]1, Inf [{{ count }} attribuuttia"
+    index: " {{ count }} attribuutti, Inf [{{ count }} attribuuttia"
   property:
     allowed_extensions: Sallitut laajennukset
     auto_option_sorting: Järjestä arvot automaattisesti aakkosjärjestykseen
@@ -222,8 +222,8 @@ pim_enrich.entity.attribute:
       select_locale: Valitse lokaali
     delete:
       confirm: Oletko varma, että haluat poistaa tämän attribuutin?
-      product_count: '{0}0 tuotetta|{1}1 tuote|]1, Inf[{{ count }} tuotetta'
-      product_model_count: '{0}0 tuotemallia|{1}1 tuotemalli|]1, Inf[{{ count }} tuotemallia'
+      product_count: '{0}0 tuotetta|{1}1 tuote，{{ count }} tuotetta'
+      product_model_count: '{0}0 tuotemallia|{1}1 tuotemalli，{{ count }} tuotemallia'
       helper:
         content: If you need to change your attribute type, to make it localizable or scopable, while keeping access to your existing attribute values,
       type: Kirjoita "{{ attributeCode }}"
@@ -234,7 +234,7 @@ pim_enrich.entity.attribute_group:
   label: attribuuttiryhmä
   uppercase_label: Attribuuttiryhmä
   plural_label: Attribuuttiryhmät
-  result_count: '{0}0 attribuuttiryhmää|{1}1 attribuuttiryhmä|]1, Inf[{{ count }} attribuuttiryhmää'
+  result_count: '{0}0 attribuuttiryhmää|{1}1 attribuuttiryhmä，{{ count }} attribuuttiryhmää'
   show_more_attribute:
     title: Täällä on hiukan tungosta. Näytämme {{ productCount }}/{{ totalCount }} tuotteista.
     subtitle: Löytääksesi kaikki tämän ryhmän attribuutit, klikkaa vain alta!
@@ -260,7 +260,7 @@ pim_enrich.entity.attribute_group:
     no_search_result: Valitettavasti haullesi ei löytynyt tuloksia.
 pim_enrich.mass_edit.family:
   title: Perheiden massamuokkaus
-  confirm: "{1}Olet muokkaamassa perhettä seuraavilla tiedoilla, ole hyvä ja vahvista.|]1, Inf[Olet muokkaamassa {{ itemsCount }} perhettä seuraavilla tiedoilla, ole hyvä ja vahvista."
+  confirm: "{1}Olet muokkaamassa perhettä seuraavilla tiedoilla, ole hyvä ja vahvista.，Olet muokkaamassa {{ itemsCount }} perhettä seuraavilla tiedoilla, ole hyvä ja vahvista."
   step:
     select:
       label: Valitse tuoteperheet
@@ -277,4 +277,4 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: Aseta vaaditut attribuutit
       description: Seuraavat vaaditut attribuutit lisätään valituille perheille
-      label_count: "{1}Aseta vaaditut attribuutit <span class=\"AknFullPage-title--highlight\">1 perheelle</span>|]1, Inf[Aseta vaaditut attribuutit <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} perheelle</span>"
+      label_count: "{1}Aseta vaaditut attribuutit <span class=\"AknFullPage-title--highlight\">1 perheelle</span>，Aseta vaaditut attribuutit <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} perheelle</span>"

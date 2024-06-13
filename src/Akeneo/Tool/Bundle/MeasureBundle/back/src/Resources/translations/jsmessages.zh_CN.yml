@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: 搜索标签或代码
   family:
-    result_count: "{0}0 个测量单位群|{1}1 个测量单位群|]1, Inf[{{ itemsCount }} 个测量单位群"
+    result_count: "{0}0 个测量单位群|{1}1 个测量单位群，{{ itemsCount }} 个测量单位群"
     not_found: 找不到测量单位群
     no_data:
       title: 抱歉，没有测量单位群！

@@ -38,7 +38,7 @@ pim_user_management:
         create:
           success: Usuário criado com sucesso.
       page_title:
-        index: "]-Inf, 1] {{ count }} usuário|]1, Inf [{{ count }} usuários"
+        index: " {{ count }} usuário, Inf [{{ count }} usuários"
       properties:
         username: Nome de usuário
         name_prefix: Prefixo do nome
@@ -84,7 +84,7 @@ pim_user_management:
     role:
       plural_label: Papeis
       page_title:
-        index: "]-Inf, 1] {{ count }} papel|]1, Inf [{{ count }} papéis"
+        index: " {{ count }} papel, Inf [{{ count }} papéis"
       module:
         create:
           button: Criar papel
@@ -93,7 +93,7 @@ pim_user_management:
     group:
       plural_label: Grupo de usuários
       page_title:
-        index: "]-Inf, 1] {{ count }} grupo|]1, Inf [{{ count }} grupos"
+        index: " {{ count }} grupo, Inf [{{ count }} grupos"
       module:
         create:
           button: Criar Grupo

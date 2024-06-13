@@ -22,10 +22,10 @@ Millisecond: Millisecondi
 Microsecond: Microsecondi
 "Time Zone": "Fuso orario"
 duration:
-  days: "{0}0 giorni|{1}1 giorno|]1, Inf[{{ count }} giorni"
-  hours: "{0}0 ore|{1}1 ora| ]1, Inf[{{ count }} ore"
-  minutes: "{0}0 minuti|{1}1 minuto|]1, Inf[{{ count }} minuti"
-  seconds: "{0}0 secondi|{1}1 secondo|]1, Inf[{{ count }} secondi"
+  days: "{0}0 giorni|{1}1 giorno，{{ count }} giorni"
+  hours: "{0}0 ore|{1}1 ora| {{ count }} ore"
+  minutes: "{0}0 minuti|{1}1 minuto，{{ count }} minuti"
+  seconds: "{0}0 secondi|{1}1 secondo，{{ count }} secondi"
 #PIM messages
 Localized value: Valori localizzati
 Columns: Colonne
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: Prima
   by: da
   cancel: Annulla
-  characters_left: ']-Inf, 1]{{ count }} carattere rimanente|]1, Inf[{{ count }} caratteri rimanenti'
+  characters_left: '{{ count }} carattere rimanente，{{ count }} caratteri rimanenti'
   clear_value: Cancella valore
   close: Chiudi
   code: Codice
@@ -223,14 +223,14 @@ pim_common:
   quality_score: Punteggio qualità
   remove: Rimuovere
   required_label: (richiesto)
-  result_count: "{0}0 risultati|{1}1 risultato|]1, Inf[{{ itemsCount }} risultati"
+  result_count: "{0}0 risultati|{1}1 risultato，{{ itemsCount }} risultati"
   save: Salva
   search: Ricerca
   select2:
     search: Ricerca...
     no_match: Nessuna corrispondenza trovata
     load_more: Carica ulteriori risultati...
-  selected: "{0}Nessun elemento selezionato|{1}Elemento selezionato|]1,Inf[{{ itemsCount }}elementi selezionati"
+  selected: "{0}Nessun elemento selezionato|{1}Elemento selezionato,Inf[{{ itemsCount }}elementi selezionati"
   status: Stato
   to: A
   type: Tipo
@@ -299,7 +299,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: Sei sicuro?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} job|]1, Inf[{{ count }} job"
+    index: "{{ count }} job，{{ count }} job"
   module:
     create:
       upload: Rilascia i tuoi file {{ type }} qui, o clicca per selezionare dal disco
@@ -409,29 +409,29 @@ pim_settings:
   product_settings: Impostazioni prodotti
   automation_settings: Automazione
   count:
-    category_trees: '{0}Hai 0 alberi |{1}Hai 1 albero |]1, Inf[Hai {{ count }} alberi '
-    categories: '{0}e 0 categorie|{1}e 1 categoria|]1, Inf[e {{ count }} categorie'
-    channels: '{0}Hai 0 canali|{1}Hai 1 canale|]1, Inf[Hai {{ count }} canali'
-    locales: '{0}Hai 0 impostazioni locali abilitate|{1}Hai 1 impostazione locale abilitata|]1, Inf[Hai {{ count }} impostazioni locali abilitate'
-    currencies: '{0}Hai 0 valute abilitate|{1}Hai 1 valuta abilitata|]1, Inf[Hai {{ count }} valute abilitate'
-    attribute_groups: '{0}Hai 0 gruppi di attributo|{1}Hai 1 gruppo di attributo|]1, Inf[Hai {{ count }} gruppi di attributo'
-    attributes: '{0}Hai 0 attributi|{1}Hai 1 attributo|]1, Inf[Hai {{ count }} attributi'
-    families: '{0}Hai 0 famiglie|{1}Hai 1 famiglia|]1, Inf[Hai {{ count }} famiglie'
-    measurements: '{0}Hai 0 unità di misura|{1}Hai 1 unità di misura|]1, Inf[Hai {{ count }} unità di misura'
-    association_types: '{0}Hai 0 tipi di associazione|{1}Hai 1 tipo di associazione|]1, Inf[Hai {{ count }} tipi di associazione'
-    group_types: '{0}Hai 0 tipi di gruppo|{1}Hai 1 tipo di gruppo|]1, Inf[Hai {{ count }} tipi di gruppo'
-    groups: '{0}Hai 0 gruppi|{1}Hai 1 gruppo|]1, Inf[Hai {{ count }} gruppi'
-    rules: '{0}Hai 0 regole abilitate|{1}Hai 1 regola abilitata|]1, Inf[Hai {{ count }} regole abilitate'
-    identifier_generators: '{0}Hai 0 generatori di identificatori|{1}Hai 1 generatore di identificatori|]1, Inf[Hai {{ count }} generatori di identificatori'
+    category_trees: '{0}Hai 0 alberi |{1}Hai 1 albero ，Hai {{ count }} alberi '
+    categories: '{0}e 0 categorie|{1}e 1 categoria，e {{ count }} categorie'
+    channels: '{0}Hai 0 canali|{1}Hai 1 canale，Hai {{ count }} canali'
+    locales: '{0}Hai 0 impostazioni locali abilitate|{1}Hai 1 impostazione locale abilitata，Hai {{ count }} impostazioni locali abilitate'
+    currencies: '{0}Hai 0 valute abilitate|{1}Hai 1 valuta abilitata，Hai {{ count }} valute abilitate'
+    attribute_groups: '{0}Hai 0 gruppi di attributo|{1}Hai 1 gruppo di attributo，Hai {{ count }} gruppi di attributo'
+    attributes: '{0}Hai 0 attributi|{1}Hai 1 attributo，Hai {{ count }} attributi'
+    families: '{0}Hai 0 famiglie|{1}Hai 1 famiglia，Hai {{ count }} famiglie'
+    measurements: '{0}Hai 0 unità di misura|{1}Hai 1 unità di misura，Hai {{ count }} unità di misura'
+    association_types: '{0}Hai 0 tipi di associazione|{1}Hai 1 tipo di associazione，Hai {{ count }} tipi di associazione'
+    group_types: '{0}Hai 0 tipi di gruppo|{1}Hai 1 tipo di gruppo，Hai {{ count }} tipi di gruppo'
+    groups: '{0}Hai 0 gruppi|{1}Hai 1 gruppo，Hai {{ count }} gruppi'
+    rules: '{0}Hai 0 regole abilitate|{1}Hai 1 regola abilitata，Hai {{ count }} regole abilitate'
+    identifier_generators: '{0}Hai 0 generatori di identificatori|{1}Hai 1 generatore di identificatori，Hai {{ count }} generatori di identificatori'
 pim_system:
   system_menu: Menu di sistema
   system_navigation: Sistema
   users_management_navigation: Gestione utenti
   count:
-    product_values: '{0}Hai 0 valori di prodotto<unk>{1}Hai 1 valore di prodotto<unk> ]1, Inf[Hai {{ count }} valori di prodotto'
-    users: '{0}Hai 0 utenti|{1}Hai 1 utente|]1, Inf[Hai {{ count }} utenti'
-    user_groups: '{0}Hai 0 gruppi di utenti|{1}Hai 1 gruppo di utenti|]1, Inf[Hai {{ count }} gruppi di utenti'
-    roles: '{0}Hai 0 ruoli|{1}Hai 1 ruolo|]1, Inf[Hai {{ count }} ruoli'
+    product_values: '{0}Hai 0 valori di prodotto<unk>{1}Hai 1 valore di prodotto<unk> Hai {{ count }} valori di prodotto'
+    users: '{0}Hai 0 utenti|{1}Hai 1 utente，Hai {{ count }} utenti'
+    user_groups: '{0}Hai 0 gruppi di utenti|{1}Hai 1 gruppo di utenti，Hai {{ count }} gruppi di utenti'
+    roles: '{0}Hai 0 ruoli|{1}Hai 1 ruolo，Hai {{ count }} ruoli'
   sso:
     enabled: SSO abilitato
     disabled: SSO disabilitato

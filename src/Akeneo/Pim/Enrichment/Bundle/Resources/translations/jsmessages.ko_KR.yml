@@ -34,9 +34,9 @@ pim_enrich.entity.product:
       success: 제품 생성됨
       fail: 제품 식별자로 특성이 구성되지 않았거나 특성을 편집할 권한이 없습니다.
   page_title:
-    index: "]-Inf, 1]{{ count }} 결과|]1, Inf[{{ count }} 결과"
-    product: "]-Inf, 1]{{ count }}개 제품|]1, Inf[{{ count }}개 제품"
-    product_model: "]-Inf, 1]{{ count }}개 제품 모델|]1, Inf[{{ count }}개 제품 모델"
+    index: "{{ count }} 결과，{{ count }} 결과"
+    product: "{{ count }}개 제품，{{ count }}개 제품"
+    product_model: "{{ count }}개 제품 모델，{{ count }}개 제품 모델"
     product_and_product_model: "{{ productCount }}, {{ productModelCount }}"
   module:
     create:
@@ -84,7 +84,7 @@ pim_enrich.entity.product:
       remove_optional: 이 특성 제거
       locale_specific_unavailable: 이 로케일 관련 필드는 해당 로케일에서 사용할 수 없습니다.
       locale_unavailable: 이 지역화 가능 필드는 로케일 '{{ locale }}' 및 채널 '{{ channel }}'에 사용할 수 없습니다.
-      to_fill_count: "{1}1 누락 필수 특성|]1, Inf [{{ count }} 누락 필수 특성"
+      to_fill_count: "{1}1 누락 필수 특성, Inf [{{ count }} 누락 필수 특성"
       add_attribute_option: 특성 옵션 추가
       add_option: 옵션 추가
     completeness:
@@ -92,7 +92,7 @@ pim_enrich.entity.product:
       complete: 완성도
       no_family: 패밀리가 정의되지 않았습니다. 패밀리를 정의하여 이 제품의 완성도를 계산하십시오.
       no_completeness: 제품의 패밀리를 방금 변경했습니다. 이 패밀리를 먼저 저장하고 새 패밀리에 대한 완성도를 계산하십시오.
-      missing_values: "{1}1 누락 값|]1, Inf[{{ count }} 누락 값"
+      missing_values: "{1}1 누락 값，{{ count }} 누락 값"
     sequential_edit:
       item_limit: 이 순차 편집에서 처음 1000개 항목만 표시됨({{ count }}개 선택됨)
       empty: 아무것도 선택하지 않았습니다. 검색 조건을 변경하십시오.
@@ -178,10 +178,10 @@ pim_enrich.entity.product_model:
     variant_axis:
       label: '변형 축'
       create: 새로 추가
-      title_create_label: "]-Inf, 1]새 {{ axes }} 추가|]1, Inf[새 {{ axes }} 추가"
+      title_create_label: "새 {{ axes }} 추가，새 {{ axes }} 추가"
       required_label: '(변형 축)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} 변형 제품|]1, Inf[{{ complete }} / {{ total }} 변형 제품"
+      variant_product: "{{ complete }} / {{ total }} 변형 제품，{{ complete }} / {{ total }} 변형 제품"
       label: 변형
     delete:
       confirm: 이 제품 모델을 삭제하시겠습니까? 모든 하위 모델, 제품 모델 및 변형 제품도 삭제됩니다.
@@ -199,7 +199,7 @@ pim_enrich.entity.group:
       success: 그룹 제거됨
       fail: 이 그룹을 삭제할 수 없음
   page_title:
-    index: "]-Inf, 1]{{ count }} 그룹|]1, Inf[{{ count }} 그룹"
+    index: "{{ count }} 그룹，{{ count }} 그룹"
   module:
     create:
       button: 그룹 만들기
@@ -217,7 +217,7 @@ pim_enrich.entity.category:
   uppercase_label: 카테고리
   plural_label: 카테고리
   page_title:
-    index: "]-Inf, 1]{{ count }}개 트리|]1, Inf[{{ count }}개 트리"
+    index: "{{ count }}개 트리，{{ count }}개 트리"
   content:
     empty_tree_list:
       title: 트리가 없습니다.
@@ -227,7 +227,7 @@ pim_enrich.entity.category:
         label: 트리 레이블
         number_of_categories: 카테고리 수
         actions: 작업
-        count_categories: ']-Inf, 1]{{ count }}개 카테고리|]1, Inf[{{ count }}개 카테고리'
+        count_categories: '{{ count }}개 카테고리，{{ count }}개 카테고리'
     tree:
       not_found: 카테고리 트리를 찾을 수 없습니다.
     edit:
@@ -271,7 +271,7 @@ pim_enrich.export.product:
     locales:
       help: "로케일은 내보낼 지역화된 제품 값을 정의합니다. 예: 프랑스어의 제품 정보만"
     attributes:
-      label: "{0}모든 특성|{1}1개 특성 선택됨|]1,Inf[{{ count }}개 특성 선택됨"
+      label: "{0}모든 특성|{1}1개 특성 선택됨,Inf[{{ count }}개 특성 선택됨"
       help: "내보낼 제품 정보를 선택합니다. 예: 기술 특성만 "
       empty: 모든 특성을 내보냅니다.
       modal:
@@ -344,7 +344,7 @@ pim_enrich.export.product:
     title: 전역 설정
 pim_enrich.mass_edit.product:
   title: 제품 일괄 작업
-  confirm: "{0}다음 정보로 일부 제품을 업데이트하려고 하며 이전 값은 대체됩니다. 확인해주십시오.|{1}다음 정보로 1개 제품을 업데이트하려고 하며 이전 값은 대체됩니다. 확인해주십시오.|]1, Inf[다음 정보로 {{ itemsCount }}개 제품을 업데이트하려고 하며 이전 값은 대체됩니다. 확인해주십시오."
+  confirm: "{0}다음 정보로 일부 제품을 업데이트하려고 하며 이전 값은 대체됩니다. 확인해주십시오.|{1}다음 정보로 1개 제품을 업데이트하려고 하며 이전 값은 대체됩니다. 확인해주십시오.，다음 정보로 {{ itemsCount }}개 제품을 업데이트하려고 하며 이전 값은 대체됩니다. 확인해주십시오."
   step:
     select:
       label: 제품 선택
@@ -364,59 +364,59 @@ pim_enrich.mass_edit.product:
       select_attributes: 특성 선택
     change_status:
       label: 상태 변경
-      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 상태 변경|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 상태 변경|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 상태 변경"
+      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 상태 변경|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 상태 변경，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 상태 변경"
       description: 선택한 제품이 활성화 또는 비활성화됩니다.
       field: 활성화하려면
     edit_common:
       label: 특성 값 편집
-      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 특성 값 편집|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 특성 값 편집|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 특성 값 편집"
+      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 특성 값 편집|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 특성 값 편집，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 특성 값 편집"
       description: 선택한 제품의 패밀리에 속하는 특성만 {{ locale }} 로케일 및 {{ scope }} 채널에 대해 다음 데이터를 사용하여 편집됩니다. 이전 값은 대체됩니다.
       no_update: 업데이트할 필드를 하나 이상 선택하십시오.
     add_attribute_value:
       label: 특성 값 추가
-      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 특성 값 추가|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 특성 값 추가|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 특성 값 추가"
+      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 특성 값 추가|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 특성 값 추가，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 특성 값 추가"
       description: 제품 패밀리에 속하는 다중 값 특성만 {{ locale }} 로케일 및 {{ scope }} 채널에 대한 다음 데이터를 사용하여 편집됩니다. 특성 값이 추가되고, 이전 값은 유지됩니다.
     change_family:
       label: 패밀리 변경
-      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 패밀리 변경|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 패밀리 변경|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 패밀리 변경"
+      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 패밀리 변경|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 패밀리 변경，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 패밀리 변경"
       description: 선택한 제품의 패밀리가 선택한 패밀리로 변경됩니다.
     add_to_group:
       label: 그룹에 추가
-      label_count: "{0}그룹에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 추가|{1}그룹에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 추가|]1, Inf[그룹에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 추가"
+      label_count: "{0}그룹에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 추가|{1}그룹에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 추가，그룹에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 추가"
       description: 선택한 제품을 추가할 그룹을 선택합니다.
       field: 그룹
       no_update: 계속하려면 그룹을 선택하십시오.
     add_to_category:
       label: 카테고리에 추가
-      label_count: "{0}카테고리에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 추가|{1}카테고리에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 추가|]1, Inf[카테고리에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 추가"
+      label_count: "{0}카테고리에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 추가|{1}카테고리에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 추가，카테고리에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 추가"
       description: 해당 제품은 다음 카테고리로 분류되고, 기존 분류는 유지됩니다.
     move_to_category:
       label: 카테고리 간 이동
-      label_count: "{0}카테고리 간에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 이동|{1}카테고리 간에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 이동|]1, Inf[카테고리 간에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 이동"
+      label_count: "{0}카테고리 간에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 이동|{1}카테고리 간에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 이동，카테고리 간에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 이동"
       description: 해당 제품은 다음 카테고리로 분류되고, 기존 분류는 손실됩니다.
       no_update: 카테고리를 선택해주십시오.
     remove_from_category:
       label: 카테고리에서 제거
-      label_count: "{0}카테고리에서 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 제거|{1}카테고리에서 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 제거|]1, Inf[카테고리에서 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 제거"
+      label_count: "{0}카테고리에서 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 제거|{1}카테고리에서 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 제거，카테고리에서 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 제거"
       description: 다음 카테고리에서 제품이 제거됩니다.
       no_update: 선택한 제품을 제거하기 위해 선택한 카테고리가 없습니다.
     add_to_existing_product_model:
       label: 기존 제품 모델에 추가
-      label_count: "{0}기존 제품 모델에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 추가|{1}기존 제품 모델에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 추가|]1, Inf[기존 제품 모델에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 추가"
+      label_count: "{0}기존 제품 모델에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 추가|{1}기존 제품 모델에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 추가，기존 제품 모델에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 추가"
       description: 선택된 제품 모델은 제품을 모으고 공통 속성 보강을 허용합니다.
       no_update: 계속하려면 제품 모델을 선택하십시오.
     convert_to_simple_products:
       label: 단일 제품으로 변환
-      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>을 단일 제품으로 변환|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>을 단일 제품으로 변환|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>을 단일 제품으로 변환"
+      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>을 단일 제품으로 변환|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>을 단일 제품으로 변환，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>을 단일 제품으로 변환"
       description: 이전의 모든 값, 카테고리, 연결이 저장됩니다.
     associate_to_product_and_product_model:
       label: 제품 연결
-      label_count: "{0}제품 또는 제품 모델에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 연결|{1}제품 또는 제품 모델에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 연결|]1, Inf[제품 또는 제품 모델에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 연결"
+      label_count: "{0}제품 또는 제품 모델에 일부 <span class=\"AknFullPage-title--highlight\">제품</span> 연결|{1}제품 또는 제품 모델에 <span class=\"AknFullPage-title--highlight\">1개 제품</span> 연결，제품 또는 제품 모델에 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span> 연결"
       description: 그리드에서 선택된 제품은 선택된 연결 유형의 선택된 제품 및 제품 모델에 연결됩니다.
       validate: 다음 단계로 이동하기 전에 연결을 추가하십시오.
     change_parent_product_model:
       label: 상위 제품 모델 변경
-      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 상위 제품 모델 변경|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 상위 제품 모델 변경|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 상위 제품 모델 변경"
+      label_count: "{0}일부 <span class=\"AknFullPage-title--highlight\">제품</span>의 상위 제품 모델 변경|{1}<span class=\"AknFullPage-title--highlight\">1개 제품</span>의 상위 제품 모델 변경，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 제품</span>의 상위 제품 모델 변경"
       description: 그리드에서 선택된 변형 제품 또는 하위 제품 모델의 상위 모델이 선택된 제품 모델로 변경됩니다.
 pim_datagrid:
   no_entities: "{{ entityHint }}을(를) 찾을 수 없습니다."
@@ -457,9 +457,9 @@ pim_datagrid:
     sequential_edit: 순차 편집
     mass_delete: 대량 삭제
     selected:
-      family: "]-Inf, 1]{{ count }}개 패밀리 선택|]1, Inf[{{ count }}개 패밀리 선택"
-      attribute: "]-Inf, 1]{{ count }}개 특성 선택됨|]1, Inf[{{ count }}개 특성 선택됨"
-      product: "]-Inf, 1]{{ count }}개 결과 선택|]1, Inf[{{ count }}개 결과 선택"
+      family: "{{ count }}개 패밀리 선택，{{ count }}개 패밀리 선택"
+      attribute: "{{ count }}개 특성 선택됨，{{ count }}개 특성 선택됨"
+      product: "{{ count }}개 결과 선택，{{ count }}개 결과 선택"
   view_selector:
     view: 보기
     choose_type: 비공개 뷰를 만들겠습니다.

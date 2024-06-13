@@ -34,9 +34,9 @@ pim_enrich.entity.product:
       success: Product succesvol aangemaakt
       fail: Er is geen attribuut geconfigureerd als product-id of je hebt niet de benodigde bewerkingsrechten.
   page_title:
-    index: "]-Inf, 1]{{ count }} resultaat|]1, Inf[{{ count }} resultaten"
-    product: "]-Inf, 1]{{ count }} product|]1, Inf[{{ count }} producten"
-    product_model: "]-Inf, 1]{{ count }} productmodel|]1, Inf[{{ count }} productmodellen"
+    index: "{{ count }} resultaat，{{ count }} resultaten"
+    product: "{{ count }} product，{{ count }} producten"
+    product_model: "{{ count }} productmodel，{{ count }} productmodellen"
     product_and_product_model: "{{ productCount }}, {{ productModelCount }}"
   module:
     create:
@@ -84,7 +84,7 @@ pim_enrich.entity.product:
       remove_optional: Dit attribuut verwijderen
       locale_specific_unavailable: Dit lokaliseerbare veld is niet beschikbaar in deze lokalisatie
       locale_unavailable: Dit lokaliseerbare veld is niet beschikbaar voor locale '{{ locale }}' en kanaal '{{ channel }}'
-      to_fill_count: "{1}1 ontbrekende vereiste attribuut|]1, Inf[{{ count }} ontbrekende vereiste attributen"
+      to_fill_count: "{1}1 ontbrekende vereiste attribuut，{{ count }} ontbrekende vereiste attributen"
       add_attribute_option: Voeg attribuut optie toe
       add_option: Optie toevoegen
     completeness:
@@ -92,7 +92,7 @@ pim_enrich.entity.product:
       complete: Volledigheid
       no_family: Geen familie gedefinieerd. Gelieve een familie te definiëren om de volledigheid van dit product te berekenen.
       no_completeness: Je hebt net de familie van dit product gewijzigd. Gelieve deze eerst te bewaren om de volledigheid van de nieuwe familie te kunnen berekenen.
-      missing_values: "{1}1 ontbrekende waarde|]1, Inf[{{ count }} ontbrekende waarden"
+      missing_values: "{1}1 ontbrekende waarde，{{ count }} ontbrekende waarden"
     sequential_edit:
       item_limit: Enkel de eerste 1000 items uit deze sequentiële bewerking ({{ count }} geselecteerd) worden getoond
       empty: Uw selectie heeft geen resultaten, gelieve uw zoekcriteria te wijzigen
@@ -178,10 +178,10 @@ pim_enrich.entity.product_model:
     variant_axis:
       label: 'variant as'
       create: Nieuwe toevoegen
-      title_create_label: "]-Inf, 1]Voeg een nieuwe {{ axes }}|]1, Inf[Voeg een nieuwe {{ axes }} toe"
+      title_create_label: "Voeg een nieuwe {{ axes }}，Voeg een nieuwe {{ axes }} toe"
       required_label: '(variant as)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} variant product|]1, Inf[{{ complete }}   {{ total }} variant producten"
+      variant_product: "{{ complete }} / {{ total }} variant product，{{ complete }}   {{ total }} variant producten"
       label: Variant
     delete:
       confirm: Weet u zeker dat u dit product model wil verwijderen? Alle kinderen, productmodellen en productvarianten zullen ook verwijderd worden.
@@ -199,7 +199,7 @@ pim_enrich.entity.group:
       success: Groep succesvol verwijderd
       fail: Kan deze groep niet verwijderen
   page_title:
-    index: "]-Inf, 1]{{ count }} groep|]1, Inf[{{ count }} groepen"
+    index: "{{ count }} groep，{{ count }} groepen"
   module:
     create:
       button: Groep aanmaken
@@ -217,7 +217,7 @@ pim_enrich.entity.category:
   uppercase_label: Categorie
   plural_label: Categorieën
   page_title:
-    index: "]-Inf, 1]{{ count }} boom|]1, Inf[{{ count }} bomen"
+    index: "{{ count }} boom，{{ count }} bomen"
   content:
     empty_tree_list:
       title: U hebt nog geen boom.
@@ -227,7 +227,7 @@ pim_enrich.entity.category:
         label: Boomlabel
         number_of_categories: Aantal categorieën
         actions: Acties
-        count_categories: ']-Inf, 1]{{ count }} categorie|]1, Inf[{{ count }} categorieën'
+        count_categories: '{{ count }} categorie，{{ count }} categorieën'
     tree:
       not_found: Categorieboom niet gevonden
     edit:
@@ -271,7 +271,7 @@ pim_enrich.export.product:
     locales:
       help: "De lokalen definiëren de gelokaliseerde productwaarden in de export. Bijv: enkel productinformatie in het Frans."
     attributes:
-      label: "{0}Alle attributen|{1}Één attribuut geselecteerd|]1,Inf[ {{ count }} attributen geselecteerd"
+      label: "{0}Alle attributen|{1}Één attribuut geselecteerd,Inf[ {{ count }} attributen geselecteerd"
       help: "Selecteer de productinformatie om te exporteren. Bijv. enkel technische attributen."
       empty: Alle attributen worden geëxporteerd
       modal:
@@ -348,7 +348,7 @@ pim_enrich.export.product:
     title: Algemene instellingen
 pim_enrich.mass_edit.product:
   title: Bulkactie voor producten
-  confirm: "{0}U staat op het punt een aantal producten met de volgende informatie te updaten, de oude waarden zullen worden vervangen. Graag bevestigen.|{1}U staat op het punt een product bij te werken met de volgende informatie, de vroegere waarden zullen worden vervangen. Graag bevestigen.|]1, Inf[U staat op het punt om {{ itemsCount }} producten met de volgende informatie bij te werken, de oude waarden zullen worden vervangen. Graag bevestigen."
+  confirm: "{0}U staat op het punt een aantal producten met de volgende informatie te updaten, de oude waarden zullen worden vervangen. Graag bevestigen.|{1}U staat op het punt een product bij te werken met de volgende informatie, de vroegere waarden zullen worden vervangen. Graag bevestigen.，U staat op het punt om {{ itemsCount }} producten met de volgende informatie bij te werken, de oude waarden zullen worden vervangen. Graag bevestigen."
   step:
     select:
       label: Kies producten
@@ -368,59 +368,59 @@ pim_enrich.mass_edit.product:
       select_attributes: Selecteer attributen
     change_status:
       label: Status wijzigen
-      label_count: "{0}Verander de status een aantal <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Verander de status van <span class=\"AknFullPage-title--highlight\">1 product</span>|]1, Inf[Verander de status van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
+      label_count: "{0}Verander de status een aantal <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Verander de status van <span class=\"AknFullPage-title--highlight\">1 product</span>，Verander de status van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
       description: De geselecteerde producten zullen worden ingeschakeld of uitgeschakeld.
       field: Om in te schakelen
     edit_common:
       label: Attribuutwaarden bewerken
-      label_count: "{0}Bewerk de attribuutwaarden van enkele <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Bewerk de attribuutwaarden van <span class=\"AknFullPage-title--highlight\">1 product</span>|]1, Inf[Bewerk de attribuutwaarden van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
+      label_count: "{0}Bewerk de attribuutwaarden van enkele <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Bewerk de attribuutwaarden van <span class=\"AknFullPage-title--highlight\">1 product</span>，Bewerk de attribuutwaarden van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
       description: Alleen de attributen die behoren tot de families van de geselecteerde producten worden gewijzigd met de volgende informatie voor de {{ locale }} lokale en het {{ scope }} kanaal. De oude waarden zullen worden vervangen.
       no_update: Selecteer ten minste één veld om te updaten
     add_attribute_value:
       label: Attribuutwaarden toevoegen
-      label_count: "{0}Voeg attribuutwaarden toe voor enkele <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Voeg attribuutwaarden toe voor <span class=\"AknFullPage-title--highlight\">1 product</span>|]1, Inf[Voeg attribuutwaarden toe voor <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
+      label_count: "{0}Voeg attribuutwaarden toe voor enkele <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Voeg attribuutwaarden toe voor <span class=\"AknFullPage-title--highlight\">1 product</span>，Voeg attribuutwaarden toe voor <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
       description: Alleen de attributen met meerdere waarden die tot de productfamilies behoren, worden bewerkt met de volgende gegevens voor taal {{ locale }} en kanaal {{ scope }}. De attribuutwaarden worden toegevoegd en de eerdere waarden blijven behouden.
     change_family:
       label: Familie wijzigen
-      label_count: "{0}Verander de familie van sommigen <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Verander de familie van <span class=\"AknFullPage-title--highlight\">1 product</span>|]1, Inf[CVerander de familie van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
+      label_count: "{0}Verander de familie van sommigen <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Verander de familie van <span class=\"AknFullPage-title--highlight\">1 product</span>，CVerander de familie van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
       description: De familie van de geselecteerde producten zal worden gewijzigd naar de gekozen familie
     add_to_group:
       label: Toevoegen aan groepen
-      label_count: "{0}Voeg sommige <span class=\"AknFullPage-title--highlight\">producten</span> toe aan groepen|{1}Voeg <span class=\"AknFullPage-title--highlight\">1 product</span> toe aan groepen|]1, Inf[Voeg <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> toe aan groepen"
+      label_count: "{0}Voeg sommige <span class=\"AknFullPage-title--highlight\">producten</span> toe aan groepen|{1}Voeg <span class=\"AknFullPage-title--highlight\">1 product</span> toe aan groepen，Voeg <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> toe aan groepen"
       description: Selecteer de groepen waaraan u de geselecteerde producten wilt toevoegen
       field: Groepen
       no_update: Selecteer een groep voordat u wilt doorgaan
     add_to_category:
       label: Voeg toe aan categorieën
-      label_count: "{0}Voeg sommige <span class=\"AknFullPage-title--highlight\">producten</span> toe aan categorieën|{1}Voeg <span class=\"AknFullPage-title--highlight\">1 product</span> toe aan categorieën|]1, Inf[Voeg <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> toe aan categorieën"
+      label_count: "{0}Voeg sommige <span class=\"AknFullPage-title--highlight\">producten</span> toe aan categorieën|{1}Voeg <span class=\"AknFullPage-title--highlight\">1 product</span> toe aan categorieën，Voeg <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> toe aan categorieën"
       description: De producten zullen worden geclassificeerd in de volgende categorieën. De bestaande classificatie wordt behouden.
     move_to_category:
       label: Verplaats tussen categorieën
-      label_count: "{0}Verplaats sommige <span class=\"AknFullPage-title--highlight\">producten</span> tussen categorieën|{1}Verplaats <span class=\"AknFullPage-title--highlight\">1 product</span> tussen categorieën|]1, Inf[Verplaats <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> tussen categorieën"
+      label_count: "{0}Verplaats sommige <span class=\"AknFullPage-title--highlight\">producten</span> tussen categorieën|{1}Verplaats <span class=\"AknFullPage-title--highlight\">1 product</span> tussen categorieën，Verplaats <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> tussen categorieën"
       description: De producten zullen worden geclassificeerd in de volgende categorieën. De bestaande classificatie gaat verloren.
       no_update: Selecteer een categorie.
     remove_from_category:
       label: Verwijder uit categorieën
-      label_count: "{0}Verwijder sommige <span class=\"AknFullPage-title--highlight\">producten</span> van categorieën|{1}Verwijder <span class=\"AknFullPage-title--highlight\">1 product</span> van categorieën|]1, Inf[Verwijder <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> van categorieën"
+      label_count: "{0}Verwijder sommige <span class=\"AknFullPage-title--highlight\">producten</span> van categorieën|{1}Verwijder <span class=\"AknFullPage-title--highlight\">1 product</span> van categorieën，Verwijder <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> van categorieën"
       description: De producten zullen worden verwijderd uit de volgende categorieën.
       no_update: Er is geen categorie aangevinkt om de geselecteerde producten uit te verwijderen.
     add_to_existing_product_model:
       label: Toevoegen aan een bestaand productmodel
-      label_count: "{0}Voeg sommige <span class=\"AknFullPage-title--highlight\">producten</span> toe aan een bestaand productmodel|{1}Voeg <span class=\"AknFullPage-title--highlight\">1 product</span> toe aan een bestaand productmodel|]1, Inf[Voeg <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> toe aan een bestaand productmodel"
+      label_count: "{0}Voeg sommige <span class=\"AknFullPage-title--highlight\">producten</span> toe aan een bestaand productmodel|{1}Voeg <span class=\"AknFullPage-title--highlight\">1 product</span> toe aan een bestaand productmodel，Voeg <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> toe aan een bestaand productmodel"
       description: Het geselecteerde productmodel verzamelt de producten en maakt de verrijking van hun gemeenschappelijke eigenschappen mogelijk.
       no_update: Selecteer een product model voordat u wilt doorgaan
     convert_to_simple_products:
       label: Converteren naar een eenvoudig product
-      label_count: "{0}Converteer een selectie van <span class=\"AknFullPage-title--highlight\">producten</span> naar eenvoudige producten|{1}Converteer <span class=\"AknFullPage-title--highlight\">één product</span> naar een simpel product|]1, Inf[Converteer <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> naar eenvoudige producten"
+      label_count: "{0}Converteer een selectie van <span class=\"AknFullPage-title--highlight\">producten</span> naar eenvoudige producten|{1}Converteer <span class=\"AknFullPage-title--highlight\">één product</span> naar een simpel product，Converteer <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> naar eenvoudige producten"
       description: Alle bestaande waarden, categorieën en associaties worden behouden.
     associate_to_product_and_product_model:
       label: Producten koppelen
-      label_count: "{0}Koppel sommige <span class=\"AknFullPage-title--highlight\">producten</span> aan producten of product modellen|{1}Koppel <span class=\"AknFullPage-title--highlight\">1 product</span> aan producten of product modellen|]1, Inf[Koppel <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> aan producten of product modellen"
+      label_count: "{0}Koppel sommige <span class=\"AknFullPage-title--highlight\">producten</span> aan producten of product modellen|{1}Koppel <span class=\"AknFullPage-title--highlight\">1 product</span> aan producten of product modellen，Koppel <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span> aan producten of product modellen"
       description: De geselecteerde producten in het overzicht worden gekoppeld aan de geselecteerde producten en productmodellen voor het gekozen associatietype
       validate: Voeg associatie toe voordat u naar de volgende stap gaat
     change_parent_product_model:
       label: Pas het bovenliggende productmodel aan
-      label_count: "{0}Verander het bovenliggende productmodel van sommige <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Verander het bovenliggende productmodel van <span class=\"AknFullPage-title--highlight\">1 product</span>|]1, Inf[Verander het bovenliggende productmodel van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
+      label_count: "{0}Verander het bovenliggende productmodel van sommige <span class=\"AknFullPage-title--highlight\">producten</span>|{1}Verander het bovenliggende productmodel van <span class=\"AknFullPage-title--highlight\">1 product</span>，Verander het bovenliggende productmodel van <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} producten</span>"
       description: In het overzicht zal het overkoepelende productmodel van het variantproduct of sub-productmodel worden aangepast naar het gekozen productmodel.
 pim_datagrid:
   no_entities: "Geen {{ entityHint }} gevonden"
@@ -461,9 +461,9 @@ pim_datagrid:
     sequential_edit: Sequentiële bewerking
     mass_delete: Groepsgewijs verwijderen
     selected:
-      family: "]-Inf, 1]{{ count }} familie geselecteerd|]1, Inf[{{ count }} families geselecteerd"
-      attribute: "]-Inf, 1]{{ count }} attribuut geselecteerd|]1, Inf[{{ count }} attributen geselecteerd"
-      product: "]-Inf, 1]{{ count }} resultaat geselecteerd|]1, Inf[{{ count }} resultaten geselecteerd"
+      family: "{{ count }} familie geselecteerd，{{ count }} families geselecteerd"
+      attribute: "{{ count }} attribuut geselecteerd，{{ count }} attributen geselecteerd"
+      product: "{{ count }} resultaat geselecteerd，{{ count }} resultaten geselecteerd"
   view_selector:
     view: Weergaves
     choose_type: Ik wil een privéweergave aanmaken

@@ -86,12 +86,12 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: İzleme
       helper:
-        title: '{{ count }} Hata var {0} |[1,Inf] {{ count }} Hatalar var'
+        title: '{{ count }} Hata var {0} , {{ count }} Hatalar var'
         description: Burada, bu bağlantı için son 7 gün içindeki her hatanın ayrıntılarını görebilirsiniz. Hata sayısı 100 hata ile sınırlıdır.
         link: Nasıl çözeceğinizi anlamak için lütfen API yardım merkezini ziyaret ediniz.
       search_filter:
         placeholder: Hata mesajlarında ara
-        result_count: '{0} Sonuç yok |[1,Inf] {{ count }} sonuçlar'
+        result_count: '{0} Sonuç yok , {{ count }} sonuçlar'
       error_list:
         date_time_column:
           title: Gün ve zaman

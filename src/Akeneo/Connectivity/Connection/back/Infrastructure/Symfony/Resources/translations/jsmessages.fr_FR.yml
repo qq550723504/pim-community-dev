@@ -50,13 +50,13 @@ akeneo_connectivity.connection:
       sub_title: Consultez notre App Store pour voir quelles app peuvent être connectées avec Akeneo PIM.
       link: Accéder à l'App Store Akeneo
       helper:
-        title: '{0} Il n''y a aucune app ou connecteur compatible avec votre version du PIM.|{1} Il y a {{ count }} app ou connecteur compatible avec votre version du PIM. |[2,Inf] Il y a {{ count }} apps ou connecteurs compatibles avec votre version du PIM.'
-        title_without_apps: '{0} Il n''y a aucun connecteur compatible avec votre version du PIM.|{1} Il y a {{ count }} connecteur compatible avec votre version du PIM. |[2,Inf] Il y a {{ count }} connecteurs compatibles avec votre version du PIM.'
+        title: '{0} Il n''y a aucune app ou connecteur compatible avec votre version du PIM.|{1} Il y a {{ count }} app ou connecteur compatible avec votre version du PIM.  Il y a {{ count }} apps ou connecteurs compatibles avec votre version du PIM.'
+        title_without_apps: '{0} Il n''y a aucun connecteur compatible avec votre version du PIM.|{1} Il y a {{ count }} connecteur compatible avec votre version du PIM.  Il y a {{ count }} connecteurs compatibles avec votre version du PIM.'
         description: Ceci n'est qu'une vue d'ensemble. Pour plus de détails, jetez un coup d'œil à l'App Store Akeneo.
         link: Allez sur l'App Store Akeneo
       search:
         placeholder: Chercher par nom
-        total: '{0} Aucun résultat|{1} 1 résultat|[2,Inf] {{ total }} résultats'
+        total: '{0} Aucun résultat|{1} 1 résultat {{ total }} résultats'
       card:
         developed_by: 'Développé par {{ author }}'
         read_more: en savoir plus
@@ -66,11 +66,11 @@ akeneo_connectivity.connection:
         pending: En attente…
       extensions:
         title: Connecteurs
-        total: '{0} Aucun connecteurs|{1} 1 connecteur|[2,Inf] {{ total }} connecteurs'
+        total: '{0} Aucun connecteurs|{1} 1 connecteur {{ total }} connecteurs'
         empty: Aucun connecteur compatible avec votre version
       apps:
         title: Apps
-        total: '{0} Aucune app|{1} 1 app|[2,Inf] {{ total }} apps'
+        total: '{0} Aucune app|{1} 1 app {{ total }} apps'
         empty: Aucune app compatible avec votre version
       unreachable: Impossible d'accéder à l'App Store, revenez plus tard.
       scroll_to_top: Haut de la page
@@ -81,7 +81,7 @@ akeneo_connectivity.connection:
       list:
         apps:
           title: Apps connectées
-          total: '{0} Aucune app|{1} 1 app|[2,Inf] {{ total }} apps'
+          total: '{0} Aucune app|{1} 1 app {{ total }} apps'
           empty: Aucune app connectée pour le moment.
           check_marketplace: 'Rendez-vous sur la {{ marketplaceLink }} pour parcourir les extensions disponibles et connecter votre première app.'
           marketplace_link_anchor: App Store
@@ -91,7 +91,7 @@ akeneo_connectivity.connection:
           title: Mes apps custom connectées
           removed_user: Utilisateur supprimé
         helper:
-          title: '[0,1] Votre PIM est connecté à {{ count }} app.|[2,Inf] Votre PIM est connecté à {{ count }} apps.'
+          title: '[0,1] Votre PIM est connecté à {{ count }} app. Votre PIM est connecté à {{ count }} apps.'
           description_1: De nouvelles apps sont développées régulièrement. Restez à l'écoute et consultez notre page App Store fréquemment pour découvrir comment connecter votre PIM.
           description_2: Vous voulez en savoir plus sur les apps ?
           link: Consultez notre Help Center pour plus d'informations.
@@ -434,7 +434,7 @@ akeneo_connectivity.connection:
     flash:
       success: Connexion supprimée avec succès.
   helper:
-    title: '{0} Pour l''instant, vous n''avez aucune connexion pour lier votre PIM à des applications tierces.{1} Vous avez 1 connexion reliant votre PIM à une application tierce. Bien joué, ainsi votre PIM est bien intégré dans son écosystème.|]1,Inf] Vous avez {{ count }} connexions reliant votre PIM à des applications tierces. Bien joué, votre PIM est ainsi bien intégré dans son écosystème.'
+    title: '{0} Pour l''instant, vous n''avez aucune connexion pour lier votre PIM à des applications tierces.{1} Vous avez 1 connexion reliant votre PIM à une application tierce. Bien joué, ainsi votre PIM est bien intégré dans son écosystème.Vous avez {{ count }} connexions reliant votre PIM à des applications tierces. Bien joué, votre PIM est ainsi bien intégré dans son écosystème.'
     description: Un PIM non connecté, c'est un peu inutile, non ? Grâce aux connexions, vous pouvez déclarer facilement tous les flux de données qui sont envoyés dans votre PIM, ainsi que ceux qui en sortent.
     link: Pour en savoir plus sur les Connexions, consultez cette page
   flow_type_helper:
@@ -548,7 +548,7 @@ akeneo_connectivity.connection:
       list:
         search:
           placeholder: Chercher parmi les messages
-          total: '{0} Aucun résultat|{1} 1 résultat|[2,Inf] {{ total }} résultats'
+          total: '{0} Aucun résultat|{1} 1 résultat {{ total }} résultats'
           level: Niveau
           all: Toutes
           none: Aucun
@@ -570,12 +570,12 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: Surveillance des erreurs
       helper:
-        title: '{0} Vous avez {{ count }} erreur |[1,Inf] Vous avez {{ count }} erreurs'
+        title: '{0} Vous avez {{ count }} erreur , Vous avez {{ count }} erreurs'
         description: Ici, vous pouvez voir le détail de chaque erreur métier pour cette connexion au cours des 7 derniers jours. Le nombre d'erreur est limité à 100 erreurs.
         link: Pour savoir comment résoudre ces erreurs, rendez vous sur la documentation de l'API.
       search_filter:
         placeholder: Rechercher dans les messages d'erreur
-        result_count: '{0} Aucun résultat|{1} 1 résultat|[2,Inf] {{ count }} résultats'
+        result_count: '{0} Aucun résultat|{1} 1 résultat {{ count }} résultats'
       error_list:
         date_time_column:
           title: Jour et heure

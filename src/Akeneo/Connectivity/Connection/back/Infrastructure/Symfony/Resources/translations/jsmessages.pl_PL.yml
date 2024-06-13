@@ -50,13 +50,13 @@ akeneo_connectivity.connection:
       sub_title: Zajrzyj do sklepu z aplikacjami, aby sprawdzić, którą aplikację można połączyć z Akeneo PIM.
       link: Przejdź do sklepu z aplikacjami
       helper:
-        title: '{0} Brak aplikacji lub wtyczek kompatybilnych z twoją wersją PIM.|{1} Aplikacje lub wtyczki kompatybilne z twoją wersją PIM: {{ count }}|[2,Inf] Aplikacje lub wtyczki kompatybilne z twoją wersją PIM: {{ count }}'
-        title_without_apps: '{0} Brak wtyczek kompatybilnych z twoją wersją PIM.|{1} Wtyczki kompatybilne z twoją wersją PIM: {{ count }}.|[2,Inf] Wtyczki kompatybilne z twoją wersją PIM: {{ count }}'
+        title: '{0} Brak aplikacji lub wtyczek kompatybilnych z twoją wersją PIM.|{1} Aplikacje lub wtyczki kompatybilne z twoją wersją PIM: {{ count }} Aplikacje lub wtyczki kompatybilne z twoją wersją PIM: {{ count }}'
+        title_without_apps: '{0} Brak wtyczek kompatybilnych z twoją wersją PIM.|{1} Wtyczki kompatybilne z twoją wersją PIM: {{ count }}. Wtyczki kompatybilne z twoją wersją PIM: {{ count }}'
         description: To tylko podgląd. Aby uzyskać więcej szczegółów, zajrzyj do sklepu z aplikacjami Akeneo.
         link: Przejdź do sklepu z aplikacjami Akeneo
       search:
         placeholder: Szukaj według nazwy
-        total: '{0} Brak wyników|{1} 1 wynik|[2,Inf] {{ total }} wyników'
+        total: '{0} Brak wyników|{1} 1 wynik {{ total }} wyników'
       card:
         developed_by: 'Autor: {{ author }}'
         read_more: czytaj więcej
@@ -66,11 +66,11 @@ akeneo_connectivity.connection:
         pending: Oczekiwanie...
       extensions:
         title: Wtyczki
-        total: '{0} Brak wtyczek|{1} Liczba wtyczek: 1|[2,Inf] Liczba wtyczek: {{ total }} '
+        total: '{0} Brak wtyczek|{1} Liczba wtyczek: 1 Liczba wtyczek: {{ total }} '
         empty: Brak wtyczek kompatybilnych z twoją wersją
       apps:
         title: Aplikacje
-        total: '{0} Brak aplikacji|{1} 1 aplikacja|[2,Inf] Liczba aplikacji: {{ total }}'
+        total: '{0} Brak aplikacji|{1} 1 aplikacja Liczba aplikacji: {{ total }}'
         empty: Brak aplikacji kompatybilnych z twoją wersją
       unreachable: Nie możemy nawiązać połączenia ze sklepem z aplikacjami. Spróbuj ponownie później.
       scroll_to_top: Przewiń do początku
@@ -81,7 +81,7 @@ akeneo_connectivity.connection:
       list:
         apps:
           title: Połączone aplikacje
-          total: '{0} Brak aplikacji|{1} 1 aplikacja|[2,Inf] Liczba aplikacji: {{ total }}'
+          total: '{0} Brak aplikacji|{1} 1 aplikacja Liczba aplikacji: {{ total }}'
           empty: Nie połączono jeszcze żadnych aplikacji.
           check_marketplace: 'Przejdź na stronę {{ marketplaceLink }}, aby przeglądać całą dostępną treść i zainstalować swoją pierwszą aplikację.'
           marketplace_link_anchor: Sklep z aplikacjami
@@ -91,7 +91,7 @@ akeneo_connectivity.connection:
           title: Moje połączone aplikacje niestandardowe
           removed_user: Użytkownik usunięty
         helper:
-          title: '[0,1] Twój PIM jest połączony z {{ count }} aplikacją.|[2,Inf] Twój PIM jest połączony z {{ count }} aplikacjami.'
+          title: '[0,1] Twój PIM jest połączony z {{ count }} aplikacją. Twój PIM jest połączony z {{ count }} aplikacjami.'
           description_1: Nowe aplikacje powstają regularnie, więc regularnie zaglądaj na stronę sklepu z aplikacjami, aby przekonać się, jak możesz połączyć Twój PIM z innymi aplikacjami.
           description_2: Chcesz dowiedzieć się więcej o aplikacjach?
           link: Aby uzyskać więcej informacji, sprawdź nasze Centrum Pomocy.
@@ -434,7 +434,7 @@ akeneo_connectivity.connection:
     flash:
       success: Połączenie pomyślnie usunięte.
   helper:
-    title: '{0} Na razie nie masz połączenia z aplikacjami zewnętrznymi.|{1} Masz 1 połączenie PIM z aplikacjami zewnętrznymi. Dobra robota, w ten sposób PIM jest dobrze zintegrowany z ekosystemem.|]1,Inf] Masz {{ count }} połączeń PIM z aplikacjami zewnętrznymi. Dobra robota, w ten sposób PIM jest dobrze zintegrowany z ekosystemem.'
+    title: '{0} Na razie nie masz połączenia z aplikacjami zewnętrznymi.|{1} Masz 1 połączenie PIM z aplikacjami zewnętrznymi. Dobra robota, w ten sposób PIM jest dobrze zintegrowany z ekosystemem.Masz {{ count }} połączeń PIM z aplikacjami zewnętrznymi. Dobra robota, w ten sposób PIM jest dobrze zintegrowany z ekosystemem.'
     description: PIM bez integracji z innymi firmami nie jest bezużyteczny, prawda? Dzięki połączeniom możesz zadeklarować wszystkie przepływy danych, które zostaną przepchnięte i pobrane poza PIM.
     link: Aby dowiedzieć się więcej o Połączeniach, sprawdź tę stronę
   flow_type_helper:
@@ -548,7 +548,7 @@ akeneo_connectivity.connection:
       list:
         search:
           placeholder: Szukaj w wiadomościach
-          total: '{0} Brak wyników|{1} 1 wynik|[2,Inf] {{ total }} wyników'
+          total: '{0} Brak wyników|{1} 1 wynik {{ total }} wyników'
           level: Poziom
           all: Wszystkie
           none: Brak
@@ -570,12 +570,12 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: Monitorowanie błędu
       helper:
-        title: '{0} Masz {{ count }} błąd |[1,Inf] Masz {{ count }} błędów'
+        title: '{0} Masz {{ count }} błąd , Masz {{ count }} błędów'
         description: Tutaj możesz zobaczyć szczegóły każdego błędu dla tego połączenia w ciągu ostatnich 7 dni. Liczba błędów jest ograniczona do 100 błędów.
         link: Aby zrozumieć, jak to rozwiązać, odwiedź centrum pomocy API.
       search_filter:
         placeholder: Szukaj w komunikatach błędów
-        result_count: '{0} Brak wyników|{1} 1 wynik|[2,Inf] {{ count }} wyników'
+        result_count: '{0} Brak wyników|{1} 1 wynik {{ count }} wyników'
       error_list:
         date_time_column:
           title: Dzień i godzina

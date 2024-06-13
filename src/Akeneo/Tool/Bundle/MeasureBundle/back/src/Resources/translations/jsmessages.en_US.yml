@@ -10,7 +10,7 @@ measurements:
     search:
         placeholder: Search on label or code
     family:
-        result_count: "{0}0 Measurement families|{1}1 Measurement family|]1, Inf[{{ itemsCount }} Measurement families"
+        result_count: "{0}0 Measurement families|{1}1 Measurement family，{{ itemsCount }} Measurement families"
         not_found: Measurement family not found
         no_data:
             title: Sorry there is no measurement family!

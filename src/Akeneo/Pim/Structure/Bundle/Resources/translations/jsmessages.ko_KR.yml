@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: 기본 그림으로 사용되는 특성
     empty_attribute_as_image: 선택하지 않음
   page_title:
-    index: "]-Inf, 1]{{ count }} 패밀리|]1, Inf[{{ count }} 패밀리"
+    index: "{{ count }} 패밀리，{{ count }} 패밀리"
   module:
     attributes:
       not_required_label: 필수 아님
@@ -75,7 +75,7 @@ pim_enrich.entity.attribute_option:
     delete:
       fail: 특성 옵션 삭제 중에 오류 발생
   page_title:
-    index: "]-Inf, 1]{{ count }}개 옵션|]1, Inf[{{ count }}개 옵션"
+    index: "{{ count }}개 옵션，{{ count }}개 옵션"
   module:
     edit:
       cancel_title: 수정 취소
@@ -110,7 +110,7 @@ pim_enrich.entity.association_type:
       success: 연결 유형 제거됨
       fail: 이 연결 유형을 삭제할 수 없음
   page_title:
-    index: "]-Inf, 1]{{ count }} 특성 유형|]1, Inf[{{ count }} 특성 유형"
+    index: "{{ count }} 특성 유형，{{ count }} 특성 유형"
   module:
     create:
       title: 새 연결 유형 만들기
@@ -138,7 +138,7 @@ pim_enrich.entity.group_type:
       success: 그룹 유형 제거됨
       fail: 이 그룹 유형을 삭제할 수 없음
   page_title:
-    index: "]-Inf, 1]{{ count }} 그룹 유형|]1, Inf[{{ count }} 그룹 유형"
+    index: "{{ count }} 그룹 유형，{{ count }} 그룹 유형"
   module:
     create:
       button: 그룹 유형 만들기
@@ -156,7 +156,7 @@ pim_enrich.entity.attribute:
       success: 특성 제거됨
       fail: 이 특성을 삭제할 수 없음
   page_title:
-    index: "]-Inf, 1]{{ count }} 특성|]1, Inf[{{ count }} 특성"
+    index: "{{ count }} 특성，{{ count }} 특성"
   property:
     allowed_extensions: 허용된 확장
     auto_option_sorting: 알파벳순으로 옵션 자동 정렬
@@ -232,9 +232,9 @@ pim_enrich.entity.attribute:
     delete:
       confirm: 이 특성을 삭제하시겠습니까?
       attribute_removal: 모든 제품에서 해당 특성이 제거됩니다.
-      product_count: '{0}0개 제품|{1}1개 제품|]1, Inf[{{ count }}개 제품'
-      product_model_count: '{0}0개 제품 모델|{1}1개 제품 모델|]1, Inf[{{ count }}개 제품 모델'
-      used: ']-Inf,1]- 이 특성에 대한 값 세트를 현재 가지고 있습니다.|]1, Inf[- 이 특성에 대한 값 세트를 현재 가지고 있습니다.'
+      product_count: '{0}0개 제품|{1}1개 제품，{{ count }}개 제품'
+      product_model_count: '{0}0개 제품 모델|{1}1개 제품 모델，{{ count }}개 제품 모델'
+      used: ']-Inf,1]- 이 특성에 대한 값 세트를 현재 가지고 있습니다.，- 이 특성에 대한 값 세트를 현재 가지고 있습니다.'
       helper:
         content: 기존 특성 값에 계속 액세스하면서 특성 유형을 변경하거나 지역화 또는 확장 가능하도록 만들어야 하는 경우
         link: 자세한 내용은 도움말을 확인하십시오.
@@ -245,7 +245,7 @@ pim_enrich.entity.attribute:
     mass_delete:
       modal:
         title: 특성
-        subtitle: '{1}{{ count }}개 특성 삭제 확인|]1, Inf[{{ count }}개 특성 삭제 확인'
+        subtitle: '{1}{{ count }}개 특성 삭제 확인，{{ count }}개 특성 삭제 확인'
         label: '"{{ textToCheck }}"을(를) 입력하십시오'
         confirm: 이러한 특성을 삭제하시겠습니까?
       message_bar:
@@ -255,7 +255,7 @@ pim_enrich.entity.attribute_group:
   label: 특성 그룹
   uppercase_label: 특성 그룹
   plural_label: 특성 그룹
-  result_count: '{0}0개 특성 그룹|{1}1개 특성 그룹|]1, Inf[{{ count }}개 특성 그룹'
+  result_count: '{0}0개 특성 그룹|{1}1개 특성 그룹，{{ count }}개 특성 그룹'
   limit_reached: '{{ max }}개의 특성 그룹 제한에 도달했습니다.'
   show_more_attribute:
     title: 여기는 약간 혼잡합니다. {{ attributeCount }}/{{ totalAttributeCount }}개 특성이 표시됩니다.
@@ -286,20 +286,20 @@ pim_enrich.entity.attribute_group:
   grid:
     columns:
       attribute_count: 관련 특성 카운트
-  selected: '{0}0개 특성 그룹 선택함|{1}1개 특성 그룹 선택함|]1, Inf[{{ count }}개 특성 그룹 선택함'
+  selected: '{0}0개 특성 그룹 선택함|{1}1개 특성 그룹 선택함，{{ count }}개 특성 그룹 선택함'
   mass_delete:
-    confirm: '{1}이 특성 그룹을 삭제하시겠습니까? |]1, Inf[이러한 {{count}}개 특성 그룹을 삭제하시겠습니까?'
+    confirm: '{1}이 특성 그룹을 삭제하시겠습니까? ，이러한 {{count}}개 특성 그룹을 삭제하시겠습니까?'
     confirmation_phrase: '"{{ confirmation_word }}"을(를) 입력하십시오'
     confirmation_word: 삭제
-    attribute_warning: '{1}이러한 특성 그룹을 삭제하면 {{ number_of_attribute}}개의 관련 특성이 영향을 받습니다. 이 관련 특성을 새 특성 그룹으로 이동해야 합니다.|]1, Inf[이러한 특성 그룹을 삭제하면 {{number_of_attribute}}개의 관련 특성이 영향을 받습니다. 이러한 관련 특성을 새 특성 그룹으로 이동해야 합니다.'
-    select_attribute_group: '{1}관련 특성을 이동할 특성 그룹을 선택하십시오:|]1, Inf[{{ number_of_attribute }}개의 관련 특성을 이동할 특성 그룹을 선택하십시오:'
+    attribute_warning: '{1}이러한 특성 그룹을 삭제하면 {{ number_of_attribute}}개의 관련 특성이 영향을 받습니다. 이 관련 특성을 새 특성 그룹으로 이동해야 합니다.，이러한 특성 그룹을 삭제하면 {{number_of_attribute}}개의 관련 특성이 영향을 받습니다. 이러한 관련 특성을 새 특성 그룹으로 이동해야 합니다.'
+    select_attribute_group: '{1}관련 특성을 이동할 특성 그룹을 선택하십시오:，{{ number_of_attribute }}개의 관련 특성을 이동할 특성 그룹을 선택하십시오:'
     empty_result_label: '특성 그룹 찾지 못함'
     placeholder: '특성 그룹 선택'
     open_label: '특성 그룹 목록'
   delete:
     confirm: '이 특성 그룹을 삭제하시겠습니까'
     attribute_warning: '이 특성 그룹을 삭제하면 {{ number_of_attribute }}개의 관련 특성에 영향을 미칩니다. 이 관련 특성을 새 특성 그룹으로 이동해야 합니다.'
-    select_attribute_group: '{1}관련 특성을 이동할 특성 그룹을 선택하십시오:|]1, Inf[{{ number_of_attribute }}개의 관련 특성을 이동할 특성 그룹을 선택하십시오:'
+    select_attribute_group: '{1}관련 특성을 이동할 특성 그룹을 선택하십시오:，{{ number_of_attribute }}개의 관련 특성을 이동할 특성 그룹을 선택하십시오:'
   batch_jobs:
     delete_attribute_groups:
       delete_attribute_groups:
@@ -312,7 +312,7 @@ pim_import_export:
       success: 특성 그룹의 일괄 삭제가 완료되었습니다.
 pim_enrich.mass_edit.family:
   title: 패밀리 일괄 작업
-  confirm: "{1}다음 정보로 1개 패밀리를 업데이트하려고 합니다. 확인해주십시오.|]1, Inf[다음 정보로 {{ itemsCount }}개 패밀리를 업데이트하려고 합니다. 확인해주십시오."
+  confirm: "{1}다음 정보로 1개 패밀리를 업데이트하려고 합니다. 확인해주십시오.，다음 정보로 {{ itemsCount }}개 패밀리를 업데이트하려고 합니다. 확인해주십시오."
   step:
     select:
       label: 패밀리 선택
@@ -329,7 +329,7 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: 특성 요구 사항 설정
       description: 선택된 패밀리에 다음 특성 요구 사항이 적용됩니다.
-      label_count: "{1}<span class=\"AknFullPage-title--highlight\">1개 패밀리</span>의 특성 요구 사항 설정|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 패밀리</span>의 특성 요구 사항 설정"
+      label_count: "{1}<span class=\"AknFullPage-title--highlight\">1개 패밀리</span>의 특성 요구 사항 설정，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}개 패밀리</span>의 특성 요구 사항 설정"
 batch_jobs:
   default_steps:
     delete_attribute_groups: 특성 그룹 삭제

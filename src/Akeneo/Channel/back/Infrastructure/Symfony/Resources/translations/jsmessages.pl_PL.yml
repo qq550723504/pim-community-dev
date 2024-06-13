@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Kanał usunięty pomyślnie
       fail: Nie można usunąć tego kanału
   page_title:
-    index: "one: 1 kanał|few: {{ count }} kanały|many: {{ count }"
+    index: "one: 1 kanał|few: {{ count }} kanały|many: {{ count }}"
   property:
     category_tree: Drzewo kategorii
     do_not_convert: Nie konwertuj
@@ -76,7 +76,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: Waluty
   page_title:
-    index: "one: 1 waluta|few: {{ count }} waluty|many: {{ count }"
+    index: "one: 1 waluta|few: {{ count }} waluty|many: {{ count }}"
 flash:
   currency:
     error:

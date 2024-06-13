@@ -52,7 +52,7 @@ pim_user_management:
         create:
           success: 用户创建成功
       page_title:
-        index: "] -Inf, 1] {{ count }} 个用户|] 1, Inf [{{ count }} 个用户"
+        index: "{{ count }} 个用户{{ count }} 个用户"
       properties:
         username: 用户名
         profile: 您的主要任务是什么？
@@ -101,7 +101,7 @@ pim_user_management:
     role:
       plural_label: 角色
       page_title:
-        index: "] -Inf, 1] {{ count }} 个角色|] 1, Inf [{{ count }} 个角色"
+        index: "{{ count }} 个角色{{ count }} 个角色"
       module:
         create:
           button: 创建角色
@@ -110,7 +110,7 @@ pim_user_management:
     group:
       plural_label: 用户组
       page_title:
-        index: "] -Inf, 1] {{ count }} 个分组|] 1, Inf [{{ count }} 个分组"
+        index: "{{ count }} 个分组{{ count }} 个分组"
       module:
         create:
           button: 创建组

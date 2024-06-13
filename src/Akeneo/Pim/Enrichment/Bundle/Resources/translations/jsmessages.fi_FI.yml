@@ -31,9 +31,9 @@ pim_enrich.entity.product:
       success: Tuote luotu
       fail: Yhtään attribuuttia ei ole määritetty tuotteen tunnisteeksi tai sinulla ei ole muokkausoikeuksia.
   page_title:
-    index: "]-Inf, 1]{{ count }} tulos|]1, Inf[{{ count }} tulosta"
-    product: "]-Inf, 1]{{ count }} tuote|]1, Inf[{{ count }} tuotetta"
-    product_model: "]-Inf, 1]{{ count }} tuotemalli|]1, +Inf[{{ count }} tuotemallia"
+    index: "{{ count }} tulos，{{ count }} tulosta"
+    product: "{{ count }} tuote，{{ count }} tuotetta"
+    product_model: "{{ count }} tuotemalli, +Inf[{{ count }} tuotemallia"
     product_and_product_model: "{{ productCount }}, {{ productModelCount }}"
   module:
     create:
@@ -77,7 +77,7 @@ pim_enrich.entity.product:
       remove_optional: Poista tämä attribuutti
       locale_specific_unavailable: Tämä lokaatiospesifi-kenttä ei ole käytettävissä tässä maassa
       locale_unavailable: Kielikohtaista kenttää ei voi käyttää lokaatiossa '{{ locale }}' ja kanavassa '{{ channel }}'
-      to_fill_count: "{1}1 vaadittu attribuutti puuttuu|]1, Inf[{{ count }} vaadittua attribuuttia puuttuu"
+      to_fill_count: "{1}1 vaadittu attribuutti puuttuu，{{ count }} vaadittua attribuuttia puuttuu"
       add_attribute_option: Lisää attribuutin vaihtoehto
       add_option: Lisää valintalistan arvo
     completeness:
@@ -85,7 +85,7 @@ pim_enrich.entity.product:
       complete: Valmistumisaste
       no_family: Perhettä ei ole määritelty. Määritä perhe, jotta voit laskea tuotteen valmiusasteen.
       no_completeness: Olet juuri muuttanut tuotteen ryhmän. Tallenna se ensin, jotta voit laskea uuden perheen valmiusasteen.
-      missing_values: "{1}1 puuttuva arvo|]1, Inf[{{ count }} puuttuvaa arvoa"
+      missing_values: "{1}1 puuttuva arvo，{{ count }} puuttuvaa arvoa"
     sequential_edit:
       item_limit: Vain 1000 ensimmäistä näytetään peräkkäisessä muokkauksessa ({{ count }} valittuna)
       empty: Valintasi on tyhjä, muuta hakuehtoja
@@ -170,10 +170,10 @@ pim_enrich.entity.product_model:
     variant_axis:
       label: 'varianttiulottuvuus'
       create: Luo uusi
-      title_create_label: "]-Inf, 1]Lisää uusi {{ axes }}|]1, Inf[Lisää uusi {{ axes }}"
+      title_create_label: "Lisää uusi {{ axes }}，Lisää uusi {{ axes }}"
       required_label: '(varianttiulottuvuus)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} tuotevariantti|]1, Inf[{{ complete }} / {{ total }} tuotevarianttia"
+      variant_product: "{{ complete }} / {{ total }} tuotevariantti，{{ complete }} / {{ total }} tuotevarianttia"
       label: Variantti
     delete:
       confirm: Oletko varma, että haluat poistaa tämän tuotemallin? Kaikki lapset, tuotemallit ja variantit poistetaan myös.
@@ -191,7 +191,7 @@ pim_enrich.entity.group:
       success: Ryhmän poistaminen onnistui
       fail: Ryhmää ei voi poistaa
   page_title:
-    index: "]-Inf, 1]{{ count }} ryhmä|]1, Inf[{{ count }} ryhmää"
+    index: "{{ count }} ryhmä，{{ count }} ryhmää"
   module:
     create:
       button: Luo ryhmä
@@ -209,7 +209,7 @@ pim_enrich.entity.category:
   uppercase_label: Kategoria
   plural_label: Kategoriat
   page_title:
-    index: "]-Inf, 1]{{ count }} kategoriapuu|]1, Inf[{{ count }} kategoriapuuta"
+    index: "{{ count }} kategoriapuu，{{ count }} kategoriapuuta"
   content:
     empty_tree_list:
       title: Sinulla ei ole yhtään kategoriapuuta
@@ -218,7 +218,7 @@ pim_enrich.entity.category:
       columns:
         label: Nimi
         number_of_categories: Kategorioiden lukumäärä
-        count_categories: ']-Inf, 1]{{ count }} kategoria|]1, Inf[{{ count }} kategoriaa'
+        count_categories: '{{ count }} kategoria，{{ count }} kategoriaa'
     tree:
       not_found: Kategoriapuuta ei löytynyt.
     edit:
@@ -258,7 +258,7 @@ pim_enrich.export.product:
     locales:
       help: "Lokaatiot määrittävät minkä kieliset arvot otetaan mukaan vientiin. Esim: vain suomenkieliset tuotetiedot."
     attributes:
-      label: "{0}Kaikki attribuutit|{1}Yksi attribuutti valittu|]1,Inf[ {{ count }} attribuuttia valittu"
+      label: "{0}Kaikki attribuutit|{1}Yksi attribuutti valittu,Inf[ {{ count }} attribuuttia valittu"
       help: "Valitse vietävä attribuuttiryhmä. Esim: vain tekniset attribuutit."
       empty: Kaikki attribuutit viedään
       modal:
@@ -350,58 +350,58 @@ pim_enrich.mass_edit.product:
       select_attributes: Valitse attribuutit
     change_status:
       label: Muuta tuotteen tila
-      label_count: "{0}Muuta joidenkin tuotteiden statusta<span class=\"AknFullPage-title--highlight\"></span>|{1}Muuta yhden tuotteen status<span class=\"AknFullPage-title--highlight\"></span>|]1, Inf[Muuta tuotteiden status<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} </span>"
+      label_count: "{0}Muuta joidenkin tuotteiden statusta<span class=\"AknFullPage-title--highlight\"></span>|{1}Muuta yhden tuotteen status<span class=\"AknFullPage-title--highlight\"></span>，Muuta tuotteiden status<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} </span>"
       description: Valitut tuotteet otetaan käyttöön tai pois käytöstä.
       field: Ottaa käyttöön
     edit_common:
       label: Muokkaa attribuuttien arvoja
-      label_count: "{0}Muokkaa<span class=\"AknFullPage-title--highlight\">tuotteiden attribuuttien arvoja</span>|{1}Muokkaa <span class=\"AknFullPage-title--highlight\">1 tuotteen attribuuttien arvoja</span>|]1, Inf[Muokkaa <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteen attribuuttien arvoja</span>"
+      label_count: "{0}Muokkaa<span class=\"AknFullPage-title--highlight\">tuotteiden attribuuttien arvoja</span>|{1}Muokkaa <span class=\"AknFullPage-title--highlight\">1 tuotteen attribuuttien arvoja</span>，Muokkaa <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteen attribuuttien arvoja</span>"
       no_update: Valitse ainakin yksi attribuutti muokattavaksi
     add_attribute_value:
       label: Lisää attribuutin arvoja
-      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotteiden attribuuttien arvoja</span>|{1}Lisää attribuuttien arvoja <span class=\"AknFullPage-title--highlight\">1 tuotteelle</span>|]1, Inf[Lisää attribuuttien arvoja <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteelle</span>"
+      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotteiden attribuuttien arvoja</span>|{1}Lisää attribuuttien arvoja <span class=\"AknFullPage-title--highlight\">1 tuotteelle</span>，Lisää attribuuttien arvoja <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteelle</span>"
       description: Vain tuotteen perheeseen kuuluvat monivalintalistat päivitetään seuraavilla arvoilla lokaalille {{ locale }} ja kanavalle {{ scope }}. Uudet arvot lisätään ja nykyiset arvot säilytetään.
     change_family:
       label: Muuta perhe
-      label_count: "{0}Muuta <span class=\"AknFullPage-title--highlight\">tuotteiden</span> perhe|{1}Muuta <span class=\"AknFullPage-title--highlight\">1 tuotteen</span> perhe|]1, Inf[Muuta <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteen</span> perhe"
+      label_count: "{0}Muuta <span class=\"AknFullPage-title--highlight\">tuotteiden</span> perhe|{1}Muuta <span class=\"AknFullPage-title--highlight\">1 tuotteen</span> perhe，Muuta <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteen</span> perhe"
       description: Valittujen tuotteiden perhe vaihdetaan valittuun tuoteperheeseen
     add_to_group:
       label: Lisää ryhmiin
-      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotetta</span> ryhmiin{1}Lisää <span class=\"AknFullPage-title--highlight\">1 tuote</span> ryhmiin|]1, Inf[Lisää <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> ryhmiin"
+      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotetta</span> ryhmiin{1}Lisää <span class=\"AknFullPage-title--highlight\">1 tuote</span> ryhmiin，Lisää <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> ryhmiin"
       description: Valitse ryhmät joihin valitut tuotteet lisätään
       field: Ryhmät
       no_update: Valitse ryhmä jatkaaksesi
     add_to_category:
       label: Lisää kategorioihin
-      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotetta</span> kategorioihin{1}Lisää <span class=\"AknFullPage-title--highlight\">1 tuote</span> kategorioihin|]1, Inf[Lisää <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> kategorioihin"
+      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotetta</span> kategorioihin{1}Lisää <span class=\"AknFullPage-title--highlight\">1 tuote</span> kategorioihin，Lisää <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> kategorioihin"
       description: Tuotteet liitetään seuraaviin kategorioihin. Olemassa oleva liitokset säilytetään.
     move_to_category:
       label: Siirrä kategorioihin
-      label_count: "{0}Siirrä <span class=\"AknFullPage-title--highlight\">tuotetta</span> kategorioiden välillä|{1}Siirrä <span class=\"AknFullPage-title--highlight\">1 tuote</span> kategorioiden välillä|]1, Inf[Siirrä <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> kategorioiden välillä"
+      label_count: "{0}Siirrä <span class=\"AknFullPage-title--highlight\">tuotetta</span> kategorioiden välillä|{1}Siirrä <span class=\"AknFullPage-title--highlight\">1 tuote</span> kategorioiden välillä，Siirrä <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> kategorioiden välillä"
       description: Tuotteet liitetään seuraaviin kategorioihin. Olemassa olevat liitokset poistetaan.
       no_update: Ole hyvä ja valitse kategoria.
     remove_from_category:
       label: Poista kategorioista
-      label_count: "{0}Poista <span class=\"AknFullPage-title--highlight\">tuotetta</span> kategorioista|{1}Poista <span class=\"AknFullPage-title--highlight\">1 tuote</span> kategorioista|]1, Inf[Poista <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> kategorioista"
+      label_count: "{0}Poista <span class=\"AknFullPage-title--highlight\">tuotetta</span> kategorioista|{1}Poista <span class=\"AknFullPage-title--highlight\">1 tuote</span> kategorioista，Poista <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> kategorioista"
       description: Tuotteet poistetaan seuraavista kategorioista.
       no_update: Kategoriaa ei ole valittu poistettaville tuotteille.
     add_to_existing_product_model:
       label: Lisää olemassaolevaan tuotemalliin
-      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotetta</span> olemassa olevaan tuotemalliin|{1}Lisää <span class=\"AknFullPage-title--highlight\">1 tuote</span> olemassa olevaan tuotemalliin|]1, Inf[Lisää <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> olemassa olevaan tuotemalliin"
+      label_count: "{0}Lisää <span class=\"AknFullPage-title--highlight\">tuotetta</span> olemassa olevaan tuotemalliin|{1}Lisää <span class=\"AknFullPage-title--highlight\">1 tuote</span> olemassa olevaan tuotemalliin，Lisää <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> olemassa olevaan tuotemalliin"
       description: Valittu tuotemalli kokoaa tuotteet ja mahdollistaa niiden yhteisten attribuuttien rikastamisen.
       no_update: Valitse tuotemalli jatkaaksesi
     convert_to_simple_products:
       label: Muunna yksittäistuotteeksi
-      label_count: "{0}Muunna <span class=\"AknFullPage-title--highlight\">tuotteet</span> yksittäistuotteiksi|{1}Muunna <span class=\"AknFullPage-title--highlight\">1 tuote</span> yksittäistuotteeksi|]1, Inf[Muunna <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> yksittäistuotteiksi"
+      label_count: "{0}Muunna <span class=\"AknFullPage-title--highlight\">tuotteet</span> yksittäistuotteiksi|{1}Muunna <span class=\"AknFullPage-title--highlight\">1 tuote</span> yksittäistuotteeksi，Muunna <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> yksittäistuotteiksi"
       description: Kaikki aikaisemmat arvot, kategoriat ja tuoteliitokset säilytetään.
     associate_to_product_and_product_model:
       label: Liitä tuotteita
-      label_count: "{0}Liitä <span class=\"AknFullPage-title--highlight\">tuotteita</span> tuotteisiin tai tuotemalleihin|{1}Liitä <span class=\"AknFullPage-title--highlight\">1 tuote</span> tuotteisiin tai tuotemalleihin|]1, Inf[Liitä <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> tuotteisiin tai tuotemalleihin"
+      label_count: "{0}Liitä <span class=\"AknFullPage-title--highlight\">tuotteita</span> tuotteisiin tai tuotemalleihin|{1}Liitä <span class=\"AknFullPage-title--highlight\">1 tuote</span> tuotteisiin tai tuotemalleihin，Liitä <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotetta</span> tuotteisiin tai tuotemalleihin"
       description: Tuoteruudukossa valittuihin tuotteisiin luodaan valitsemasi tyyppinen assosiaatio niiltä tuotteilta tai tuotemalleilta, jotka seuraavaksi valitset
       validate: Ole hyvä ja lisää assosiaatio ennen kuin siirryt seuraavaan vaiheeseen
     change_parent_product_model:
       label: Vaihda ylätason tuotemalli
-      label_count: "{0}Vaihda <span class=\"AknFullPage-title--highlight\">tuotteiden ylätason tuotemalli</span>|{1}Vaihda ylätason tuotemalli <span class=\"AknFullPage-title--highlight\">1 tuotteelle</span>|]1,Inf[Muuta <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteen ylätason tuotemalli</span>"
+      label_count: "{0}Vaihda <span class=\"AknFullPage-title--highlight\">tuotteiden ylätason tuotemalli</span>|{1}Vaihda ylätason tuotemalli <span class=\"AknFullPage-title--highlight\">1 tuotteelle</span>,Inf[Muuta <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} tuotteen ylätason tuotemalli</span>"
       description: Ylätason tuotteeksi vaihdetaan valitsemasi tuotemalli niille varianteille ja alatason tuotemalleille, jotka ovat valittuna tuoteruudukossa.
 pim_datagrid:
   no_entities.product: "Tuotteita ei löytynyt" #Custom translation for product grid
@@ -439,8 +439,8 @@ pim_datagrid:
     sequential_edit: Peräkkäinen muokkaus
     mass_delete: Massapoisto
     selected:
-      family: "]-Inf, 1]{{ count }} perhe valittu|]1, Inf[{{ count }} perhettä valittu"
-      product: "]-Inf, 1]{{ count }} tulos valittu|]1, Inf[{{ count }} tulosta valittu"
+      family: "{{ count }} perhe valittu，{{ count }} perhettä valittu"
+      product: "{{ count }} tulos valittu，{{ count }} tulosta valittu"
   view_selector:
     view: Näkymät
     choose_type: Haluan luoda yksityisen näkymän

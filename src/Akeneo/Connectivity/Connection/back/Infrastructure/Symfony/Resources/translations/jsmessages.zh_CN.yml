@@ -56,7 +56,7 @@ akeneo_connectivity.connection:
         link: 前往 Akeneo App Store
       search:
         placeholder: 按名称搜索
-        total: '{0} 无结果|{1} 1 个结果|[2,Inf] {{ total }} 个结果'
+        total: '{0} 无结果|{1} 1 个结果 {{ total }} 个结果'
       card:
         developed_by: '开发者：{{ author }}'
         read_more: 阅读更多
@@ -70,7 +70,7 @@ akeneo_connectivity.connection:
         empty: 没有与您的版本兼容的连接器
       apps:
         title: 应用
-        total: '{0} 没有应用 |{1} 1 个应用 |[2,Inf] {{ total }} 个应用'
+        total: '{0} 没有应用 |{1} 1 个应用  {{ total }} 个应用'
         empty: 没有与您的版本兼容的应用
       unreachable: 无法访问 App Store，请稍后再试。
       scroll_to_top: 滚动到顶部
@@ -81,7 +81,7 @@ akeneo_connectivity.connection:
       list:
         apps:
           title: 已连接的应用
-          total: '{0} 没有应用 |{1} 1 个应用 |[2,Inf] {{ total }} 个应用'
+          total: '{0} 没有应用 |{1} 1 个应用  {{ total }} 个应用'
           empty: 尚未连接任何应用。
           check_marketplace: '检查 {{ marketplaceLink }} 以浏览所有可用的内容并安装您的第一个应用。'
           marketplace_link_anchor: Арр Store
@@ -91,7 +91,7 @@ akeneo_connectivity.connection:
           title: 我的已连接自定义应用
           removed_user: 已移除用户
         helper:
-          title: '[0,1] 您的 PIM 已与 {{ count }} 个应用连接。|[2,Inf] 您的 PIM 已与 {{ count }} 个应用连接。'
+          title: '[0,1] 您的 PIM 已与 {{ count }} 个应用连接。 您的 PIM 已与 {{ count }} 个应用连接。'
           description_1: 我们定期开发新的应用，请随时关注并查看我们的 App Store 页面以探索如何连接您的 PIM。
           description_2: 想了解更多关于应用的信息？
           link: 查看我们的“帮助中心”获取更多信息。
@@ -434,7 +434,7 @@ akeneo_connectivity.connection:
     flash:
       success: 已成功删除连接。
   helper:
-    title: '{0} 目前，您没有将 PIM 链接到第三方应用程序的连接。{1} 您有 1 个将 PIM 链接到第三方应用程序的连接。很好，这样您的 PIM 将很好地集成到其生态系统。|]1，Inf] 您有 {{ count }} 个将 PIM 链接到第三方应用程序的连接。很好，这样您的 PIM 将很好地集成到其生态系统。'
+    title: '{0} 目前，您没有将 PIM 链接到第三方应用程序的连接。{1} 您有 1 个将 PIM 链接到第三方应用程序的连接。很好，这样您的 PIM 将很好地集成到其生态系统。，Inf] 您有 {{ count }} 个将 PIM 链接到第三方应用程序的连接。很好，这样您的 PIM 将很好地集成到其生态系统。'
     description: 没有任何第三方整合的 PIM 是没有用处的。通过连接，您可以声明所有导入和推出 PIM 的数据流。
     link: 要了解更多关于连接的信息，请查看此页面
   flow_type_helper:
@@ -548,7 +548,7 @@ akeneo_connectivity.connection:
       list:
         search:
           placeholder: 搜索消息
-          total: '{0} 无结果|{1} 1 个结果|[2,Inf] {{ total }} 个结果'
+          total: '{0} 无结果|{1} 1 个结果 {{ total }} 个结果'
           level: 等级
           all: 所有
           none: 无
@@ -570,12 +570,12 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: 错误监测
       helper:
-        title: '{0} 您有 {{ count }} 个错误 |[1,Inf] 您有 {{ count }} 个错误'
+        title: '{0} 您有 {{ count }} 个错误 , 您有 {{ count }} 个错误'
         description: 在这里，您可以看到过去 7 天内此连接的每个错误的详细信息。错误数限制为 100 个。
         link: 要了解如何解决，请访问 API 帮助中心。
       search_filter:
         placeholder: 搜索错误消息
-        result_count: '{0} 无结果|{1} 1 个结果|[2,Inf] {{ count }} 个结果'
+        result_count: '{0} 无结果|{1} 1 个结果 {{ count }} 个结果'
       error_list:
         date_time_column:
           title: 日期和时间

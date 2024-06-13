@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: 類別選擇
-        label: "{0}所有產品|{1}一個選中的類別|]1,Inf[{{ count }}選中的類別"
+        label: "{0}所有產品|{1}一個選中的類別,Inf[{{ count }}選中的類別"
         title: 選擇類別
     locales:
       validation:
@@ -31,7 +31,7 @@ pim_import_export:
         upload:
           error: 無法上傳此文件。文件體積可能超過了您在PHP或HTTP服務器中設置的最大上傳體積。
       page_title:
-        index: "]-Inf, 1] {{ count }} 匯入資料|]1, Inf [{{ count }} 匯入資料"
+        index: " {{ count }} 匯入資料, Inf [{{ count }} 匯入資料"
       module:
         create:
           button: 創建匯入資料
@@ -41,7 +41,7 @@ pim_import_export:
         create:
           success: 匯出資料已成功創建
       page_title:
-        index: "]-Inf, 1] {{ count }} 匯出資料|]1, Inf [{{ count }} 匯出資料"
+        index: " {{ count }} 匯出資料, Inf [{{ count }} 匯出資料"
       module:
         create:
           button: 創建匯出資料

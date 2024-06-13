@@ -22,10 +22,10 @@ Millisecond: 毫秒
 Microsecond: 微秒
 "Time Zone": "时区"
 duration:
-  days: "{0}0 天|{1}1 天|]1, Inf[{{ count }} 天"
-  hours: "{0}0 小时|{1}1 小时|]1, Inf[{{ count }} 小时"
-  minutes: "{0}0 分钟|{1}1 分钟|]1, Inf[{{ count }} 分钟"
-  seconds: "{0}0 秒|{1}1 秒|]1, Inf[{{ count }} 秒"
+  days: "{0}0 天|{1}1 天，{{ count }} 天"
+  hours: "{0}0 小时|{1}1 小时，{{ count }} 小时"
+  minutes: "{0}0 分钟|{1}1 分钟，{{ count }} 分钟"
+  seconds: "{0}0 秒|{1}1 秒，{{ count }} 秒"
 #PIM messages
 Localized value: 本地化的值
 Columns: 列
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: 之前
   by: 由
   cancel: 取消
-  characters_left: ']-Inf, 1]剩余 {{ count }} 个字符|]1, Inf[剩余 {{ count }} 个字符'
+  characters_left: '剩余 {{ count }} 个字符，剩余 {{ count }} 个字符'
   clear_value: 清除值
   close: 关闭
   code: 代码
@@ -223,14 +223,14 @@ pim_common:
   quality_score: 质量评分
   remove: 移除
   required_label: '（必填）'
-  result_count: "{0}0 个结果|{1}1 个结果|]1, Inf[{{ itemsCount }} 个结果"
+  result_count: "{0}0 个结果|{1}1 个结果，{{ itemsCount }} 个结果"
   save: 保存
   search: 搜索
   select2:
     search: 搜索...
     no_match: 未找到匹配项
     load_more: 加载更多结果...
-  selected: "{0}0 个选定条目|{1}1 个选定条目|]1, Inf[{{ itemsCount }} 个选定条目"
+  selected: "{0}0 个选定条目|{1}1 个选定条目，{{ itemsCount }} 个选定条目"
   status: 状态
   to: 到
   type: 类型
@@ -299,7 +299,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: 是否确定?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} 个作业|]1, Inf[{{ count }} 个作业"
+    index: "{{ count }} 个作业，{{ count }} 个作业"
   module:
     create:
       upload: 将您的 {{ type }} 文件拖到此处，或点击浏览磁盘
@@ -409,29 +409,29 @@ pim_settings:
   product_settings: 产品设置
   automation_settings: 自动化
   count:
-    category_trees: '{0}您有 0 个树 |{1}您有 1 个树 |]1，Inf[您有 {{ count }} 个树'
-    categories: '{0}和 0 个类别 |{1}和 1 个类别 |]1, Inf[和 {{ count }} 个类别'
-    channels: '{0}您有 0 个渠道|{1}您有 1 个渠道|]1，Inf[您有 {{ count }} 渠道]'
-    locales: '{0}您有 0 个已启用区域|{1}您有 1 个已启用区域|]1，Inf[您有 {{ count }} 个已启用区域'
-    currencies: '{0}您有 0 个已启用货币|{1}您有 1 个已启用货币|]1, Inf[您有 {{ count }} 个已启用货币'
-    attribute_groups: '{0}您有 0 个属性组 |{1}您有 1 个属性组 |]1，Inf[您有 {{ count }} 个属性组'
-    attributes: '{0}您有 0 个属性|{1}您有 1 个属性|]1，Inf[您有 {{ count }} 个属性'
-    families: '{0}您有 0 个品类|{1}您有 1 个品类|]1，Inf[您有 {{ count }} 个品类'
-    measurements: '{0}您有 0 个测量|{1}您有 1 个测量|]1, Inf[您有 {{ count }} 个测量'
-    association_types: '{0}您有 0 个关联类型 |{1}您有 1 个关联类型 |]1, Inf[您有 {{ count }} 个关联类型'
-    group_types: '{0}您有 0 个分组类型 |{1}您有 1 个分组类型 |]1，Inf[您有 {{ count }} 个分组类型'
-    groups: '{0}您有 0 个组 |{1}您有 1 个组 |]1，Inf[您有 {{ count }} 个组'
-    rules: '{0}您有 0 个已启用规则|{1}您有 1 个已启用规则|]1, Inf[您有 {{ count }} 个已启用规则'
-    identifier_generators: '{0}您有 0 个标识符生成器 |{1}您有 1 个标识符生成器 |]1，Inf[您有 {{ count }} 个标识符生成器'
+    category_trees: '{0}您有 0 个树 |{1}您有 1 个树 ，您有 {{ count }} 个树'
+    categories: '{0}和 0 个类别 |{1}和 1 个类别 ，和 {{ count }} 个类别'
+    channels: '{0}您有 0 个渠道|{1}您有 1 个渠道，您有 {{ count }} 渠道]'
+    locales: '{0}您有 0 个已启用区域|{1}您有 1 个已启用区域，您有 {{ count }} 个已启用区域'
+    currencies: '{0}您有 0 个已启用货币|{1}您有 1 个已启用货币，您有 {{ count }} 个已启用货币'
+    attribute_groups: '{0}您有 0 个属性组 |{1}您有 1 个属性组 ，您有 {{ count }} 个属性组'
+    attributes: '{0}您有 0 个属性|{1}您有 1 个属性，您有 {{ count }} 个属性'
+    families: '{0}您有 0 个品类|{1}您有 1 个品类，您有 {{ count }} 个品类'
+    measurements: '{0}您有 0 个测量|{1}您有 1 个测量，您有 {{ count }} 个测量'
+    association_types: '{0}您有 0 个关联类型 |{1}您有 1 个关联类型 ，您有 {{ count }} 个关联类型'
+    group_types: '{0}您有 0 个分组类型 |{1}您有 1 个分组类型 ，您有 {{ count }} 个分组类型'
+    groups: '{0}您有 0 个组 |{1}您有 1 个组 ，您有 {{ count }} 个组'
+    rules: '{0}您有 0 个已启用规则|{1}您有 1 个已启用规则，您有 {{ count }} 个已启用规则'
+    identifier_generators: '{0}您有 0 个标识符生成器 |{1}您有 1 个标识符生成器 ，您有 {{ count }} 个标识符生成器'
 pim_system:
   system_menu: 系统菜单
   system_navigation: 系统导航
   users_management_navigation: 用户管理导航
   count:
-    product_values: '{0}您有 0 个产品值 |{1}您有 1 个产品值 |]1，Inf[您有 {{ count }} 个产品值'
-    users: '{0}您有 0 个用户 |{1}您有 1 个用户 |]1，Inf[您有 {{ count }} 个用户'
-    user_groups: '{0}您有 0 个用户组 |{1}您有 1 个用户组 |]1，Inf[您有 {{ count }} 个用户组'
-    roles: '{0}您有 0 个角色 |{1}您有 1 个角色 |]1，Inf[您有 {{ count }} 个角色'
+    product_values: '{0}您有 0 个产品值 |{1}您有 1 个产品值 ，您有 {{ count }} 个产品值'
+    users: '{0}您有 0 个用户 |{1}您有 1 个用户 ，您有 {{ count }} 个用户'
+    user_groups: '{0}您有 0 个用户组 |{1}您有 1 个用户组 ，您有 {{ count }} 个用户组'
+    roles: '{0}您有 0 个角色 |{1}您有 1 个角色 ，您有 {{ count }} 个角色'
   sso:
     enabled: SSO 已启用
     disabled: SSO 已禁用

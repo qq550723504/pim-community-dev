@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: 渠道已成功移除
       fail: 无法删除此渠道
   page_title:
-    index: "]-Inf, 1]{{ count }} 个渠道|]1, Inf[{{ count }} 个渠道"
+    index: "{{ count }} 个渠道，{{ count }} 个渠道"
   property:
     category_tree: 类别树
     do_not_convert: 不转换
@@ -65,7 +65,7 @@ pim_enrich.entity.locale:
   uppercase_label: 区域
   plural_label: 区域
   page_title:
-    index: "]-Inf, 1]{{ count }} 个已启用区域|]1, Inf[{{ count }"
+    index: "{{ count }} 个已启用区域，{{ count }}"
   helper: "要启用或禁用某个区域，请转到您的其中一个<a href={{ href }}>渠道</"
   grid:
     columns:
@@ -76,7 +76,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: 货币
   page_title:
-    index: "]-Inf, 1]{{ count }} 种货币|]1, Inf[{{ count }} 种货币"
+    index: "{{ count }} 种货币，{{ count }} 种货币"
 flash:
   currency:
     error:

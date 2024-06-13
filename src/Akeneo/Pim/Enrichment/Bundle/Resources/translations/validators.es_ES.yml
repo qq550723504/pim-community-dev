@@ -87,7 +87,7 @@ pim_catalog:
     product_identifier: Estos identificadores "%s" no existen.
     blacklisted_attribute_code: Código bloqueado temporalmente hasta que se complete el trabajo de limpieza en curso.
     blacklisted_attribute_code_with_link: "Código bloqueado temporalmente hasta que finalice el trabajo de limpieza en curso. Para obtener más información, consulte el <a href='{{ link }}' target='_blank'>detalle del trabajo</a>."
-    duplicate_options: '{1} La siguiente opción se ha utilizado varias veces: «{{ duplicate_options }}». Por favor, compruebe su lista de opciones de nuevo. |]1, +Inf] Las siguientes opciones fueron usadas varias veces: «{{ duplicate_options }}». Por favor, compruebe su lista de opciones de nuevo.'
+    duplicate_options: '{1} La siguiente opción se ha utilizado varias veces: «{{ duplicate_options }}». Por favor, compruebe su lista de opciones de nuevo. , +Inf] Las siguientes opciones fueron usadas varias veces: «{{ duplicate_options }}». Por favor, compruebe su lista de opciones de nuevo.'
     0: Se ha producido un error inesperado.
     100: Valor no previsto
     101: Este campo debe contener un valor booleano.

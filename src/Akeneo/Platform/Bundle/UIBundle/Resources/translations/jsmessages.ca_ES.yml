@@ -22,10 +22,10 @@ Millisecond: Mil·lisegon
 Microsecond: Microsegon
 "Time Zone": "Zona horària"
 duration:
-  days: "{0}0 dies|{1}1 dia|]1, Inf[{{ count }} dies"
-  hours: "{0}0 hores|{1}1 hora|]1, Inf[{{ count }} hores"
-  minutes: "{0}0 minuts|{1}1 minut|]1, Inf[{{ count }} minuts"
-  seconds: "{0}0 segons|{1}1 segon|]1, Inf[{{ count }} segons"
+  days: "{0}0 dies|{1}1 dia，{{ count }} dies"
+  hours: "{0}0 hores|{1}1 hora，{{ count }} hores"
+  minutes: "{0}0 minuts|{1}1 minut，{{ count }} minuts"
+  seconds: "{0}0 segons|{1}1 segon，{{ count }} segons"
 #PIM messages
 Localized value: Valor amb configuració regional
 Columns: Columnes
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: Abans
   by: per
   cancel: Cancel·lar
-  characters_left: ']-Inf, 1]{{ count }} caràcters restants|]1, Inf[{{ count }} caràcters restants'
+  characters_left: '{{ count }} caràcters restants，{{ count }} caràcters restants'
   clear_value: Esborra el valor
   close: Tancar
   code: Codi
@@ -223,14 +223,14 @@ pim_common:
   quality_score: Puntuació de qualitat
   remove: Eliminar
   required_label: (obligatori)
-  result_count: "{0}0 resultats|{1}1 resultat|]1, Inf[{{ itemsCount }} resultats"
+  result_count: "{0}0 resultats|{1}1 resultat，{{ itemsCount }} resultats"
   save: Desar
   search: Cercar
   select2:
     search: Cercar...
     no_match: No s’han trobat coincidències
     load_more: Carregant més resultats...
-  selected: "{0}Cap seleccionat|{1}Un seleccionat|]1, Inf[{{ itemsCount }} seleccionat"
+  selected: "{0}Cap seleccionat|{1}Un seleccionat，{{ itemsCount }} seleccionat"
   status: Estat
   to: fins a
   type: Tipus
@@ -299,7 +299,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: Estàs segur?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} feines|]1, Inf[{{ count }} feines"
+    index: "{{ count }} feines，{{ count }} feines"
   module:
     create:
       upload: Deixeu anar el fitxer {{ type }} aquí, o clic per buscar en el disc
@@ -409,29 +409,29 @@ pim_settings:
   product_settings: Configuració de producte
   automation_settings: Automatització
   count:
-    category_trees: '{0}Tens 0 arbres |{1}Tens 1 arbre |]1, Inf[Tens {{ count }} arbres'
-    categories: '{0}i 0 categories|{1}i 1 categoria|]1, Inf[i {{ count }} categories'
-    channels: '{0}Tens 0 canals|{1}Tens 1 canal|]1, Inf[Tens {{ count }} canals'
-    locales: '{0}Tens 0 configuracions regionals activades|{1}Tens 1 configuració regional activada|]1, Inf[Teniu {{ count }} configuracions regionals activades'
-    currencies: '{0}Tens 0 monedes activades|{1}Tens 1 moneda activada|]1, Inf[Teniu {{ count }} monedes activades'
-    attribute_groups: '{0}Tens 0 grups d''atributs|{1}Tens 1 grup d''atributs|]1, Inf[Tens {{ count }} grups d''atributs'
-    attributes: '{0}Tens 0 atributs|{1}Tens 1 atribut|]1, Inf[Teniu {{ count }} atributs'
-    families: '{0}Tens 0 famílies|{1}Tens 1 família|]1, Inf[Tens {{ count }} famílies'
-    measurements: '{0}Tens 0 mesures|{1}Tens 1 mesura|]1, Inf[Teniu {{ count }} mesures'
-    association_types: '{0}Tens 0 tipus d''associació|{1}Teniu 1 tipus d''associació|]1, Inf[Teniu {{ count }} tipus d''associació'
-    group_types: '{0}Tens 0 tipus de grup|{1}Tens 1 tipus de grup|]1, Inf[Teniu {{ count }} tipus de grup'
-    groups: '{0}Tens 0 grups|{1}Tens 1 grup|]1, Inf[Tens {{ count }} grups'
-    rules: '{0}Tens 0 regles activades|{1}Teniu 1 regla activada|]1, Inf[Teniu {{ count }} regles activades'
-    identifier_generators: '{0}Tens 0 generador d''identificadors|{1}Tens 1 generador d''identificadors|]1, Inf[Teniu {{ count }} generadors d''identificadors'
+    category_trees: '{0}Tens 0 arbres |{1}Tens 1 arbre ，Tens {{ count }} arbres'
+    categories: '{0}i 0 categories|{1}i 1 categoria，i {{ count }} categories'
+    channels: '{0}Tens 0 canals|{1}Tens 1 canal，Tens {{ count }} canals'
+    locales: '{0}Tens 0 configuracions regionals activades|{1}Tens 1 configuració regional activada，Teniu {{ count }} configuracions regionals activades'
+    currencies: '{0}Tens 0 monedes activades|{1}Tens 1 moneda activada，Teniu {{ count }} monedes activades'
+    attribute_groups: '{0}Tens 0 grups d''atributs|{1}Tens 1 grup d''atributs，Tens {{ count }} grups d''atributs'
+    attributes: '{0}Tens 0 atributs|{1}Tens 1 atribut，Teniu {{ count }} atributs'
+    families: '{0}Tens 0 famílies|{1}Tens 1 família，Tens {{ count }} famílies'
+    measurements: '{0}Tens 0 mesures|{1}Tens 1 mesura，Teniu {{ count }} mesures'
+    association_types: '{0}Tens 0 tipus d''associació|{1}Teniu 1 tipus d''associació，Teniu {{ count }} tipus d''associació'
+    group_types: '{0}Tens 0 tipus de grup|{1}Tens 1 tipus de grup，Teniu {{ count }} tipus de grup'
+    groups: '{0}Tens 0 grups|{1}Tens 1 grup，Tens {{ count }} grups'
+    rules: '{0}Tens 0 regles activades|{1}Teniu 1 regla activada，Teniu {{ count }} regles activades'
+    identifier_generators: '{0}Tens 0 generador d''identificadors|{1}Tens 1 generador d''identificadors，Teniu {{ count }} generadors d''identificadors'
 pim_system:
   system_menu: Menú del sistema
   system_navigation: Sistema de navegació
   users_management_navigation: Navegació de gestió d'usuaris
   count:
-    product_values: '{0}Tens 0 valors de producte|{1}Tens 1 valor de producte|]1, Inf[Tens {{ count }} valors de producte'
-    users: '{0}Tens 0 usuaris|{1}Tens 1 usuari|]1, Inf[Tens {{ count }} usuaris'
-    user_groups: '{0}Tens 0 grups d''usuaris|{1}Tens 1 grup d''usuaris|]1, Inf[Tens {{ count }} grups d''usuaris'
-    roles: '{0}Tens 0 rols|{1}Tens 1 rol|]1, Inf[Teniu {{ count }} rols'
+    product_values: '{0}Tens 0 valors de producte|{1}Tens 1 valor de producte，Tens {{ count }} valors de producte'
+    users: '{0}Tens 0 usuaris|{1}Tens 1 usuari，Tens {{ count }} usuaris'
+    user_groups: '{0}Tens 0 grups d''usuaris|{1}Tens 1 grup d''usuaris，Tens {{ count }} grups d''usuaris'
+    roles: '{0}Tens 0 rols|{1}Tens 1 rol，Teniu {{ count }} rols'
   sso:
     enabled: Activat SSO
     disabled: Desactivat SSO

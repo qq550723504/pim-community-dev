@@ -50,13 +50,13 @@ akeneo_connectivity.connection:
       sub_title: Bekijk onze App Store om te zien welke applicatie kan worden verbonden met Akeneo PIM.
       link: Open de App Store
       helper:
-        title: '{0} Er zijn geen apps of connectoren compatibel met uw PIM-versie.|{1} Er is {{ count }} app of connector compatibel met uw PIM-versie.|[2,Inf] Er zijn {{ count }} apps of connectoren compatibel met uw PIM-versie.'
-        title_without_apps: '{0} Er zijn geen connectoren compatibel met uw PIM versie.|{1} Er is {{ count }} connector compatibel met uw PIM-versie.## |[2,Inf] Er zijn {{ count }} connectoren compatibel met uw PIM-versie.'
+        title: '{0} Er zijn geen apps of connectoren compatibel met uw PIM-versie.|{1} Er is {{ count }} app of connector compatibel met uw PIM-versie. Er zijn {{ count }} apps of connectoren compatibel met uw PIM-versie.'
+        title_without_apps: '{0} Er zijn geen connectoren compatibel met uw PIM versie.|{1} Er is {{ count }} connector compatibel met uw PIM-versie.##  Er zijn {{ count }} connectoren compatibel met uw PIM-versie.'
         description: Dit is slechts een overzicht. Neem voor meer details een kijkje in de Akeneo App Store.
         link: Ga naar de Akeneo App Store
       search:
         placeholder: Zoeken op naam
-        total: '{0} Geen resultaten|{1} 1 resultaat|[2,Inf] {{ total }} resultaten'
+        total: '{0} Geen resultaten|{1} 1 resultaat {{ total }} resultaten'
       card:
         developed_by: 'Ontwikkeld door {{ author }}'
         read_more: meer lezen
@@ -66,11 +66,11 @@ akeneo_connectivity.connection:
         pending: In afwachting…
       extensions:
         title: Connectoren
-        total: '{0} Geen connectoren|{1} 1 connector|[2,Inf] {{ total }} connectoren'
+        total: '{0} Geen connectoren|{1} 1 connector {{ total }} connectoren'
         empty: Er zijn geen connectoren die compatibel zijn met uw versie
       apps:
         title: Apps
-        total: '{0} Geen apps|{1} 1 app|[2,Inf] {{ total }} apps'
+        total: '{0} Geen apps|{1} 1 app {{ total }} apps'
         empty: Er zijn geen apps die compatibel zijn met uw versie
       unreachable: We kunnen de App Store niet bereiken. Kom later terug.
       scroll_to_top: Naar boven scrollen
@@ -81,7 +81,7 @@ akeneo_connectivity.connection:
       list:
         apps:
           title: Verbonden apps
-          total: '{0} Geen apps|{1} 1 app|[2,Inf] {{ total }} apps'
+          total: '{0} Geen apps|{1} 1 app {{ total }} apps'
           empty: Nog geen apps verbonden.
           check_marketplace: 'Kijk op {{ marketplaceLink }} om alle beschikbare content te bekijken en uw eerste app te installeren.'
           marketplace_link_anchor: App Store
@@ -91,7 +91,7 @@ akeneo_connectivity.connection:
           title: Mijn verbonden aangepaste apps
           removed_user: Verwijderde gebruiker
         helper:
-          title: '[0,1] Uw PIM is verbonden met {{ count }} app.|[2,Inf] Uw PIM is verbonden met {{ count }} apps.'
+          title: '[0,1] Uw PIM is verbonden met {{ count }} app. Uw PIM is verbonden met {{ count }} apps.'
           description_1: Er worden regelmatig nieuwe apps ontwikkeld, dus blijf het in de gaten houden en controleer regelmatig onze App Store-pagina om te ontdekken hoe u uw PIM kunt verbinden.
           description_2: Wilt u graag meer weten over apps?
           link: Ga naar Hulp voor meer informatie.
@@ -434,7 +434,7 @@ akeneo_connectivity.connection:
     flash:
       success: Verbinding succesvol verwijderd.
   helper:
-    title: '{0} Op dit moment hebt u geen verbinding om uw PIM te koppelen aan applicaties van derden.|{1} U hebt 1 verbinding die uw PIM koppelt aan applicaties van derden. Goed gedaan, uw PIM is zo goed geïntegreerd in het ecosysteem.|]1,Inf] U hebt {{ count }} verbindingen die uw PIM koppelen aan applicaties van derden. Goed gedaan, uw PIM is zo goed geïntegreerd in het ecosysteem.'
+    title: '{0} Op dit moment hebt u geen verbinding om uw PIM te koppelen aan applicaties van derden.|{1} U hebt 1 verbinding die uw PIM koppelt aan applicaties van derden. Goed gedaan, uw PIM is zo goed geïntegreerd in het ecosysteem.U hebt {{ count }} verbindingen die uw PIM koppelen aan applicaties van derden. Goed gedaan, uw PIM is zo goed geïntegreerd in het ecosysteem.'
     description: Een PIM zonder integraties van derden is een soort van nutteloos, nietwaar? Dankzij de verbindingen, kunt u alle gegevensstromen inrichten die data met PIM moeten uitwisselen.
     link: Bekijk deze pagina om meer te weten te komen over Verbindingen.
   flow_type_helper:
@@ -548,7 +548,7 @@ akeneo_connectivity.connection:
       list:
         search:
           placeholder: Zoeken in berichten
-          total: '{0} Geen resultaten|{1} 1 resultaat|[2,Inf] {{ total }} resultaten'
+          total: '{0} Geen resultaten|{1} 1 resultaat {{ total }} resultaten'
           level: Niveau
           all: Alles
           none: Geen
@@ -570,12 +570,12 @@ akeneo_connectivity.connection:
     connection_monitoring:
       title: Foutenmonitoring
       helper:
-        title: '{0} U heeft {{ count }} fout |[1,Inf] U heeft {{ count }} fouten'
+        title: '{0} U heeft {{ count }} fout , U heeft {{ count }} fouten'
         description: Hier kunt u details van alle fouten zien voor deze verbinding van de laatste 7 dagen. Het aantal fouten is beperkt tot 100.
         link: Wil je leren hoe je dit kunt oplossen, bezoek dan het API-hulpcentrum.
       search_filter:
         placeholder: Zoeken in foutmeldingen
-        result_count: '{0} Geen resultaten|{1} 1 resultaat|[2,Inf] {{ count }} resultaten'
+        result_count: '{0} Geen resultaten|{1} 1 resultaat {{ count }} resultaten'
       error_list:
         date_time_column:
           title: Dag en tijd

@@ -30,7 +30,7 @@ pim_enrich.entity.product:
       success: Produto criado com sucesso
       fail: Nenhum atributo está configurado como um identificador de produto ou você não tem os direitos para editá-lo.
   page_title:
-    index: "]-Inf, 1]{{ count }} resultado|]1, Inf[{{ count }} resultados"
+    index: "{{ count }} resultado，{{ count }} resultados"
   module:
     create:
       subtitle: Criar produto
@@ -68,14 +68,14 @@ pim_enrich.entity.product:
       remove_optional: Remover esse atributo
       locale_specific_unavailable: Este campo de linguagem específica não está disponível nesta linguagem
       locale_unavailable: Este campo localizável não está disponível para a linguagem '{{ locale }}' e canal '{{ channel }}'
-      to_fill_count: "{1}1 atributo obrigatório faltando|]1, Inf[{{ count }} atributos obrigatórios faltando"
+      to_fill_count: "{1}1 atributo obrigatório faltando，{{ count }} atributos obrigatórios faltando"
       add_attribute_option: Adicionar Opção de Atributo
     completeness:
       title: Plenitude
       complete: Plenitude
       no_family: Família não definida. Por favor, defina uma família para calcular a plenitude desse produto.
       no_completeness: Você alterou a família do produto. Por favor, salve primeiramente para calcular a plenitude para nova família.
-      missing_values: "{1}1 valor faltando|]1, Inf[{{ count }} valores faltando"
+      missing_values: "{1}1 valor faltando，{{ count }} valores faltando"
     sequential_edit:
       item_limit: Apenas primeiros 1000 itens exibidos nesta edição sequencial ({{ count }} selecionados)
       empty: Sua seleção está vazia, mude seus critérios de pesquisa
@@ -149,7 +149,7 @@ pim_enrich.entity.product_model:
       create_label: "Adicionar um novo {{ axes }}"
       required_label: '(eixo de variante)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }}/ {{ total }} produto variante|]1, Inf[{{ complete }}/ {{ total }} produtos variantes"
+      variant_product: "{{ complete }}/ {{ total }} produto variante，{{ complete }}/ {{ total }} produtos variantes"
       label: Variante
     delete:
       confirm: Tem certeza que deseja excluir este modelo de produto? Todos os seus filhos, modelos de produto e produtos variantes, também serão excluídos.
@@ -167,7 +167,7 @@ pim_enrich.entity.group:
       success: Grupo removido com sucesso
       fail: Não é possível excluir esse grupo
   page_title:
-    index: "]-Inf, 1]{{ count }} grupo|]1, Inf[{{ count }} grupos"
+    index: "{{ count }} grupo，{{ count }} grupos"
   module:
     create:
       button: Criar Grupo
@@ -192,7 +192,7 @@ pim_enrich.export.product:
     locales:
       help: "As localidades define os valores de produtos localizados para exportar. Ex: apenas informações de produto em Francês."
     attributes:
-      label: "{0} todos os atributos |{1} um atributo selecionado |] 1, Inf [{{ count }} atributos selecionados"
+      label: "{0} todos os atributos |{1} um atributo selecionado {{ count }} atributos selecionados"
       help: "Selecione as informações do produto a exportar. Ex: somente os atributos técnicos."
       empty: Todos os atributos serão exportados
       modal:

@@ -44,7 +44,7 @@ akeneo_data_quality_insights:
     key_indicators:
       title: Belangrijkste indicatoren
       products: '{1}1 product ]1, 200[{{ count }} producten [200, Inf[meer dan {{ count }} producten'
-      product_models: '{1}1 productmodel|]1, 200[{{ count }} productmodellen|[200, Inf[meer dan {{ count }} productmodellen'
+      product_models: '{1}1 productmodel, 200[{{ count }} productmodellen|[200, Inf[meer dan {{ count }} productmodellen'
       entities_to_work_on: 'U heeft <improvable_products_count_link/> om aan te werken.'
       entities_to_work_on_2_kinds: 'U heeft <improvable_products_count_link/> en <improvable_product_models_count_link/> om aan te werken.'
       list:

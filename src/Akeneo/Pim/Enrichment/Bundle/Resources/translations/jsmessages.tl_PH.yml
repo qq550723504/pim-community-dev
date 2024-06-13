@@ -171,7 +171,7 @@ pim_enrich.export.product:
     locales:
       help: "Ang lokal ay tumutukoy sa naisalokal na produktong halaga para sa eksport. Hal: tanging ang produktong impormasyon ay naka pranses."
     attributes:
-      label: "{0}Lahat ng mga attribute|{1}Isang attribute ang napili|]1,Inf[{{ count }} na mga attribute ang napili"
+      label: "{0}Lahat ng mga attribute|{1}Isang attribute ang napili,Inf[{{ count }} na mga attribute ang napili"
       help: "Piliin ang impormasyon ng produkto na iluluwas. Hal: mga teknikal na katangian lamang."
       empty: Lahat ng attribute ay i-aangkat
       modal:

@@ -134,7 +134,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -241,7 +241,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: Er du sikker?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "] -Inf, 1] {{ count }} operasjon|] 1, Inf [{{ count }} operasjoner"
+    index: "{{ count }} operasjon{{ count }} operasjoner"
   module:
     create:
       upload: Slipp din {{ type }} fil her, eller klikk for å se igjennom disken

@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: 카테고리 선택
-        label: "{0}모든 제품|{1}1 선택 카테고리|]1,Inf[{{ count }} 선택 카테고리"
+        label: "{0}모든 제품|{1}1 선택 카테고리,Inf[{{ count }} 선택 카테고리"
         title: 카테고리 선택
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: 파일을 업로드할 수 없습니다. 파일 크기가 해당 PHP 또는 HTTP 서버 구성의 구성된 최대 업로드 크기를 초과할 수 있습니다.
       page_title:
-        index: "]-Inf, 1] {{ count }} 가져오기 프로필|]1, Inf [{{ count }} 가져오기 프로필"
+        index: " {{ count }} 가져오기 프로필, Inf [{{ count }} 가져오기 프로필"
       module:
         create:
           button: 가져오기 프로필 만들기
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: 내보내기 프로필 생성됨
       page_title:
-        index: "]-Inf, 1] {{ count }} 내보내기 프로필|]1, Inf [{{ count }} 내보내기 프로필"
+        index: " {{ count }} 내보내기 프로필, Inf [{{ count }} 내보내기 프로필"
       module:
         create:
           button: 내보내기 프로필 만들기

@@ -22,10 +22,10 @@ Millisecond: Millisecond
 Microsecond: Microsecond
 "Time Zone": "Time Zone"
 duration:
-  days: "{0}0 days|{1}1 day|]1, Inf[{{ count }} days"
-  hours: "{0}0 hours|{1}1 hour|]1, Inf[{{ count }} hours"
-  minutes: "{0}0 minutes|{1}1 minute|]1, Inf[{{ count }} minutes"
-  seconds: "{0}0 seconds|{1}1 second|]1, Inf[{{ count }} seconds"
+  days: "{0}0 days|{1}1 day，{{ count }} days"
+  hours: "{0}0 hours|{1}1 hour，{{ count }} hours"
+  minutes: "{0}0 minutes|{1}1 minute，{{ count }} minutes"
+  seconds: "{0}0 seconds|{1}1 second，{{ count }} seconds"
 #PIM messages
 Localized value: Localized value
 Columns: Columns
@@ -150,7 +150,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -170,7 +170,7 @@ pim_common:
   before: Before
   by: by
   cancel: Cancel
-  characters_left: ']-Inf, 1]{{ count }} character left|]1, Inf[{{ count }} characters left'
+  characters_left: '{{ count }} character left，{{ count }} characters left'
   clear_value: Clear value
   close: Close
   code: Code
@@ -215,14 +215,14 @@ pim_common:
   quality_score: Quality score
   remove: Remove
   required_label: (required)
-  result_count: "{0}0 results|{1}1 result|]1, Inf[{{ itemsCount }} results"
+  result_count: "{0}0 results|{1}1 result，{{ itemsCount }} results"
   save: Save
   search: Search
   select2:
     search: Search...
     no_match: No matches found
     load_more: Loading more results...
-  selected: "{0}None selected|{1}One selected|]1, Inf[{{ itemsCount }} selected"
+  selected: "{0}None selected|{1}One selected，{{ itemsCount }} selected"
   status: Status
   to: to
   type: Type
@@ -289,7 +289,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: Are you sure?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]{{ count }} job|]1, Inf[{{ count }} jobs"
+    index: "{{ count }} job，{{ count }} jobs"
   module:
     create:
       upload: Drop your {{ type }} file here, or click to browse disk
@@ -392,28 +392,28 @@ pim_settings:
   catalog_settings: Catalog settings
   product_settings: Product settings
   count:
-    category_trees: '{0}You have 0 trees |{1}You have 1 tree |]1, Inf[You have {{ count }} trees '
-    categories: '{0}and 0 categories|{1}and 1 category|]1, Inf[and {{ count }} categories'
-    channels: '{0}You have 0 channels|{1}You have 1 channel|]1, Inf[You have {{ count }} channels'
-    locales: '{0}You have 0 enabled locales|{1}You have 1 enabled locale|]1, Inf[You have {{ count }} enabled locales'
-    currencies: '{0}You have 0 enabled currencies|{1}You have 1 enabled currency|]1, Inf[You have {{ count }} enabled currencies'
-    attribute_groups: '{0}You have 0 attribute groups|{1}You have 1 attribute group|]1, Inf[You have {{ count }} attribute groups'
-    attributes: '{0}You have 0 attributes|{1}You have 1 attribute|]1, Inf[You have {{ count }} attributes'
-    families: '{0}You have 0 families|{1}You have 1 family|]1, Inf[You have {{ count }} families'
-    measurements: '{0}You have 0 measurements|{1}You have 1 measurement|]1, Inf[You have {{ count }} measurements'
-    association_types: '{0}You have 0 association types|{1}You have 1 association type|]1, Inf[You have {{ count }} association types'
-    group_types: '{0}You have 0 group types|{1}You have 1 group type|]1, Inf[You have {{ count }} group types'
-    groups: '{0}You have 0 groups|{1}You have 1 group|]1, Inf[You have {{ count }} groups'
-    rules: '{0}You have 0 enabled rules|{1}You have 1 enabled rule|]1, Inf[You have {{ count }} enabled rules'
+    category_trees: '{0}You have 0 trees |{1}You have 1 tree ，You have {{ count }} trees '
+    categories: '{0}and 0 categories|{1}and 1 category，and {{ count }} categories'
+    channels: '{0}You have 0 channels|{1}You have 1 channel，You have {{ count }} channels'
+    locales: '{0}You have 0 enabled locales|{1}You have 1 enabled locale，You have {{ count }} enabled locales'
+    currencies: '{0}You have 0 enabled currencies|{1}You have 1 enabled currency，You have {{ count }} enabled currencies'
+    attribute_groups: '{0}You have 0 attribute groups|{1}You have 1 attribute group，You have {{ count }} attribute groups'
+    attributes: '{0}You have 0 attributes|{1}You have 1 attribute，You have {{ count }} attributes'
+    families: '{0}You have 0 families|{1}You have 1 family，You have {{ count }} families'
+    measurements: '{0}You have 0 measurements|{1}You have 1 measurement，You have {{ count }} measurements'
+    association_types: '{0}You have 0 association types|{1}You have 1 association type，You have {{ count }} association types'
+    group_types: '{0}You have 0 group types|{1}You have 1 group type，You have {{ count }} group types'
+    groups: '{0}You have 0 groups|{1}You have 1 group，You have {{ count }} groups'
+    rules: '{0}You have 0 enabled rules|{1}You have 1 enabled rule，You have {{ count }} enabled rules'
 pim_system:
   system_menu: System menu
   system_navigation: System navigation
   users_management_navigation: Users management navigation
   count:
-    product_values: '{0}You have 0 product values|{1}You have 1 product value|]1, Inf[You have {{ count }} product values'
-    users: '{0}You have 0 users|{1}You have 1 user|]1, Inf[You have {{ count }} users'
-    user_groups: '{0}You have 0 user groups|{1}You have 1 user group|]1, Inf[You have {{ count }} user groups'
-    roles: '{0}You have 0 roles|{1}You have 1 role|]1, Inf[You have {{ count }} roles'
+    product_values: '{0}You have 0 product values|{1}You have 1 product value，You have {{ count }} product values'
+    users: '{0}You have 0 users|{1}You have 1 user，You have {{ count }} users'
+    user_groups: '{0}You have 0 user groups|{1}You have 1 user group，You have {{ count }} user groups'
+    roles: '{0}You have 0 roles|{1}You have 1 role，You have {{ count }} roles'
   sso:
     enabled: SSO enabled
     disabled: SSO disabled

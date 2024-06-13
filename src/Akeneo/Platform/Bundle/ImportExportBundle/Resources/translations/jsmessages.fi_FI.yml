@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: Kategoriavalinta
-        label: "{0}Kaikki tuotteet|{1}Yksi kategoria valittu|]1,Inf[{{ count }} kategoriaa valittu"
+        label: "{0}Kaikki tuotteet|{1}Yksi kategoria valittu,Inf[{{ count }} kategoriaa valittu"
         title: Valitse kategoriat
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: Tiedoston lataaminen ei onnistu. Sen koko ylittää maksimikokorajoituksen (PHP tai HTTP palvelimen konfiguraatio)
       page_title:
-        index: "]-Inf, 1] {{ count }} tuontiprofiili|]1, Inf [{{ count }} tuontiprofiilia"
+        index: " {{ count }} tuontiprofiili, Inf [{{ count }} tuontiprofiilia"
       module:
         create:
           button: Luo tuontiprofiili
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: Vientiprofiilin tallentaminen onnistui
       page_title:
-        index: "]-Inf, 1] {{ count }} vientiprofiili|]1, Inf [{{ count }} vientiprofiilia"
+        index: " {{ count }} vientiprofiili, Inf [{{ count }} vientiprofiilia"
       module:
         create:
           button: Luo vientiprofiili

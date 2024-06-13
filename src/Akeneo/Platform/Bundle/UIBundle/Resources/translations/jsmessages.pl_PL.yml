@@ -22,10 +22,10 @@ Millisecond: Milisekunda
 Microsecond: Mikrosekunda
 "Time Zone": "Strefa Czasowa"
 duration:
-  days: "{0}0 dni|{1}1 dzień|]1, Inf[{{ count }} dni"
-  hours: "{0}0 godz.|{1}1 godz.|]1, Inf[{{ count }} godz."
-  minutes: "{0}0 min{1}1 min|]1, Inf[{{ count }} min"
-  seconds: "{0}0 sekund|{1}1 sekunda|]1, Inf[{{ count }} skund\n"
+  days: "{0}0 dni|{1}1 dzień，{{ count }} dni"
+  hours: "{0}0 godz.|{1}1 godz.，{{ count }} godz."
+  minutes: "{0}0 min{1}1 min，{{ count }} min"
+  seconds: "{0}0 sekund|{1}1 sekunda，{{ count }} skund\n"
 #PIM messages
 Localized value: Przetłumaczona wartość
 Columns: Kolumny
@@ -155,7 +155,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -175,7 +175,7 @@ pim_common:
   before: Przed
   by: autorstwa
   cancel: Anuluj
-  characters_left: ']-Inf, 1]Pozostałe znaki: {{ count }}|]1, Inf[Pozostałe znaki: {{ count }}'
+  characters_left: 'Pozostałe znaki: {{ count }}，Pozostałe znaki: {{ count }}'
   clear_value: Wyczyść wartość
   close: Zamknij
   code: Kod
@@ -223,14 +223,14 @@ pim_common:
   quality_score: Wynik jakości
   remove: Usuń
   required_label: (wymagane)
-  result_count: "{0}0 wyników|{1}1 wynik|]1, Inf[{{ itemsCount }} wyników"
+  result_count: "{0}0 wyników|{1}1 wynik，{{ itemsCount }} wyników"
   save: Zapisz
   search: Szukaj
   select2:
     search: Szukaj...
     no_match: Nie znaleziono dopasowań
     load_more: Ładuję więcej wyników...
-  selected: "{0}Brak wybranych|{1}Wybrane pozycje: 1|]1, Inf[Wybrane pozycje: {{ itemsCount }}"
+  selected: "{0}Brak wybranych|{1}Wybrane pozycje: 1，Wybrane pozycje: {{ itemsCount }}"
   status: Status
   to: do
   type: Typ
@@ -299,7 +299,7 @@ pim_enrich.entity.fallback:
       discard_changes_title: Jesteś pewien?
 pim_enrich.entity.job_execution:
   page_title:
-    index: "]-Inf, 1]Liczba zadań: {{ count }}|]1, Inf[Liczba zadań: {{ count }}"
+    index: "Liczba zadań: {{ count }}，Liczba zadań: {{ count }}"
   module:
     create:
       upload: Upuść twój plik {{ type }} tutaj, lub kliknij aby przeglądać dysk
@@ -409,29 +409,29 @@ pim_settings:
   product_settings: Ustawienia produktów
   automation_settings: Automatyzacja
   count:
-    category_trees: '{0}Liczba drzew: 0 |{1}Liczba drzew: 1 |]1, Inf[Liczba drzew: {{ count }}, '
-    categories: '{0}liczba kategorii: 0|{1}liczba kategorii: 1|]1, Inf[liczba kategorii: {{ count }}'
-    channels: '{0}Liczba kanałów: 0|{1}Liczba kanałów: 1|]1, Inf[Liczba kanałów: {{ count }}'
-    locales: '{0}Liczba włączonych ustawień regionalnych: 0|{1}Liczba włączonych ustawień regionalnych: 1|]1, Inf[Liczba włączonych ustawień regionalnych: {{ count }}'
-    currencies: '{0}Liczba włączonych walut: 0|{1}Liczba włączonych walut: 1|]1, Inf[Liczba włączonych walut: {{ count }}'
-    attribute_groups: '{0}Liczba grup atrybutów: 0|{1}Liczba grup atrybutów: 1|]1, Inf[Liczba grup atrybutów: {{ count }}'
-    attributes: '{0}Liczba atrybutów: 0|{1}Liczba atrybutów: 1|]1, Inf[Liczba atrybutów: {{ count }}'
-    families: '{0}Liczba rodzin: 0|{1}Liczba rodzin: 1|]1, Inf[Liczba rodzin: {{ count }}'
-    measurements: '{0}Liczba pomiarów: 0|{1}Liczba pomiarów: 1|]1, Inf[Liczba pomiarów: {{ count }}'
-    association_types: '{0}Liczba typów powiązań: 0|{1}Liczba typów powiązań: 1|]1, Inf[Liczba typów powiązań: {{ count }}'
-    group_types: '{0}Liczba typów grup: 0|{1}Liczba typów grup: 1|]1, Inf[Liczba typów grup: {{ count }}'
-    groups: '{0}Liczba grup: 0|{1}Liczba grup: 1|]1, Inf[Liczba grup: {{ count }}'
-    rules: '{0}Liczba włączonych reguł: 0|{1}Liczba włączonych reguł: 1|]1, Inf[Liczba włączonych reguł: {{ count }}'
-    identifier_generators: '{0}Liczba generatorów identyfikatorów: 0|{1}Liczba generatorów identyfikatorów: 1|]1, Inf[Liczba generatorów identyfikatorów: {{ count }}'
+    category_trees: '{0}Liczba drzew: 0 |{1}Liczba drzew: 1 ，Liczba drzew: {{ count }}, '
+    categories: '{0}liczba kategorii: 0|{1}liczba kategorii: 1，liczba kategorii: {{ count }}'
+    channels: '{0}Liczba kanałów: 0|{1}Liczba kanałów: 1，Liczba kanałów: {{ count }}'
+    locales: '{0}Liczba włączonych ustawień regionalnych: 0|{1}Liczba włączonych ustawień regionalnych: 1，Liczba włączonych ustawień regionalnych: {{ count }}'
+    currencies: '{0}Liczba włączonych walut: 0|{1}Liczba włączonych walut: 1，Liczba włączonych walut: {{ count }}'
+    attribute_groups: '{0}Liczba grup atrybutów: 0|{1}Liczba grup atrybutów: 1，Liczba grup atrybutów: {{ count }}'
+    attributes: '{0}Liczba atrybutów: 0|{1}Liczba atrybutów: 1，Liczba atrybutów: {{ count }}'
+    families: '{0}Liczba rodzin: 0|{1}Liczba rodzin: 1，Liczba rodzin: {{ count }}'
+    measurements: '{0}Liczba pomiarów: 0|{1}Liczba pomiarów: 1，Liczba pomiarów: {{ count }}'
+    association_types: '{0}Liczba typów powiązań: 0|{1}Liczba typów powiązań: 1，Liczba typów powiązań: {{ count }}'
+    group_types: '{0}Liczba typów grup: 0|{1}Liczba typów grup: 1，Liczba typów grup: {{ count }}'
+    groups: '{0}Liczba grup: 0|{1}Liczba grup: 1，Liczba grup: {{ count }}'
+    rules: '{0}Liczba włączonych reguł: 0|{1}Liczba włączonych reguł: 1，Liczba włączonych reguł: {{ count }}'
+    identifier_generators: '{0}Liczba generatorów identyfikatorów: 0|{1}Liczba generatorów identyfikatorów: 1，Liczba generatorów identyfikatorów: {{ count }}'
 pim_system:
   system_menu: Menu systemowe
   system_navigation: Nawigacja systemu
   users_management_navigation: Nawigacja zarządzaniem użytkownikami
   count:
-    product_values: '{0}Liczba wartości produktu: 0|{1}Liczba wartości produktu: 1|]1, Inf[Liczba wartości produktu: {{ count }}'
-    users: '{0}Liczba użytkowników: 0 |{1}Liczba użytkowników: 1 |]1, Inf[Liczba użytkowników: {{ count }} '
-    user_groups: '{0}Liczba grup użytkowników: 0|{1}Liczba grup użytkowników: 1|]1, Inf[Liczba grup użytkowników: {{ count }}'
-    roles: '{0}Liczba ról: 0|{1}Liczba ról: 1|]1, Inf[Liczba ról: {{ count }}'
+    product_values: '{0}Liczba wartości produktu: 0|{1}Liczba wartości produktu: 1，Liczba wartości produktu: {{ count }}'
+    users: '{0}Liczba użytkowników: 0 |{1}Liczba użytkowników: 1 ，Liczba użytkowników: {{ count }} '
+    user_groups: '{0}Liczba grup użytkowników: 0|{1}Liczba grup użytkowników: 1，Liczba grup użytkowników: {{ count }}'
+    roles: '{0}Liczba ról: 0|{1}Liczba ról: 1，Liczba ról: {{ count }}'
   sso:
     enabled: SSO włączone
     disabled: SSO wyłączone

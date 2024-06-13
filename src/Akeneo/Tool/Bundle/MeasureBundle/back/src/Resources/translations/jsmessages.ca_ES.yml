@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Cercar a l'etiqueta o codi
   family:
-    result_count: "{0}0 Família mpetrica |{1}1 Família mpetrica |]1, Inf[{{ itemsCount }} Famílies mètriques"
+    result_count: "{0}0 Família mpetrica |{1}1 Família mpetrica ，{{ itemsCount }} Famílies mètriques"
     not_found: Família mètrica no trobada
     no_data:
       title: Ho sentim, no hi ha cap família mètrica!

@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Het kanaal is verwijderd
       fail: Kan dit kanaal niet verwijderen
   page_title:
-    index: "]-Inf, 1]{{ count }} kanaal|]1, Inf[{{ count }} kanalen"
+    index: "{{ count }} kanaal，{{ count }} kanalen"
   property:
     category_tree: Categorieboom
     do_not_convert: Niet converteren
@@ -65,7 +65,7 @@ pim_enrich.entity.locale:
   uppercase_label: Taal
   plural_label: Talen
   page_title:
-    index: "]-Inf, 1]{{ count }} ingeschakelde taal]1, Inf[{{ count }"
+    index: "{{ count }} ingeschakelde taal{{ count }}"
   helper: "Om een taal in of uit te schakelen, gaat u naar een van <"
   grid:
     columns:
@@ -76,7 +76,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: Valuta's
   page_title:
-    index: "]-Inf, 1]{{ count }} valuta|]1, Inf[{{ count }} valuta's"
+    index: "{{ count }} valuta，{{ count }} valuta's"
 flash:
   currency:
     error:

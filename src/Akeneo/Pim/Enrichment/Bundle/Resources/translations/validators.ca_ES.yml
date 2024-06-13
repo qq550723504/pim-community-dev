@@ -87,7 +87,7 @@ pim_catalog:
     product_identifier: Aquests identificadors "%s" no existeixen.
     blacklisted_attribute_code: Codi bloquejat temporalment fins que s'hagi completat la tasca de neteja en curs.
     blacklisted_attribute_code_with_link: "Codi bloquejat temporalment fins que s'hagi completat la tasca de neteja en curs. Per saber-ne més, consulteu <a href='{{ link }}' target='_blank'>detall de la tasca</a>."
-    duplicate_options: '{1} L''opció següent s''ha utilitzat diverses vegades: "{{ duplicate_options }}". Si us plau, torneu a comprovar la vostra llista d''opcions.|]1, +Inf] Les opcions següents s''han utilitzat diverses vegades: "{{ duplicate_options }}". Si us plau, torneu a comprovar la vostra llista d''opcions.'
+    duplicate_options: '{1} L''opció següent s''ha utilitzat diverses vegades: "{{ duplicate_options }}". Si us plau, torneu a comprovar la vostra llista d''opcions., +Inf] Les opcions següents s''han utilitzat diverses vegades: "{{ duplicate_options }}". Si us plau, torneu a comprovar la vostra llista d''opcions.'
     0: S'ha produït un error inesperat.
     100: Valor inesperat
     101: Aquest camp espera un valor booleà.

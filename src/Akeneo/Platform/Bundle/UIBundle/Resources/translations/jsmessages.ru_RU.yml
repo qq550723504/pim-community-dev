@@ -21,10 +21,10 @@ Millisecond: Миллисекунда
 Microsecond: Микросекунда
 "Time Zone": "Часовой пояс"
 duration:
-  days: "{0}0 дней|{1}1 день|]1, Inf [{{ count }} дней"
-  hours: "{0}0 часов|{1}1 час|]1, Inf[часов: {{ count }}"
-  minutes: "{0}0 минут |{1}1 минута|]1, Inf[минут: {{ count }}"
-  seconds: "{0}0 секунд|{1}1 секунда|]1, Inf [секунд: {{ count }}"
+  days: "{0}0 дней|{1}1 день, Inf [{{ count }} дней"
+  hours: "{0}0 часов|{1}1 час，часов: {{ count }}"
+  minutes: "{0}0 минут |{1}1 минута，минут: {{ count }}"
+  seconds: "{0}0 секунд|{1}1 секунда, Inf [секунд: {{ count }}"
 #PIM messages
 Localized value: Локализованное значение
 Columns: Столбцы
@@ -138,7 +138,7 @@ pim_ui:
 #fail: Can not create this entity
 #success: Entity successfully created
 #page_title:
-#index: "]-Inf, 1]1 entity|]1, Inf[{{ count }} entities"
+#index: "1 entity，{{ count }} entities"
 #property:
 #field_name: Field name
 #complex_field:
@@ -193,7 +193,7 @@ pim_common:
   properties: Свойства
   remove: Удалить
   required_label: (требуется)
-  result_count: "{0}0 результатов|{1}1 результат|]1, Inf[{{ itemsCount }} результатов"
+  result_count: "{0}0 результатов|{1}1 результат，{{ itemsCount }} результатов"
   save: Сохранить
   search: Поиск
   select2:

@@ -38,7 +38,7 @@ pim_user_management:
         create:
           success: Bruger blev oprettet.
       page_title:
-        index: "]-Inf, 1] {{ count }} bruger|]1, Inf [{{ count }} brugere"
+        index: " {{ count }} bruger, Inf [{{ count }} brugere"
       properties:
         username: Brugernavn
         name_prefix: Navnepræfiks
@@ -79,7 +79,7 @@ pim_user_management:
     role:
       plural_label: Roller
       page_title:
-        index: "]-Inf, 1] {{ count }} rolle|]1, Inf [{{ count }} roller"
+        index: " {{ count }} rolle, Inf [{{ count }} roller"
       module:
         create:
           button: Opret rolle
@@ -88,7 +88,7 @@ pim_user_management:
     group:
       plural_label: Brugergrupper
       page_title:
-        index: "]-Inf, 1] {{ count }} gruppe|]1, Inf [{{ count }} grupper"
+        index: " {{ count }} gruppe, Inf [{{ count }} grupper"
       module:
         create:
           button: Opret gruppe

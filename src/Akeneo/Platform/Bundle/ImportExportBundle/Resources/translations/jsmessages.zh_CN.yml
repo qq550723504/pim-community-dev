@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: 类别选择
-        label: "{0}所有产品 |{1}一个选定的类别|]1,Inf[{{ count }} 个选定的类别"
+        label: "{0}所有产品 |{1}一个选定的类别,Inf[{{ count }} 个选定的类别"
         title: 选择类别
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: 无法上传文件。文件大小可能超过您的 PHP 或 HTTP 服务器配置上配置的最大上传大小
       page_title:
-        index: "]-Inf, 1] {{ count }} 个导入配置文件|]1, Inf [{{ count }} 个导入配置文件"
+        index: " {{ count }} 个导入配置文件, Inf [{{ count }} 个导入配置文件"
       module:
         create:
           button: 创建导入配置文件
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: 导出配置文件已成功创建
       page_title:
-        index: "]-Inf, 1] {{ count }} 个导出配置文件|]1, Inf [{{ count }} 个导出配置文件"
+        index: " {{ count }} 个导出配置文件, Inf [{{ count }} 个导出配置文件"
       module:
         create:
           button: 创建导出配置文件

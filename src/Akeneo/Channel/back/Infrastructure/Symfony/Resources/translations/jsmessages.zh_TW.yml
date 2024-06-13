@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: 渠道已成功移除
       fail: 不能移除此渠道
   page_title:
-    index: "]-Inf, 1]{{ count }} 個渠道|]1, Inf[{{ count }} 個渠道"
+    index: "{{ count }} 個渠道，{{ count }} 個渠道"
   property:
     category_tree: 類別目錄
     do_not_convert: 不轉換
@@ -64,8 +64,8 @@ pim_enrich.entity.locale:
   uppercase_label: 區域
   plural_label: 區域
   page_title:
-    index: "]-Inf, 1]{{ count }} 個區域|]1, Inf[{{ count }} 個區域"
+    index: "{{ count }} 個區域，{{ count }} 個區域"
 pim_enrich.entity.currency:
   plural_label: 貨幣
   page_title:
-    index: "]-Inf, 1]{{ count }} 個貨幣|]1, Inf[{{ count }} 個貨幣"
+    index: "{{ count }} 個貨幣，{{ count }} 個貨幣"

@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Channel successfully removed
       fail: Cannot delete this channel
   page_title:
-    index: "]-Inf, 1]{{ count }} channel|]1, Inf[{{ count }} channels"
+    index: "{{ count }} channel，{{ count }} channels"
   property:
     category_tree: Category tree
     do_not_convert: Do not convert
@@ -69,7 +69,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: Currencies
   page_title:
-    index: "]-Inf, 1]{{ count }} currency|]1, Inf[{{ count }} currencies"
+    index: "{{ count }} currency，{{ count }} currencies"
 flash:
   currency:
     error:

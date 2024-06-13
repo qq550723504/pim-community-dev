@@ -26,7 +26,7 @@ pim_enrich.entity.product:
       success: 產品已成功創建
       fail: 沒有將屬性配置為產品標識符，或者您無權對其進行編輯。
   page_title:
-    index: "]-Inf, 1]{{ count }} 個結果|]1, Inf[{{ count }} 個結果"
+    index: "{{ count }} 個結果，{{ count }} 個結果"
   module:
     create:
       subtitle: 創建產品
@@ -64,7 +64,7 @@ pim_enrich.entity.product:
       remove_optional: 移除此屬性
       locale_specific_unavailable: 此字段在此區域中不可用
       locale_unavailable: 此可本地化字段不可用於 '{{ locale }}' 區域和 '{{ channel }}' 渠道
-      to_fill_count: "{1} 個必需屬性已丟失|]1，Inf[{{ count }} 個必需屬性已丟失"
+      to_fill_count: "{1} 個必需屬性已丟失，{{ count }} 個必需屬性已丟失"
       add_attribute_option: 添加屬性選項
       add_option: 新增選項
     completeness:
@@ -72,7 +72,7 @@ pim_enrich.entity.product:
       complete: 完成
       no_family: 沒有定義品類。請定義一個品類來計算此產品的完成度。
       no_completeness: 您剛修改了產品品類。請保存後再計算新品類的完成度。
-      missing_values: "{1}1 個數值已丟失|]1，Inf[{{ count }} 個數值已丟失"
+      missing_values: "{1}1 個數值已丟失，{{ count }} 個數值已丟失"
     sequential_edit:
       item_limit: 僅顯示此序列編輯中的前1000個條目（已選{{ count }}項）
       empty: 您的選擇為空，請修改您的搜索條件
@@ -147,7 +147,7 @@ pim_enrich.entity.product_model:
       create_label: "添加新的 {{ axes }}"
       required_label: '(變量軸)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} 個產品變量|]1, Inf[{{ complete }} / {{ total }} 個產品變量"
+      variant_product: "{{ complete }} / {{ total }} 個產品變量，{{ complete }} / {{ total }} 個產品變量"
     delete:
       confirm: 確定要刪除此產品型號嗎？其子項、產品型號和產品變量也將被刪除。
       confirm_for_products_and_product_models: 確定要刪除已選產品和產品型號嗎？所有產品型號的子項也將被刪除。
@@ -164,7 +164,7 @@ pim_enrich.entity.group:
       success: 分組已成功移除
       fail: 不能刪除此分組
   page_title:
-    index: "]-Inf, 1]{{ count }} 個分組|]1, Inf[{{ count }} 個分組"
+    index: "{{ count }} 個分組，{{ count }} 個分組"
   module:
     create:
       button: 創建分組
@@ -192,7 +192,7 @@ pim_enrich.export.product:
     locales:
       help: "區域確定了要匯出的本地化產品值。例如：僅限法語產品信息。"
     attributes:
-      label: "{0} 全部屬性 |{1} 一個已選屬性|]1,Inf[{{ count }} 個已選屬性"
+      label: "{0} 全部屬性 |{1} 一個已選屬性,Inf[{{ count }} 個已選屬性"
       help: "選擇要匯出的產品信息。例如：僅限技術屬性。"
       empty: 將匯出全部屬性
       modal:
@@ -258,7 +258,7 @@ pim_enrich.export.product:
     title: 全局設定
 pim_enrich.mass_edit.product:
   title: 產品批量操作
-  confirm: "{1}您將要更新包含以下信息的產品，請確認。|]1, Inf[您將要更新{{ itemsCount }}個包含以下信息的產品，請確認。"
+  confirm: "{1}您將要更新包含以下信息的產品，請確認。，您將要更新{{ itemsCount }}個包含以下信息的產品，請確認。"
   step:
     select:
       label: 選擇產品
@@ -276,53 +276,53 @@ pim_enrich.mass_edit.product:
       select_attributes: 選擇屬性
     change_status:
       label: 修改狀態
-      label_count: "{1}修改<span class=\"AknFullPage-title--highlight\">1 個產品</span>的狀態|]1, Inf[修改<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的狀態"
+      label_count: "{1}修改<span class=\"AknFullPage-title--highlight\">1 個產品</span>的狀態，修改<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的狀態"
       description: 已選產品將被啟用或禁用。
       field: 啟用
     edit_common:
       label: 修改屬性值
-      label_count: "{1}編輯<span class=\"AknFullPage-title--highlight\">1 個產品</span>的屬性值|]1, Inf[編輯<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的屬性值"
+      label_count: "{1}編輯<span class=\"AknFullPage-title--highlight\">1 個產品</span>的屬性值，編輯<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的屬性值"
       description: 僅可使用以下{{ locale }}區域和{{ scope }}渠道數據修改屬於此選中產品品類的屬性。
       no_update: 請選擇至少一個字段更新。
     add_attribute_value:
       label: 添加屬性值
-      label_count: "{1}為<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加屬性值|]1, Inf[為<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}個產品</span>添加屬性值"
+      label_count: "{1}為<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加屬性值，為<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}個產品</span>添加屬性值"
       description: 僅可使用以下{{ locale }}區域和{{ scope }}渠道數據修改屬於此選中產品品類的多值屬性。
     change_family:
       label: 修改品類
-      label_count: "{1}修改<span class=\"AknFullPage-title--highlight\">1 個產品</span>的品類|]1, Inf[修改<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的品類"
+      label_count: "{1}修改<span class=\"AknFullPage-title--highlight\">1 個產品</span>的品類，修改<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的品類"
       description: 選定產品的品類將更改為選中的品類
     add_to_group:
       label: 添加到分組
-      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加到分組|]1, Inf[將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>添加到分組"
+      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加到分組，將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>添加到分組"
       description: 選擇分組以添加選中的產品
       field: 分組
       no_update: 請在繼續前選擇一個分組
     add_to_category:
       label: 添加到類別
-      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加到類別|]1, Inf[將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>添加到類別"
+      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加到類別，將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>添加到類別"
       description: 產品將被分入下列類別，當前分類將保留。
     move_to_category:
       label: 類別移動
-      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>移動到類別|]1, Inf[將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>移動到類別"
+      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>移動到類別，將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>移動到類別"
       description: 產品將被分入下列類別，當前分類將丟失。
     remove_from_category:
       label: 從類別中移除
-      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>從類別中移除|]1, Inf[將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>從類別中移除"
+      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>從類別中移除，將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>從類別中移除"
       description: 產品將從以下目錄中刪除。
     add_to_existing_product_model:
       label: 添加到現有產品型號
-      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加到現有產品型號|]1, Inf[將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>添加到現有產品型號"
+      label_count: "{1}將<span class=\"AknFullPage-title--highlight\">1 個產品</span>添加到現有產品型號，將<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>添加到現有產品型號"
       description: 選中的產品型號將收集產品，從而豐富擁有通用屬性的多個產品。
       no_update: 請在繼續前選擇一個產品型號
     associate_to_product_and_product_model:
       label: 關聯
-      label_count: "{1}關聯<span class=\"AknFullPage-title--highlight\">1 個產品</span>到產品或產品型號|]1, Inf[關聯 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>到產品或產品型號"
+      label_count: "{1}關聯<span class=\"AknFullPage-title--highlight\">1 個產品</span>到產品或產品型號，關聯 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>到產品或產品型號"
       description: 界面中選中的產品將關聯到選中關聯類型中選中的產品和產品型號
       validate: 請在進入下一步前添加關聯
     change_parent_product_model:
       label: 修改父級產品型號
-      label_count: "{1}修改<span class=\"AknFullPage-title--highlight\">1 個產品</span>的父級產品型號|]1, Inf[修改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的父級產品型號"
+      label_count: "{1}修改<span class=\"AknFullPage-title--highlight\">1 個產品</span>的父級產品型號，修改 <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個產品</span>的父級產品型號"
       description: 產品變量的父級或界面中選中的子產品型號將修改為選中產品型號。
 pim_datagrid:
   mass_action_group:

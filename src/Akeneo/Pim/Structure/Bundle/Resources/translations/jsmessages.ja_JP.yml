@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: メイン画像として使用される属性
     empty_attribute_as_image: 未選択
   page_title:
-    index: "]-Inf, 1] {{ count }} ファミリー |]1, Inf [{{ count }} ファミリー"
+    index: " {{ count }} ファミリー , Inf [{{ count }} ファミリー"
   module:
     attributes:
       not_required_label: 任意
@@ -75,7 +75,7 @@ pim_enrich.entity.attribute_option:
     delete:
       fail: 属性オプションの削除中にエラーが発生しました
   page_title:
-    index: "]-Inf, 1]{{ count }} オプション|]1, Inf[{{ count }} オプション"
+    index: "{{ count }} オプション，{{ count }} オプション"
   module:
     edit:
       cancel_title: 変更をキャンセル
@@ -110,7 +110,7 @@ pim_enrich.entity.association_type:
       success: 関連タイプを正常に削除しました
       fail: この関連タイプを削除することはできません
   page_title:
-    index: "]-Inf, 1]{{ count }} 関連タイプ|]1, Inf[{{ count }} 関連タイプ"
+    index: "{{ count }} 関連タイプ，{{ count }} 関連タイプ"
   module:
     create:
       title: 関連タイプを新規作成
@@ -138,7 +138,7 @@ pim_enrich.entity.group_type:
       success: グループタイプを正常に削除しました
       fail: このグループタイプは削除できません
   page_title:
-    index: "]-Inf, 1]{{ count }} グループタイプ|]1, Inf[{{ count }} グループタイプ"
+    index: "{{ count }} グループタイプ，{{ count }} グループタイプ"
   module:
     create:
       button: グループタイプを作成
@@ -156,7 +156,7 @@ pim_enrich.entity.attribute:
       success: 属性を正常に削除しました
       fail: この属性は削除できません
   page_title:
-    index: "]-Inf, 1]{{ count }} 属性|]1, Inf[{{ count }} 属性"
+    index: "{{ count }} 属性，{{ count }} 属性"
   property:
     allowed_extensions: 利用できる拡張子
     auto_option_sorting: アルファベット順のオプションを自動的に並べ替える
@@ -232,9 +232,9 @@ pim_enrich.entity.attribute:
     delete:
       confirm: この属性を削除してもよろしいですか？
       attribute_removal: この属性はすべての商品から削除されます。
-      product_count: '{0}0 個の商品|{1}1 個の商品|]1, Inf[{{ count }} 個の商品'
-      product_model_count: '{0}0 個の商品モデル|{1}1 個の商品モデル|]1, Inf[{{ count }} 個の商品モデル'
-      used: ']-Inf,1]には現在、この属性の値が設定されています。|]1, Inf[には現在、この属性の値が設定されています。'
+      product_count: '{0}0 個の商品|{1}1 個の商品，{{ count }} 個の商品'
+      product_model_count: '{0}0 個の商品モデル|{1}1 個の商品モデル，{{ count }} 個の商品モデル'
+      used: ']-Inf,1]には現在、この属性の値が設定されています。，には現在、この属性の値が設定されています。'
       helper:
         content: 既存の属性値へのアクセスを維持したまま、属性タイプを変更してローカライズ可または参照可にする必要がある場合は、
         link: 詳細についてはヘルプセンターをご確認ください。
@@ -245,7 +245,7 @@ pim_enrich.entity.attribute:
     mass_delete:
       modal:
         title: 属性
-        subtitle: '{1}{{ count }} 個の属性の削除を確認してください|]1, Inf[{{ count }} 個の属性の削除を確認してください'
+        subtitle: '{1}{{ count }} 個の属性の削除を確認してください，{{ count }} 個の属性の削除を確認してください'
         label: '"{{ textToCheck }}" と入力してください'
         confirm: 本当にこれらの属性を削除しますか？
       message_bar:
@@ -255,7 +255,7 @@ pim_enrich.entity.attribute_group:
   label: 属性グループ
   uppercase_label: 属性グループ
   plural_label: 属性グループ
-  result_count: '{0}0 個の属性グループ|{1}1 個の属性グループ|]1, Inf[{{ count }} 個の属性グループ'
+  result_count: '{0}0 個の属性グループ|{1}1 個の属性グループ，{{ count }} 個の属性グループ'
   limit_reached: '{{ max }} 属性グループの上限に達しました。'
   show_more_attribute:
     title: 少し混雑しています。{{ attributeCount }}/{{ totalAttributeCount }} 個の属性を表示します。
@@ -286,20 +286,20 @@ pim_enrich.entity.attribute_group:
   grid:
     columns:
       attribute_count: 関連する属性数
-  selected: '{0}属性グループは選択されていません|{1}1個の属性グループを選択済み|]1, Inf[{{ count }}個の属性グループを選択済み'
+  selected: '{0}属性グループは選択されていません|{1}1個の属性グループを選択済み，{{ count }}個の属性グループを選択済み'
   mass_delete:
-    confirm: '{1}この属性グループを本当に削除しますか？|]1, Inf[これら{{ count }}個の属性グループを本当に削除しますか？'
+    confirm: '{1}この属性グループを本当に削除しますか？，これら{{ count }}個の属性グループを本当に削除しますか？'
     confirmation_phrase: '"{{ confirmation_word }}" と入力してください'
     confirmation_word: 削除
-    attribute_warning: '{1}これらの属性グループを削除すると、{{ number_of_attribute }}個の関連属性が影響を受けます。この関連属性を新しい属性グループに移動する必要があります。|]1, Inf[これらの属性グループを削除すると、{{ number_of_attribute }}個の関連属性が影響を受けます。これらの関連属性を新しい属性グループに移動する必要があります。'
-    select_attribute_group: '{1}関連属性の移動先の属性グループを選択してください:|]1, Inf[{{ number_of_attribute }}個の関連属性の移動先の属性グループを選択してください:'
+    attribute_warning: '{1}これらの属性グループを削除すると、{{ number_of_attribute }}個の関連属性が影響を受けます。この関連属性を新しい属性グループに移動する必要があります。，これらの属性グループを削除すると、{{ number_of_attribute }}個の関連属性が影響を受けます。これらの関連属性を新しい属性グループに移動する必要があります。'
+    select_attribute_group: '{1}関連属性の移動先の属性グループを選択してください:，{{ number_of_attribute }}個の関連属性の移動先の属性グループを選択してください:'
     empty_result_label: '属性グループが見つかりません'
     placeholder: '属性グループを選択'
     open_label: '属性グループリスト'
   delete:
     confirm: '本当にこの属性グループを削除しますか'
     attribute_warning: 'この属性グループを削除すると、{{ number_of_attribute }} 個の関連属性に影響します。この関連属性を新しい属性グループに移動する必要があります。'
-    select_attribute_group: '{1}関連属性の移動先の属性グループを選択してください:|]1, Inf[{{ number_of_attribute }}個の関連属性の移動先の属性グループを選択してください:'
+    select_attribute_group: '{1}関連属性の移動先の属性グループを選択してください:，{{ number_of_attribute }}個の関連属性の移動先の属性グループを選択してください:'
   batch_jobs:
     delete_attribute_groups:
       delete_attribute_groups:
@@ -329,7 +329,7 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: 属性の要件を設定
       description: 以下の属性要件が選択したファミリーに適用されます
-      label_count: "{1}<span class=\"AknFullPage-title--highlight\">１件のファミリー</span>の属性要件を設定|]1, Inf[<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}件のファミリー</span>の属性要件を設定"
+      label_count: "{1}<span class=\"AknFullPage-title--highlight\">１件のファミリー</span>の属性要件を設定，<span class=\"AknFullPage-title--highlight\">{{ itemsCount }}件のファミリー</span>の属性要件を設定"
 batch_jobs:
   default_steps:
     delete_attribute_groups: 属性グループを削除

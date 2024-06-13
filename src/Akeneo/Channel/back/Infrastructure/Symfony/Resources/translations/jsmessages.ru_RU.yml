@@ -63,7 +63,7 @@ pim_enrich.entity.locale:
   uppercase_label: Локаль
   plural_label: Локали
   page_title:
-    index: "]-Inf, 1]{{ count }} активированная локаль|]1, Inf[{{ count }} активированных локали"
+    index: "{{ count }} активированная локаль，{{ count }} активированных локали"
   helper: "Чтобы активировать или деактивировать локаль, перейдите к одному из <a href={{ href }}>ваших каналов</a> и добавьте или удалите локаль."
   grid:
     columns:

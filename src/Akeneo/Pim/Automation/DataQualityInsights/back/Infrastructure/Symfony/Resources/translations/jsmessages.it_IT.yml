@@ -43,8 +43,8 @@ akeneo_data_quality_insights:
       day: giorno
     key_indicators:
       title: Indicatori chiave
-      products: '{1}1 prodotto|]1, 200[{{ count }} prodotti|[200, Inf[più di {{ count }} prodotti'
-      product_models: '{1}1 modello di prodotto|]1, 200[{{ count }} modelli di prodotto|[200, Inf[più di {{ count }} modelli di prodotto'
+      products: '{1}1 prodotto, 200[{{ count }} prodotti|[200, Inf[più di {{ count }} prodotti'
+      product_models: '{1}1 modello di prodotto, 200[{{ count }} modelli di prodotto|[200, Inf[più di {{ count }} modelli di prodotto'
       entities_to_work_on: 'Hai <improvable_products_count_link/> su cui lavorare.'
       entities_to_work_on_2_kinds: 'Hai <improvable_products_count_link/> e <improvable_product_models_count_link/> su cui lavorare.'
       list:

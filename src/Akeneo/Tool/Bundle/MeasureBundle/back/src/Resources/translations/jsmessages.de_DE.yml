@@ -8,7 +8,7 @@ measurements:
   search:
     placeholder: Auf Label oder Code suchen
   family:
-    result_count: "{0}0 Messfamilien |{1}1 Messfamilie |]1, Inf[{{ itemsCount }} Messfamilien"
+    result_count: "{0}0 Messfamilien |{1}1 Messfamilie ，{{ itemsCount }} Messfamilien"
     not_found: Messfamilie nicht gefunden
     no_data:
       title: Leider gibt es keine Messfamilie!

@@ -8,7 +8,7 @@ pim_connector:
       selector:
         modal:
           title: Sélection des catégories
-        label: "{0}Tous les produits|{1}Une catégorie sélectionnée|]1,Inf[{{ count }} catégories sélectionnées"
+        label: "{0}Tous les produits|{1}Une catégorie sélectionnée,Inf[{{ count }} catégories sélectionnées"
         title: Sélectionner la/les catégorie(s)
     locales:
       validation:
@@ -37,7 +37,7 @@ pim_import_export:
         upload:
           error: Impossible de télécharger le fichier. Sa taille dépasse peut-être la taille maximale de téléchargement définie sur votre configuration PHP ou serveur HTTP
       page_title:
-        index: "]-Inf, 1]{{ count }} profil d'import|]1, Inf[{{ count }} profils d'import"
+        index: "{{ count }} profil d'import，{{ count }} profils d'import"
       module:
         create:
           button: Créer un profil d'import
@@ -47,7 +47,7 @@ pim_import_export:
         create:
           success: Le profil d'export a bien été créé
       page_title:
-        index: "]-Inf, 1]{{ count }} profil d'export|]1, Inf[{{ count }} profils d'export"
+        index: "{{ count }} profil d'export，{{ count }} profils d'export"
       module:
         create:
           button: Créer un profil d'export

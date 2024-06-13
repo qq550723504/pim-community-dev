@@ -49,7 +49,7 @@ pim_enrich.entity.channel:
       success: Canal eliminado correctamente
       fail: No se puede eliminar este canal
   page_title:
-    index: "]-Inf, 1]{{ count }} canal|]1, Inf[{{ count }} canales"
+    index: "{{ count }} canal，{{ count }} canales"
   property:
     category_tree: Árbol de categoría
     do_not_convert: No convertir
@@ -65,7 +65,7 @@ pim_enrich.entity.locale:
   uppercase_label: Configuración regional
   plural_label: Configuraciones regionales
   page_title:
-    index: "]-Inf, 1]{{ count }} configuración regional habilitada|]1"
+    index: "{{ count }} configuración regional habilitada"
   helper: "Para habilitar o deshabilitar una configuración regional"
   grid:
     columns:
@@ -76,7 +76,7 @@ pim_enrich.entity.locale:
 pim_enrich.entity.currency:
   plural_label: Monedas
   page_title:
-    index: "]-Inf, 1]{{ count }} moneda|]1, Inf[{{ count }} monedas"
+    index: "{{ count }} moneda，{{ count }} monedas"
 flash:
   currency:
     error:

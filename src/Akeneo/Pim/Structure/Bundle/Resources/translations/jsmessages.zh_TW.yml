@@ -19,7 +19,7 @@ pim_enrich.entity.family:
     attribute_as_image: 作為主圖的屬性
     empty_attribute_as_image: 未選擇
   page_title:
-    index: "]-Inf, 1]{{ count }} 個品類|]1, Inf[{{ count }} 個品類"
+    index: "{{ count }} 個品類，{{ count }} 個品類"
   module:
     attributes:
       not_required_label: 非必填
@@ -89,7 +89,7 @@ pim_enrich.entity.association_type:
       success: 關聯類型已成功刪除
       fail: 無法刪除此關聯類型
   page_title:
-    index: "]-Inf, 1]{{ count }}關聯類型]1, Inf[{{ count }}關聯類型"
+    index: "{{ count }}關聯類型{{ count }}關聯類型"
   module:
     create:
       button: 創建關聯類型
@@ -108,7 +108,7 @@ pim_enrich.entity.group_type:
       success: 分組類型已成功刪除
       fail: 不能刪除此分組類型
   page_title:
-    index: "]-Inf, 1]{{ count }} 個分組類型|]1, Inf[{{ count }} 個分組類型"
+    index: "{{ count }} 個分組類型，{{ count }} 個分組類型"
   module:
     create:
       button: 創建分組類型
@@ -126,7 +126,7 @@ pim_enrich.entity.attribute:
       success: 屬性已移除
       fail: 無法刪除此屬性
   page_title:
-    index: "]-Inf, 1]{{ count }} 個屬性|]1, Inf[{{ count }} 個屬性"
+    index: "{{ count }} 個屬性，{{ count }} 個屬性"
   property:
     allowed_extensions: 允許的擴展名
     auto_option_sorting: 按字母順序自動排序選項
@@ -221,7 +221,7 @@ pim_enrich.entity.attribute_group:
       confirm: 確定要刪除該屬性分組？
 pim_enrich.mass_edit.family:
   title: 品類批量操作
-  confirm: "{1}您將要更新包含以下信息的品類，請確認。|]1, Inf[您將要更新{{ itemsCount }}個包含以下信息的品類，請確認。"
+  confirm: "{1}您將要更新包含以下信息的品類，請確認。，您將要更新{{ itemsCount }}個包含以下信息的品類，請確認。"
   step:
     select:
       label: 選擇品類
@@ -238,4 +238,4 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: 設置屬性要求
       description: 以下屬性要求將被用於選中的品類
-      label_count: "{1}設置<span class=\"AknFullPage-title--highlight\">1 個品類</span>的屬性要求|]1, Inf[編輯<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個品類</span>的屬性要求"
+      label_count: "{1}設置<span class=\"AknFullPage-title--highlight\">1 個品類</span>的屬性要求，編輯<span class=\"AknFullPage-title--highlight\">{{ itemsCount }} 個品類</span>的屬性要求"

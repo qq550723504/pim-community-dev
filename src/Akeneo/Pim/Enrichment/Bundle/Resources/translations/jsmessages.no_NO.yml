@@ -30,7 +30,7 @@ pim_enrich.entity.product:
       success: Produktet ble opprettet
       fail: Ingen attributter er konfigurert med produktidentifikasjon, eller du har ikke rettigheter til å redigere det.
   page_title:
-    index: "] -Inf, 1] {{ count }} resultat |] 1, Inf [{{ count }} resultater"
+    index: "{{ count }} resultat {{ count }} resultater"
   module:
     create:
       subtitle: Opprett produkt
@@ -68,14 +68,14 @@ pim_enrich.entity.product:
       remove_optional: Fjern dette attributtet
       locale_specific_unavailable: Dette lokaliserbare feltet er ikke tilgjengelig for det valgte språket
       locale_unavailable: Dette lokaliserbare feltet er ikke tilgjengelig for språk '{{ locale }}' og kanal '{{ channel }}'
-      to_fill_count: "{1}1 mangler påkrevd attributt |] 1, Inf [{{ count }} manglende påkrevde attributter"
+      to_fill_count: "{1}1 mangler påkrevd attributt {{ count }} manglende påkrevde attributter"
       add_attribute_option: Legg til attributtalternativ
     completeness:
       title: Fullstendighet
       complete: Fullstendighet
       no_family: Ingen familie er definert. Vennligst definer en familie for å beregne fullstendigheten på dette produktet.
       no_completeness: Du endret nettopp familie for produktet. Lagre for å beregne fullstendighet for den nye familien.
-      missing_values: "{1} 1 mangler verdi |] 1, Inf [{{ count }} manglende verdier"
+      missing_values: "{1} 1 mangler verdi {{ count }} manglende verdier"
     sequential_edit:
       item_limit: Kun de første 1000 elementene vist i denne sekvensielle redigeringen ({{ count }} valgt)
       empty: Valget ditt har ingen resultater, vennligst endre dine søkekriterier
@@ -149,7 +149,7 @@ pim_enrich.entity.product_model:
       create_label: "Legg til ny {{ axes }}"
       required_label: '(Variantakse)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} variantprodukt|]1, Inf[{{ complete }} / {{ total }} produktvarianter"
+      variant_product: "{{ complete }} / {{ total }} variantprodukt，{{ complete }} / {{ total }} produktvarianter"
       label: Variant
     delete:
       confirm: Er du sikker på at du ønsker å slette denne produktmodellen? Alle underliggende produkter, produktmodeller og produktvarianter slettes også.
@@ -167,7 +167,7 @@ pim_enrich.entity.group:
       success: Gruppe fjernet
       fail: Kan ikke slette denne gruppen
   page_title:
-    index: "]-Inf, 1]{{ count }} gruppe|]1, Inf[{{ count }} grupper"
+    index: "{{ count }} gruppe，{{ count }} grupper"
   module:
     create:
       button: Opprett gruppe
@@ -195,7 +195,7 @@ pim_enrich.export.product:
     locales:
       help: "Språk velger de lokaliserede produktverdier til å eksportere. Feks: kun produktinformasjon på fransk."
     attributes:
-      label: "{0} alle attributter |{1} en attribut valgt |] 1, Inf [{{ count }} attributter valgt"
+      label: "{0} alle attributter |{1} en attribut valgt {{ count }} attributter valgt"
       help: "Velg produktinformasjon for eksport. Feks: kun tekniske attributter."
       empty: Alle attributter vil bli eksportert
       modal:
@@ -261,7 +261,7 @@ pim_enrich.export.product:
     title: Globale innstillinger
 pim_enrich.mass_edit.product:
   title: Produkt massehandlinger
-  confirm: "{0}Du er på vei til å oppdatere produkter med følgende informasjon, vennligst bekreft.|{1}Du er på vei til å oppdatere et produkt med følgende informasjon, vennligst bekreft.|]1, Inf[Du er på vei til å oppdatere {{ itemsCount }} produkter med følgende informasjon, vennligst bekreft."
+  confirm: "{0}Du er på vei til å oppdatere produkter med følgende informasjon, vennligst bekreft.|{1}Du er på vei til å oppdatere et produkt med følgende informasjon, vennligst bekreft.，Du er på vei til å oppdatere {{ itemsCount }} produkter med følgende informasjon, vennligst bekreft."
   step:
     select:
       label: Velg produkt
@@ -279,12 +279,12 @@ pim_enrich.mass_edit.product:
       select_attributes: Velg attribut
     change_status:
       label: Endre status
-      label_count: "{0}Endre status på noen <span class=\"AknFullPage-title--highlight\">products</span>|{1}Endre status på <span class=\"AknFullPage-title--highlight\">1 produkt</span>|]1, Inf[Endre status på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{0}Endre status på noen <span class=\"AknFullPage-title--highlight\">products</span>|{1}Endre status på <span class=\"AknFullPage-title--highlight\">1 produkt</span>，Endre status på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: De valgte produktene vil bli aktivert eller deaktivert.
       field: Aktivere
     edit_common:
       label: Endre attributtverdier
-      label_count: "{0}Endre atributtverdier på noen <span class=\"AknFullPage-title--highlight\">products</span>|{1}Endre atributtverdier på <span class=\"AknFullPage-title--highlight\">1 produkt</span>|]1, Inf[Endre atribruttverdi på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{0}Endre atributtverdier på noen <span class=\"AknFullPage-title--highlight\">products</span>|{1}Endre atributtverdier på <span class=\"AknFullPage-title--highlight\">1 produkt</span>，Endre atribruttverdi på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: Kun de attributter som tilhører familiene til de valgte produkter vil bli redigert med følgende data for {{ locale }} locale og {{ scope }} kanal.
       no_update: Vennligst velg minst ett felt til å oppdatere
     add_attribute_value:

@@ -30,7 +30,7 @@ pim_enrich.entity.product:
       success: Produktet blev oprettet
       fail: Ingen attribut er konfigureret som et produkt-id, eller du har ikke rettigheder til at redigere den.
   page_title:
-    index: "] -Inf, 1] {{ count }} resultat |] 1, Inf [{{ count }} resultater"
+    index: "{{ count }} resultat {{ count }} resultater"
   module:
     create:
       subtitle: Opret produkt
@@ -68,7 +68,7 @@ pim_enrich.entity.product:
       remove_optional: Fjern denne attribut
       locale_specific_unavailable: Dette landestandard specifikke felt er ikke tilgængeligt i denne landestandard
       locale_unavailable: Dette landespecifik felt er ikke tilgængeligt for landestandard'{{ locale }}' og '{{ channel }}'-kanal
-      to_fill_count: "{1}1 mangler kræved attribut |] 1, Inf [{{ count }} manglende krævede attributter"
+      to_fill_count: "{1}1 mangler kræved attribut {{ count }} manglende krævede attributter"
       add_attribute_option: Tilføj attribut tilvalg
       add_option: Tilføje en mulighed
     completeness:
@@ -76,7 +76,7 @@ pim_enrich.entity.product:
       complete: Fuldført
       no_family: Ingen familie defineret. Definér venligst en familie for at beregne fuldstændigheden af dette produkt.
       no_completeness: Du har lige ændret familie på produktet. Gem det først for at beregne fuldstændigheden for den nye familie.
-      missing_values: "{1} 1 mangler værdi |] 1, Inf [{{ count }} manglende værdier"
+      missing_values: "{1} 1 mangler værdi {{ count }} manglende værdier"
     sequential_edit:
       item_limit: Kun de første 1000 poster vist i dette sekventiel redigere ({{ count }} udvalgte)
       empty: Dit valg er tom, skal du ændre dine søgekriterier
@@ -150,7 +150,7 @@ pim_enrich.entity.product_model:
       create_label: "Tilføje en ny {{ axes }}"
       required_label: '(variant akse)'
     completeness:
-      variant_product: "]-Inf, 1]{{ complete }} / {{ total }} produkt variant|]1, Inf[{{ complete }} / {{ total }} produkt varianter"
+      variant_product: "{{ complete }} / {{ total }} produkt variant，{{ complete }} / {{ total }} produkt varianter"
     delete:
       confirm: Er du sikker på du vil slette denne produktmodel? Alle underliggende produkter, produktmodeller og variant produkter, slettes også.
       confirm_for_products_and_product_models: Er du sikker på du vil slette de valgte produkter og produktmodeller? Alle produktmodeller og undeliggende produkter bliver også slettet.
@@ -167,7 +167,7 @@ pim_enrich.entity.group:
       success: Gruppen blev slettet
       fail: Kan ikke slette denne gruppe
   page_title:
-    index: "]-Inf, 1]{{ count }} gruppe|]1, Inf[{{ count }} grupper"
+    index: "{{ count }} gruppe，{{ count }} grupper"
   module:
     create:
       button: Opret gruppe
@@ -188,7 +188,7 @@ pim_enrich.export.product:
     locales:
       help: "Landestandarderne definerer de lokaliserede produkt værdier at eksportere. Ex: kun produktinformation på fransk."
     attributes:
-      label: "{0} alle attributter |{1} én attribut valgt |] 1, Inf [{{ count }} attributter valgt"
+      label: "{0} alle attributter |{1} én attribut valgt {{ count }} attributter valgt"
       help: "Vælg produktinformation til eksport. Eks: kun de tekniske attributter."
       empty: Alle attributter vil blive eksporteret
       modal:
@@ -274,54 +274,54 @@ pim_enrich.mass_edit.product:
       select_attributes: Vælg attributter
     change_status:
       label: Skift status
-      label_count: "{1}Change <span class=\"AknFullPage-title--highlight\"> 1</span> produkt |] 1, Inf [Skift status på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{1}Change <span class=\"AknFullPage-title--highlight\"> 1</span> produkt Skift status på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: De valgte produkter vil blive aktiveret eller deaktiveret.
       field: At aktivere
     edit_common:
       label: Redigere attributter værdier
-      label_count: "{1}Ret fælles attributter på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> |] 1, Inf [Rediger fælles attributter på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{1}Ret fælles attributter på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> Rediger fælles attributter på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: Kun de attributter, der tilhører familierne til de valgte produkter vil blive redigeret med følgende data for {{ locale }} locale og {{ scope }} kanal.
       no_update: Vælg venligst mindst en enhed, der skal opdateres
     add_attribute_value:
       label: Redigere attributter værdier
-      label_count: "{1}Ret fælles attributter på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> |] 1, Inf [Rediger fælles attributter på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{1}Ret fælles attributter på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> Rediger fælles attributter på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: Kun fler-værdi attributter, der tilhører produktgruppernes familier, vil blive redigeret med følgende data for {{ locale }} lokale og {{ scope }} -kanalen. Attributternes værdier tilføjes, og de tidligere værdier bibholdesholdes.
     change_family:
       label: Ændre familie
-      label_count: "{1}Ændre familie på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> |] 1, Inf [Skift familie på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{1}Ændre familie på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> Skift familie på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: Familie på de udvalgte produkter vil blive ændret til den valgte familie
     add_to_group:
       label: Tilføj til grupper
-      label_count: "{1}Tilføj <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> gruppe |] 1, Inf [Tilføj <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til grupper"
+      label_count: "{1}Tilføj <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> gruppe Tilføj <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til grupper"
       description: Vælg de grupper hvor de udvalgte produkter skal tilføjes til
       field: Grupper
       no_update: Vælg venligst en gruppe for at fortsætte
     add_to_category:
       label: Tilføje til kategorier
-      label_count: "{1}Tilføj <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> gruppe |] 1, Inf [Tilføj <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til grupper"
+      label_count: "{1}Tilføj <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> gruppe Tilføj <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til grupper"
       description: Produkterne vil blive klassificeret i følgende kategorier, den nuværende klassificering bibeholdes.
     move_to_category:
       label: Flyt mellem kategorier
-      label_count: "{1}Flyt <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> mellem kategorier |] 1, Inf [Flyt <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> mellem kategorier"
+      label_count: "{1}Flyt <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> mellem kategorier Flyt <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> mellem kategorier"
       description: Produkterne vil blive klassificeret i følgende kategorier, den nuværende klassificering bibeholdes.
     remove_from_category:
       label: Fjern fra kategorier
-      label_count: "{1}Fjern <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> fra kategorier |] 1, Inf [Fjern <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> fra kategorier"
+      label_count: "{1}Fjern <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> fra kategorier Fjern <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> fra kategorier"
       description: Produkterne vil blive fjernet fra følgende kategorier.
       no_update: Du har ikke markeret en kategori at fjerne de valgte produkter fra.
     add_to_existing_product_model:
       label: Føj til en eksisterende produktmodel
-      label_count: "{1}Tilføj <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> gruppe |] 1, Inf [Tilføj <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til grupper"
+      label_count: "{1}Tilføj <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> gruppe Tilføj <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til grupper"
       description: Den valgte produktmodel vil samle produkterne og giver mulighed for berigelse af deres fælles egenskaber.
       no_update: Vælg venligst en gruppe for at fortsætte
     associate_to_product_and_product_model:
       label: Associeret
-      label_count: "{1}Associer <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> til produkter eller produkt modeller |] 1, Inf [Associer <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til produkter eller produkt modeller"
+      label_count: "{1}Associer <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> til produkter eller produkt modeller Associer <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span> til produkter eller produkt modeller"
       description: De valgte produkter i listen vil blive associeret til de udvalgte produkter og produkt modeller for den valgte associetingstype
       validate: Vælg venligst associering før du fortsætter til næste trin
     change_parent_product_model:
       label: Ændre forældre produkt model
-      label_count: "{1}Ændre overordnet produkt model på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> |] 1, Inf [Ændre overordnet produkt model på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
+      label_count: "{1}Ændre overordnet produkt model på <span class=\"AknFullPage-title--highlight\"> 1 produkt</span> Ændre overordnet produkt model på <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} produkter</span>"
       description: Det overordnede tilknytning til variantprodukterne eller underproduktmodellerne, der er valgt i nettet, vil blive ændret til den valgte produktmodel.
 pim_datagrid:
   mass_action_group:

@@ -20,7 +20,7 @@ pim_enrich.entity.family:
     attribute_as_image: Attributt brukes som primærbilde
     empty_attribute_as_image: Ikke valgt
   page_title:
-    index: "] -Inf, 1] {{ count }} familie|] 1, Inf [{{ count }} familier"
+    index: "{{ count }} familie{{ count }} familier"
   module:
     attributes:
       not_required_label: Ikke nødvendig
@@ -90,7 +90,7 @@ pim_enrich.entity.association_type:
       success: Foreningen type fjernet
       fail: Kan ikke slette denne tilknytningstypen
   page_title:
-    index: "] -Inf, 1] {{ count }} tilknytningstype |] 1, Inf [{{ count }} tilknytningstyper"
+    index: "{{ count }} tilknytningstype {{ count }} tilknytningstyper"
   module:
     create:
       button: Opprett tilknytningstype
@@ -109,7 +109,7 @@ pim_enrich.entity.group_type:
       success: Gruppetype ble fjernet
       fail: Kan ikke slette denne gruppetypen
   page_title:
-    index: "]-Inf, 1]{{ count }} gruppetype|]1, Inf[{{ count }} gruppetyper"
+    index: "{{ count }} gruppetype，{{ count }} gruppetyper"
   module:
     create:
       button: Opprett gruppetype
@@ -127,7 +127,7 @@ pim_enrich.entity.attribute:
       success: Attributtet fjernet
       fail: Kan ikke slette attributtet
   page_title:
-    index: "]-Inf, 1]{{ count }} attributt|]1, Inf[{{ count }} attributter"
+    index: "{{ count }} attributt，{{ count }} attributter"
   property:
     allowed_extensions: Tillatte filtyper
     auto_option_sorting: Sorter innstillinger etter alfabetisk rekkefølge
@@ -232,4 +232,4 @@ pim_enrich.mass_edit.family:
     set_requirements:
       label: Definer attributtkrav
       description: Følgende attributtkrav vil bli brukt på de valgte familiene
-      label_count: "{1}Definer attributtkrav for <span class=\"AknFullPage-title--highlight\"> 1 familie</span> |] 1, Inf [Definer attributtkrav for <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} familier</span>"
+      label_count: "{1}Definer attributtkrav for <span class=\"AknFullPage-title--highlight\"> 1 familie</span> Definer attributtkrav for <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} familier</span>"

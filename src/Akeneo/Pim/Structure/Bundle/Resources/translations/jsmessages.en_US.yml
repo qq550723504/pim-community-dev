@@ -20,7 +20,7 @@ pim_enrich.entity.family:
         attribute_as_image: Attribute used as the main picture
         empty_attribute_as_image: Not selected
     page_title:
-        index: "]-Inf, 1]{{ count }} family|]1, Inf[{{ count }} families"
+        index: "{{ count }} family，{{ count }} families"
     module:
         attributes:
             not_required_label: Not required
@@ -79,7 +79,7 @@ pim_enrich.entity.attribute_option:
         delete:
             fail: Error during deletion of the attribute option
     page_title:
-        index: "]-Inf, 1]{{ count }} option|]1, Inf[{{ count }} options"
+        index: "{{ count }} option，{{ count }} options"
     module:
         edit:
             cancel_title: Cancel modification
@@ -115,7 +115,7 @@ pim_enrich.entity.association_type:
             success: Association type successfully removed
             fail: Cannot delete this association type
     page_title:
-        index: "]-Inf, 1]{{ count }} association type|]1, Inf[{{ count }} association types"
+        index: "{{ count }} association type，{{ count }} association types"
     module:
         create:
             title: Create a new association type
@@ -144,7 +144,7 @@ pim_enrich.entity.group_type:
             success: Group type successfully removed
             fail: Cannot delete this group type
     page_title:
-        index: "]-Inf, 1]{{ count }} group type|]1, Inf[{{ count }} group types"
+        index: "{{ count }} group type，{{ count }} group types"
     module:
         create:
             button: Create group type
@@ -163,7 +163,7 @@ pim_enrich.entity.attribute:
             success: Attribute successfully removed
             fail: Cannot delete this attribute
     page_title:
-        index: "]-Inf, 1]{{ count }} attribute|]1, Inf[{{ count }} attributes"
+        index: "{{ count }} attribute，{{ count }} attributes"
     property:
         allowed_extensions: Allowed extensions
         auto_option_sorting: Sort automatically options by alphabetical order
@@ -280,9 +280,9 @@ pim_enrich.entity.attribute:
         delete:
             confirm: Are you sure you want to delete this attribute?
             attribute_removal: The attribute will be removed from all products.
-            product_count: '{0}0 products|{1}1 product|]1, Inf[{{ count }} products'
-            product_model_count: '{0}0 product models|{1}1 product model|]1, Inf[{{ count }} product models'
-            used: ']-Inf,1]currently has values set for this attribute.|]1, Inf[currently have values set for this attribute.'
+            product_count: '{0}0 products|{1}1 product，{{ count }} products'
+            product_model_count: '{0}0 product models|{1}1 product model，{{ count }} product models'
+            used: ']-Inf,1]currently has values set for this attribute.，currently have values set for this attribute.'
             helper:
                 content: If you need to change your attribute type, to make it localizable or scopable, while keeping access to your existing attribute values,
                 link: check out our Help Center (for more information).
@@ -294,7 +294,7 @@ pim_enrich.entity.attribute:
         mass_delete:
             modal:
                 title: Attributes
-                subtitle: '{1}Confirm deletion of {{ count }} attribute|]1, Inf[Confirm deletion of {{ count }} attributes'
+                subtitle: '{1}Confirm deletion of {{ count }} attribute，Confirm deletion of {{ count }} attributes'
                 label: Please type "{{ textToCheck }}"
                 confirm: Are you sure you want to delete these attributes?
             message_bar:
@@ -305,7 +305,7 @@ pim_enrich.entity.attribute_group:
     label: attribute group
     uppercase_label: Attribute group
     plural_label: Attribute groups
-    result_count: '{0}0 attribute groups|{1}1 attribute group|]1, Inf[{{ count }} attribute groups'
+    result_count: '{0}0 attribute groups|{1}1 attribute group，{{ count }} attribute groups'
     limit_reached: You’ve reached the limit of {{ max }} attribute groups.
     show_more_attribute:
         title: It's a bit crowded around here, we show you {{ attributeCount }}/{{ totalAttributeCount }} attributes.
@@ -336,20 +336,20 @@ pim_enrich.entity.attribute_group:
     grid:
         columns:
             attribute_count: Related attributes count
-    selected: '{0}0 attribute group selected|{1}1 attribute group selected|]1, Inf[{{ count }} attribute groups selected'
+    selected: '{0}0 attribute group selected|{1}1 attribute group selected，{{ count }} attribute groups selected'
     mass_delete:
-        confirm: '{1}Are you sure you want to delete this attribute group?|]1, Inf[Are you sure you want to delete these {{ count }} attribute groups?'
+        confirm: '{1}Are you sure you want to delete this attribute group?，Are you sure you want to delete these {{ count }} attribute groups?'
         confirmation_phrase: 'Please type "{{ confirmation_word }}"'
         confirmation_word: delete
-        attribute_warning: '{1}Deleting these attribute groups will impact {{ number_of_attribute }} related attribute. You will need to move this related attribute to a new attribute group.|]1, Inf[Deleting these attribute groups will impact {{ number_of_attribute }} related attributes. You will need to move these related attributes to a new attribute group.'
-        select_attribute_group: '{1}Please select the attribute group to move the related attribute to|]1, Inf[Please select the attribute group to move the {{ number_of_attribute }} related attributes to'
+        attribute_warning: '{1}Deleting these attribute groups will impact {{ number_of_attribute }} related attribute. You will need to move this related attribute to a new attribute group.，Deleting these attribute groups will impact {{ number_of_attribute }} related attributes. You will need to move these related attributes to a new attribute group.'
+        select_attribute_group: '{1}Please select the attribute group to move the related attribute to，Please select the attribute group to move the {{ number_of_attribute }} related attributes to'
         empty_result_label: 'No attribute group found'
         placeholder: 'Select attribute group'
         open_label: 'attribute group list'
     delete:
         confirm: 'Are you sure you want to delete this attribute group'
         attribute_warning: 'Deleting this attribute group will impact {{ number_of_attribute }} related attribute. You will need to move this related attribute to a new attribute group.'
-        select_attribute_group: '{1}Please select the attribute group to move the related attribute to:|]1, Inf[Please select the attribute group to move the {{ number_of_attribute }} related attributes to:'
+        select_attribute_group: '{1}Please select the attribute group to move the related attribute to:，Please select the attribute group to move the {{ number_of_attribute }} related attributes to:'
     batch_jobs:
         delete_attribute_groups:
             delete_attribute_groups:
@@ -364,7 +364,7 @@ pim_import_export:
 
 pim_enrich.mass_edit.family:
     title: Families bulk action
-    confirm: "{1}You are about to update a family with the following information, please confirm.|]1, Inf[You are about to update {{ itemsCount }} families with the following information, please confirm."
+    confirm: "{1}You are about to update a family with the following information, please confirm.，You are about to update {{ itemsCount }} families with the following information, please confirm."
     step:
         select:
             label: Choose families
@@ -381,7 +381,7 @@ pim_enrich.mass_edit.family:
         set_requirements:
             label: Set attributes requirements
             description: The following attributes requirements will be applied to the selected families
-            label_count: "{1}Set attributes requirements of <span class=\"AknFullPage-title--highlight\">1 family</span>|]1, Inf[Set attributes requirements of <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} families</span>"
+            label_count: "{1}Set attributes requirements of <span class=\"AknFullPage-title--highlight\">1 family</span>，Set attributes requirements of <span class=\"AknFullPage-title--highlight\">{{ itemsCount }} families</span>"
 
 batch_jobs:
     default_steps:

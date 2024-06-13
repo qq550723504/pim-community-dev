@@ -331,7 +331,7 @@ akeneo_connectivity.connection:
   error_management:
     connection_monitoring:
       helper:
-        title: '{0} у вас {{ count }} ошибка |[1,Inf] у вас {{ count }} ошибок'
+        title: '{0} у вас {{ count }} ошибка , у вас {{ count }} ошибок'
         description: Здесь вы можете увидеть детали каждой ошибки для этого соединения за последние 7 дней. Количество ошибок ограничено 100 ошибками.
         link: Чтобы понять, как решить эту проблему, посетите Центр помощи по API.
       search_filter:

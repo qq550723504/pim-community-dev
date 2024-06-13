@@ -43,7 +43,7 @@ pim_datagrid:
   mass_action:
     delete:
       empty_selection: No hi ha productes seleccionats
-      success_message: "{0} no s'ha eliminat cap entitat|{1} s'ha eliminat una entitat|] 1, Inf [s'han eliminat %count% entitats"
+      success_message: "{0} no s'ha eliminat cap entitat|{1} s'ha eliminat una entitats'han eliminat %count% entitats"
     default:
       confirmation:
         title: Confirmació d'accions masives
