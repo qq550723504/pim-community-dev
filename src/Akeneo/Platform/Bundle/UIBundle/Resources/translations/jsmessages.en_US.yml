@@ -188,7 +188,7 @@ pim_common:
     before: Before
     by: by
     cancel: Cancel
-    characters_left: {{ count }} character left，{{ count }} characters left
+    characters_left: "{{ count }} character left，{{ count }} characters left"
     clear_value: Clear value
     close: Close
     code: Code
